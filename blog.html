@@ -1,237 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- BALISES SEO -->
-    <title>Blog – SkySocial | Conseils en Création de Site Web & Réseaux Sociaux</title>
-    <meta name="description" content="Le blog de SkySocial : conseils pratiques sur la création de site web, les réseaux sociaux, la stratégie digitale et le développement de votre activité en ligne.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Blog – SkySocial">
-    <meta property="og:description" content="Articles et ressources pour mieux comprendre le prix d’un site web, la gestion des réseaux sociaux et la stratégie digitale.">
-    <meta property="og:image" content="https://www.skysocial.fr/stratmedia.jpeg">
-    <meta property="og:url" content="https://www.skysocial.fr/blog.html">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog – SkySocial">
-    <meta name="twitter:description" content="Conseils pour booster votre visibilité en ligne : site web, réseaux sociaux, stratégie digitale.">
-    <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg">
-
-    <!-- Données structurées Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Blog SkySocial",
-      "url": "https://www.skysocial.fr/blog.html",
-      "description": "Blog de l'agence SkySocial sur la création de sites web, la gestion des réseaux sociaux et la stratégie digitale.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "SkySocial Agency",
-        "url": "https://www.skysocial.fr"
-      }
-    }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <style>
-       .logo,nav ul{display:flex}body,nav ul li a{color:var(--dark)}.logo,nav ul li a:hover{color:var(--primary)}.nav-btn,nav ul li a:after{background:linear-gradient(90deg,var(--primary),var(--secondary))}.logo span,.page-hero h1{-webkit-text-fill-color:transparent}header,nav ul li a:hover:after{width:100%}*{margin:0;padding:0;box-sizing:border-box;font-family:'Bricolage Grotesque',sans-serif}body{background-color:var(--light);line-height:1.6;overflow-x:hidden}.container{width:90%;max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:var(--white);box-shadow:0 5px 20px rgba(0,0,0,.1);position:fixed;top:0;z-index:1000;transition:.4s}.header-container{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-size:28px;font-weight:800;text-decoration:none;align-items:center}.nav-btn,nav ul li a{font-weight:600;text-decoration:none}.nav-btn,footer{color:var(--white)}.logo span{background:linear-gradient(135deg,var(--primary) 0,var(--accent) 100%);-webkit-background-clip:text}nav ul{list-style:none}nav ul li{margin-left:30px}nav ul li a{transition:.3s;position:relative;padding:8px 0}nav ul li a:after{content:'';position:absolute;width:0;height:3px;bottom:0;left:0;transition:width .3s;border-radius:3px}.nav-btn{padding:12px 25px;border-radius:30px;transition:.3s;box-shadow:0 4px 15px rgba(74,108,247,.3)}.nav-btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(74,108,247,.4)}.page-hero{padding:180px 0 80px;background:linear-gradient(135deg,var(--light) 0,#e8ecfb 100%);text-align:center}.page-hero h1{font-size:3rem;margin-bottom:20px;background:linear-gradient(135deg,var(--primary) 0,var(--secondary) 100%);-webkit-background-clip:text}.page-hero p{font-size:1.2rem;max-width:700px;margin:0 auto;color:#555}.blog-section{padding:80px 0 100px}.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}.blog-card{background:var(--white);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;overflow:hidden}.blog-card-image{height:180px;overflow:hidden}.blog-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.blog-card-content{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px}.blog-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(0,0,0,.14)}.blog-card:hover .blog-card-image img{transform:scale(1.05)}.blog-card a.read-more,.blog-card-btn{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.95rem;color:var(--primary);text-decoration:none}.blog-card a.read-more span,.blog-card-btn span{font-size:1.1rem}.blog-card a.read-more:hover,.blog-card-btn:hover{color:var(--secondary)}.fade-in{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}.fade-in.visible{opacity:1;transform:translateY(0)}.blog-category{display:inline-block;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);font-weight:700}.blog-title{font-size:1.3rem;font-weight:700;color:var(--dark)}.blog-meta{font-size:.9rem;color:#777}.blog-excerpt{font-size:.98rem;color:#555}footer{background:radial-gradient(circle at top left,rgba(74,108,247,.22),transparent 60%),radial-gradient(circle at top right,rgba(255,107,0,.2),transparent 60%),var(--dark);padding:70px 0 30px;margin-top:80px}.footer-container{display:flex;flex-direction:column;gap:40px}.footer-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.2fr) minmax(0,1.6fr);gap:40px;align-items:flex-start}@media (max-width:900px){.footer-grid{grid-template-columns:1fr}}.footer-brand-logo{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.08);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin-bottom:12px}.footer-brand-logo .dot{width:9px;height:9px;border-radius:999px;background:var(--accent)}.footer-brand p{opacity:.85;max-width:360px;margin-bottom:18px}.footer-social{display:flex;gap:12px}.footer-cta-btn,.footer-social a{display:inline-flex;border-radius:999px;color:var(--white);text-decoration:none}.footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,.25);align-items:center;justify-content:center;opacity:.85;transition:.25s}.footer-social a:hover{opacity:1;transform:translateY(-3px);border-color:var(--accent)}.footer-title{font-size:1.1rem;margin-bottom:16px}.footer-contact-list,.footer-links ul{list-style:none;padding:0;margin:0}.footer-contact-list li+li,.footer-links ul li+li{margin-top:8px}.footer-contact-list a,.footer-links a{color:var(--white);text-decoration:none;opacity:.82;font-size:.95rem;transition:.25s}.footer-contact-list a:hover,.footer-links a:hover{opacity:1;color:var(--accent);padding-left:4px}.footer-contact-list li{display:flex;align-items:center;gap:8px}.footer-contact-list i{font-size:.95rem;opacity:.8}.footer-cta-btn{margin-top:18px;align-items:center;gap:8px;padding:10px 18px;background:linear-gradient(90deg,var(--primary),var(--secondary));font-size:.95rem;border:none;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s}.badge-new,.featured-badge{top:12px;left:12px;color:#fff;font-weight:700}.footer-cta-btn i{font-size:.9rem}.footer-cta-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}.footer-subtext{margin-top:8px;font-size:.85rem;opacity:.8}.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:.85rem;opacity:.85}.footer-bottom-links{display:flex;align-items:center;gap:10px}.footer-bottom-links a{color:var(--white);text-decoration:none;opacity:.85;transition:opacity .2s}.footer-bottom-links a:hover{opacity:1}.badge-new{position:absolute;background:linear-gradient(135deg,var(--secondary),var(--primary));padding:6px 12px;font-size:.75rem;border-radius:999px;letter-spacing:.04em;box-shadow:0 4px 10px rgba(0,0,0,.18);animation:.5s forwards popIn;opacity:0}.blog-card,.featured-blog{position:relative}@keyframes popIn{0%{transform:scale(.5);opacity:0}100%{transform:scale(1);opacity:1}}.featured-blog{display:grid;grid-template-columns:1.2fr 2fr;gap:30px;padding:40px;background:var(--white);border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,.08);margin-bottom:60px}.featured-badge{position:absolute;background:#ff6b00;padding:8px 18px;border-radius:999px;font-size:.9rem;z-index:10}.featured-image img{width:100%;height:100%;border-radius:16px;object-fit:cover}.featured-content .featured-category{color:var(--primary);font-size:.85rem;font-weight:700}.featured-title{font-size:1.8rem;margin:10px 0;color:var(--dark)}.featured-excerpt{color:#555;margin-bottom:20px}.featured-btn{display:inline-block;background:linear-gradient(90deg,var(--primary),var(--secondary));padding:12px 25px;border-radius:999px;color:#fff;text-decoration:none;font-weight:600}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog SkySocial – Conseils web & réseaux sociaux</title>
+  <meta name="description" content="Conseils pratiques pour créer un site web performant, gérer vos réseaux sociaux et produire du contenu engageant.">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-}*{margin:0;padding:0;box-sizing:border-box;font-family:'Bricolage Grotesque',sans-serif}body{background-color:var(--light);line-height:1.6;overflow-x:hidden}.container{width:90%;max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:var(--white);box-shadow:0 5px 20px rgba(0,0,0,.1);position:fixed;top:0;z-index:1000;transition:.4s}.header-container{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo,.service-card .learn-more{color:var(--primary);align-items:center}.logo{font-size:28px;font-weight:800;text-decoration:none}.btn,.nav-btn{color:var(--white);border-radius:30px;transition:.3s;text-decoration:none;font-weight:600}.logo span{-webkit-background-clip:text}nav ul{list-style:none}nav ul li{margin-left:30px}nav ul li a{text-decoration:none;font-weight:600;transition:.3s;padding:8px 0}nav ul li a:after{width:0;height:3px;bottom:0;transition:width .3s;border-radius:3px}nav ul li a:hover{color:var(--primary)}.nav-btn{padding:12px 25px;box-shadow:0 4px 15px rgba(74,108,247,.3)}.nav-btn:hover{box-shadow:0 8px 20px rgba(74,108,247,.4)}
-
-    <!-- HEADER -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">SKY SOCIAL MEDIA</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="nav-btn">Contact</a></li>
-                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn">Prendre RDV</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Le blog de SkySocial</h1>
-            <p>Des articles clairs et concrets pour comprendre le prix d’un site web, améliorer vos réseaux sociaux et développer votre visibilité en ligne.</p>
-        </div>
-    </section>
-	
-<!-- ARTICLE À LA UNE -->
-<article class="featured-blog fade-in">
-    <div class="featured-badge">⭐ À la Une</div>
-
-    <div class="featured-image">
-        <img src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-             alt="Article à la une">
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html">SkySocial <span>Agency</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="featured-content">
-        <span class="featured-category">Conseils business</span>
-        <h2 class="featured-title">5 raisons d’investir dans un site web professionnel en 2025</h2>
-        <p class="featured-excerpt">
-            Avoir un site web n’est plus un luxe mais un investissement stratégique. 
-            Voici pourquoi 2025 est l’année idéale pour passer à l’action.
-        </p>
-        <a href="nouvel-article.html" class="featured-btn">Lire l'article</a>
-    </div>
-</article>
-
-    <!-- LISTE D'ARTICLES -->
-    <section class="blog-section">
-        <div class="container">
-            <div class="blog-grid">
-
-    <!-- ARTICLE 1 : Combien coûte un site web -->
-    <article class="blog-card fade-in">
-        <div class="blog-card-image">
-            <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                 alt="Création de site web sur ordinateur portable">
-        </div>
-        <div class="blog-card-content">
-            <span class="blog-category">Site web</span>
-            <h2 class="blog-title">Combien coûte la création d’un site web en 2025 ?</h2>
-            <p class="blog-meta">Publié le 21 novembre 2025 • Temps de lecture : 7 min</p>
-            <p class="blog-excerpt">
-                Entre les offres à 300 € et les devis à plus de 5 000 €, difficile d’y voir clair.
-                On décortique les vrais facteurs de prix et les fourchettes réalistes selon votre projet.
-            </p>
-            <a href="combien-coute-creation-site-web-2025.html" class="read-more">
-                Lire l’article <span>→</span>
-            </a>
-        </div>
-    </article>
-
-    <!-- ARTICLE 2 : Thérapeutes -->
-<article class="blog-card fade-in">
-    <span class="badge-new">Nouveau</span>
-
-    <div class="blog-card-image">
-        <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=1200"
-             alt="Thérapeute en séance avec une patiente">
-    </div>
-
-    <div class="blog-card-content">
-        <span class="blog-category">Thérapeutes & bien-être</span>
-        <h2 class="blog-title">Pourquoi un thérapeute doit absolument avoir un site web en 2025 ?</h2>
-        <p class="blog-meta">Publié le 21 novembre 2025 • Temps de lecture : 6 min</p>
-        <p class="blog-excerpt">
-            Visibilité locale, crédibilité, prise de rendez-vous, rassurance… Un site web
-            est devenu un outil essentiel pour les thérapeutes qui veulent développer
-            leur activité en 2025.
-        </p>
-        <a href="pourquoi-therapeute-site-web-2025.html" class="read-more">
-            Lire l’article <span>→</span>
-        </a>
-    </div>
-</article>
-
-</div>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-    <div class="container footer-container">
-        <div class="footer-grid">
-            <!-- Colonne 1 : Branding -->
-            <div class="footer-brand">
-                <div class="footer-brand-logo">
-                    <span class="dot"></span>
-                    <span>Sky Social Agency</span>
-                </div>
-                <p>
-                    Création de sites web & accompagnement digital pour indépendants et petites entreprises.
-                </p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/skysocialagency" target="_blank" aria-label="Instagram SkySocial Agency">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/sky-social-agency" target="_blank" aria-label="LinkedIn SkySocial Agency">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Colonne 2 : Navigation -->
-            <div class="footer-links">
-                <h3 class="footer-title">Navigation</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 3 : Contact & CTA -->
-            <div class="footer-contact">
-                <h3 class="footer-title">Contact</h3>
-                <ul class="footer-contact-list">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+33669708046">+33 6 69 70 80 46</a>
-                    </li>
-                </ul>
-
-                <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="footer-cta-btn">
-                    <span>Réserver un appel découverte</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <p class="footer-subtext">Réponse sous 24–48h, sans engagement.</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Sky Social Agency – Tous droits réservés.</p>
-            <div class="footer-bottom-links">
-                <a href="mentions-legales.html" target="_blank" rel="noopener noreferrer">Mentions légales</a>
-                <span>•</span>
-                <a href="politique-confidentialite.html" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Le blog SkySocial</div>
+        <h1>Des ressources concrètes pour accélérer votre présence en ligne</h1>
+        <p>Articles de fond, méthodes pas à pas et exemples issus de nos missions pour vous aider à prendre de meilleures décisions digitales.</p>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <article class="card article">
+          <div class="badge">Site web</div>
+          <h2><a href="combien-coute-creation-site-web-2025.html">Combien coûte la création d’un site web en 2025 ?</a></h2>
+          <p>Les postes de coûts à prévoir, les fourchettes de prix selon la complexité du projet et les points de vigilance pour éviter les mauvaises surprises.</p>
+          <a class="btn btn-outline" href="combien-coute-creation-site-web-2025.html">Lire l'article</a>
+        </article>
+
+        <article class="card article">
+          <div class="badge">Secteur santé & bien-être</div>
+          <h2><a href="pourquoi-therapeute-site-web-2025.html">Pourquoi un thérapeute doit avoir un site web en 2025 ?</a></h2>
+          <p>Visibilité locale, prise de rendez-vous, contenu rassurant : découvrez pourquoi un site devient incontournable pour les praticiens.</p>
+          <a class="btn btn-outline" href="pourquoi-therapeute-site-web-2025.html">Lire l'article</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>© 2025 SkySocial Agency – Blog</div>
+      <nav>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const elements = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-
-        elements.forEach(el => observer.observe(el));
-    });
-</script>
-
+  </footer>
 </body>
 </html>
-

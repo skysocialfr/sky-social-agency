@@ -1,331 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- BALISES SEO -->
-    <title>Nos Services – Création de Site Web, Social Media & Stratégie Digitale | SkySocial</title>
-    <meta name="description" content="Découvrez les services SkySocial : création de site web vitrine, gestion de réseaux sociaux, création de contenu et accompagnement digital sur-mesure pour indépendants et TPE.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Nos Services – SkySocial">
-    <meta property="og:description" content="Une offre complète : site web, réseaux sociaux, branding et stratégie digitale pour développer votre business en ligne.">
-    <meta property="og:image" content="https://www.skysocial.fr/stratmedia.jpeg">
-    <meta property="og:url" content="https://www.skysocial.fr/services.html">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nos Services – Création de Site Web & Social Media">
-    <meta name="twitter:description" content="Accompagnement digital clé en main pour les indépendants et petites entreprises.">
-    <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg">
-    <!-- FIN BALISES SEO -->
-
-    <!-- Données structurées Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SkySocial Agency",
-      "url": "https://www.skysocial.fr/services.html",
-      "logo": "https://www.skysocial.fr/stratmedia.jpeg",
-      "description": "Services de création de sites web, gestion de réseaux sociaux et stratégie digitale pour indépendants et TPE.",
-      "sameAs": [
-        "https://www.instagram.com/skysocialagency",
-        "https://www.linkedin.com/company/sky-social-agency"
-      ]
-    }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Optimisation des polices -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <style>
-		.logo,nav ul{display:flex}.logo,nav ul li a:hover{color:var(--primary)}.page-hero p,.section-title h2,body,nav ul li a{color:var(--dark)}.nav-btn,.section-title h2:after,nav ul li a:after{background:linear-gradient(90deg,var(--primary),var(--secondary))}.btn:before,.service-card:hover:before{height:100%}.feature-item i,.logo span,.page-hero h1,.service-card i{-webkit-text-fill-color:transparent}.cta,.custom-solution,.page-hero,.process-step,.section-title{text-align:center}.btn:before,.cta:before,header,nav ul li a:hover:after{width:100%}.btn,.cta,.page-hero,.service-card{position:relative;overflow:hidden}.btn:before{content:'';position:absolute;top:0;left:-100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}.cta:before,.process-steps:before,.service-card:before,nav ul li a:after{content:'';position:absolute;left:0}.logo span,.service-card:before{background:linear-gradient(135deg,var(--primary) 0,var(--accent) 100%)}.btn:hover:before{left:100%}:root{--primary:#4a6cf7;--secondary:#ff6b00;--accent:#00d2a0;--dark:#1d2130;--light:#f7f9fc;--white:#ffffff}*{margin:0;padding:0;box-sizing:border-box;font-family:'Bricolage Grotesque',sans-serif}body{background-color:var(--light);line-height:1.6;overflow-x:hidden}.container{width:90%;max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:var(--white);box-shadow:0 5px 20px rgba(0,0,0,.1);position:fixed;top:0;z-index:1000;transition:.4s}.header-container{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-size:28px;font-weight:800;text-decoration:none;align-items:center}.nav-btn,nav ul li a{text-decoration:none;font-weight:600;transition:.3s}.logo span{-webkit-background-clip:text}nav ul{list-style:none}nav ul li{margin-left:30px}nav ul li a{position:relative;padding:8px 0}nav ul li a:after{width:0;height:3px;bottom:0;transition:width .3s;border-radius:3px}.nav-btn{color:var(--white);padding:12px 25px;border-radius:30px;box-shadow:0 4px 15px rgba(74,108,247,.3)}.nav-btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(74,108,247,.4)}.page-hero{padding:180px 0 100px;background:linear-gradient(135deg,var(--light) 0,#e8ecfb 100%)}.page-hero-content{position:relative;z-index:2}.page-hero h1{font-size:3.5rem;margin-bottom:20px;background:linear-gradient(135deg,var(--primary) 0,var(--secondary) 100%);-webkit-background-clip:text}.page-hero p{font-size:1.4rem;max-width:700px;margin:0 auto 40px}.services{padding:100px 0;background-color:var(--white)}.section-title{margin-bottom:80px}.section-title h2{font-size:2.8rem;margin-bottom:20px;position:relative;display:inline-block}.section-title h2:after{content:'';position:absolute;width:80px;height:4px;bottom:-15px;left:50%;transform:translateX(-50%);border-radius:2px}.section-title p{font-size:1.2rem;max-width:700px;margin:30px auto 0;color:#666}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.service-card{background:var(--white);border-radius:15px;padding:40px 30px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.4s;z-index:1}.service-card:before{top:0;width:100%;height:0;transition:height .4s;z-index:-1;opacity:.05}.service-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.12)}.service-card i{font-size:3rem;margin-bottom:25px;background:linear-gradient(135deg,var(--primary) 0,var(--secondary) 100%);-webkit-background-clip:text}.service-card h3{font-size:1.6rem;margin-bottom:15px;color:var(--dark)}.service-card p{color:#666;margin-bottom:20px}.service-features{margin-top:20px}.service-features li{margin-bottom:10px;display:flex;align-items:center}.service-features li i{font-size:1rem;margin-right:10px;color:var(--accent);background:0 0;-webkit-text-fill-color:var(--accent)}.process{padding:100px 0;background:linear-gradient(135deg,var(--light) 0,#e8ecfb 100%)}.process-steps{display:flex;justify-content:space-between;margin-top:60px;position:relative}.process-steps:before{top:40px;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--secondary));z-index:1}.process-step{position:relative;z-index:2;flex:1}.step-number{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0,var(--secondary) 100%);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:700;margin:0 auto 20px}.step-title{font-size:1.4rem;margin-bottom:15px;color:var(--dark)}.step-description{color:#666;padding:0 15px}.custom-solution{padding:100px 0;background-color:var(--white)}.custom-content{max-width:900px;margin:0 auto}.custom-content h2{font-size:2.8rem;margin-bottom:30px;color:var(--dark)}.custom-content p{font-size:1.2rem;margin-bottom:40px;color:#666;line-height:1.8}.solution-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin:60px 0}.feature-item{background:var(--light);padding:30px 20px;border-radius:10px;transition:.3s}.custom-cta,.feature-item i{background:linear-gradient(135deg,var(--primary) 0,var(--secondary) 100%)}.feature-item:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.1)}.feature-item i{font-size:2.5rem;margin-bottom:15px;-webkit-background-clip:text}.feature-item h3{font-size:1.4rem;margin-bottom:10px;color:var(--dark)}.feature-item p{font-size:1rem;margin-bottom:0}.custom-cta{padding:60px 40px;border-radius:15px;color:var(--white);margin-top:60px}.btn,.btn-large{display:inline-block;border-radius:30px;text-decoration:none;transition:.3s;box-shadow:0 5px 15px rgba(255,255,255,.2)}.custom-cta h3{font-size:2.2rem;margin-bottom:20px;color:var(--white);text-shadow:0 2px 4px rgba(0,0,0,.3)}.custom-cta p{font-size:1.2rem;margin-bottom:30px;opacity:.95;color:var(--white);text-shadow:0 1px 2px rgba(0,0,0,.2);font-weight:500}.btn-large{background:var(--white);color:var(--primary);padding:18px 40px;font-weight:700;font-size:1.2rem}.cta,footer{color:var(--white)}.btn-large:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(255,255,255,.3)}.cta{padding:100px 0;background:linear-gradient(135deg,var(--primary) 0,var(--secondary) 100%)}.cta:before{height:100%;top:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="%23ffffff" opacity="0.1" d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z"/></svg>') 0 0/150px}.cta-content{position:relative;z-index:1;max-width:800px;margin:0 auto}.cta h2{font-size:2.8rem;margin-bottom:20px}.cta p{font-size:1.2rem;margin-bottom:40px;opacity:.9}.btn{background:var(--white);color:var(--primary);padding:16px 35px;font-weight:600;font-size:1.1rem}footer{background:radial-gradient(circle at top left,rgba(74,108,247,.22),transparent 60%),radial-gradient(circle at top right,rgba(255,107,0,.2),transparent 60%),var(--dark);padding:70px 0 30px;margin-top:80px}.footer-container{display:flex;flex-direction:column;gap:40px}.footer-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.2fr) minmax(0,1.6fr);gap:40px;align-items:flex-start}@media (max-width:900px){.footer-grid{grid-template-columns:1fr}}.footer-brand-logo{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.08);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin-bottom:12px}.footer-brand-logo .dot{width:9px;height:9px;border-radius:999px;background:var(--accent)}.footer-brand p{opacity:.85;max-width:360px;margin-bottom:18px}.footer-social{display:flex;gap:12px}.footer-cta-btn,.footer-social a{display:inline-flex;color:var(--white);text-decoration:none}.footer-social a{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.25);align-items:center;justify-content:center;opacity:.85;transition:.25s}.footer-social a:hover{opacity:1;transform:translateY(-3px);border-color:var(--accent)}.footer-title{font-size:1.1rem;margin-bottom:16px}.footer-contact-list,.footer-links ul{list-style:none;padding:0;margin:0}.footer-contact-list li+li,.footer-links ul li+li{margin-top:8px}.footer-contact-list a,.footer-links a{color:var(--white);text-decoration:none;opacity:.82;font-size:.95rem;transition:.25s}.footer-contact-list a:hover,.footer-links a:hover{opacity:1;color:var(--accent);padding-left:4px}.footer-contact-list li{display:flex;align-items:center;gap:8px}.footer-contact-list i{font-size:.95rem;opacity:.8}.footer-cta-btn{margin-top:18px;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--secondary));font-size:.95rem;border:none;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s}.footer-cta-btn i{font-size:.9rem}.footer-cta-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.35)}.footer-subtext{margin-top:8px;font-size:.85rem;opacity:.8}.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:.85rem;opacity:.85}.footer-bottom-links{display:flex;align-items:center;gap:10px}.footer-bottom-links a{color:var(--white);text-decoration:none;opacity:.85;transition:opacity .2s}.footer-bottom-links a:hover{opacity:1}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.fade-in{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}.fade-in.visible{opacity:1;transform:translateY(0)}@media (max-width:992px){.process-steps{flex-direction:column;gap:40px}.process-steps:before{display:none}}@media (max-width:768px){.header-container,header{padding:10px 0!important}header{position:relative!important}.header-container{flex-direction:column}.page-hero{padding:120px 0 80px!important}nav ul{margin-top:15px;flex-direction:column;gap:10px;text-align:center;flex-wrap:wrap;justify-content:center}nav ul li{margin:0!important}.about-image-container{height:300px!important;margin-top:30px}.about-content:nth-child(2n) .about-image-container{margin-top:0;margin-bottom:30px}.page-hero h1{font-size:2.2rem!important;line-height:1.2}.page-hero p{font-size:1.1rem!important}.stats-grid,.team-grid,.values-grid{grid-template-columns:1fr}.section-title h2{font-size:2rem!important}.image-banner{height:250px}.banner-text h3{font-size:1.5rem!important}.banner-text p{font-size:.9rem!important}.team-member{padding:20px 15px}.service-card,.value-card{padding:25px 20px}.container{padding:0 15px}.custom-content h2{font-size:2.2rem!important}.custom-cta h3{font-size:1.8rem!important}}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services SkySocial – Sites web, réseaux sociaux, vidéo</title>
+  <meta name="description" content="Découvrez les services SkySocial : création de sites vitrines, community management, stratégie digitale et montage vidéo.">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-            body{background-color:var(--light);line-height:1.6;overflow-x:hidden}.container{width:90%;max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:var(--white);box-shadow:0 5px 20px rgba(0,0,0,.1);position:fixed;top:0;z-index:1000;transition:.4s}.header-container{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo,.service-card .learn-more{color:var(--primary);align-items:center}.logo{font-size:28px;font-weight:800;text-decoration:none}.btn,.nav-btn{color:var(--white);border-radius:30px;transition:.3s;text-decoration:none;font-weight:600}.logo span{-webkit-background-clip:text}nav ul{list-style:none}nav ul li{margin-left:30px}nav ul li a{text-decoration:none;font-weight:600;transition:.3s;padding:8px 0}nav ul li a:after{width:0;height:3px;bottom:0;transition:width .3s;border-radius:3px}nav ul li a:hover{color:var(--primary)}.nav-btn{padding:12px 25px;box-shadow:0 4px 15px rgba(74,108,247,.3)}.nav-btn:hover{box-shadow:0 8px 20px rgba(74,108,247,.4)}
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">SKY SOCIAL MEDIA</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="nav-btn">Contact</a></li>
-                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn">Prendre RDV</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Page Hero -->
-    <section class="page-hero">
-    <div class="container page-hero-content">
-        <h1>Création de sites web, réseaux sociaux & stratégie digitale</h1>
-        <p>
-            SkySocial accompagne les indépendants et petites entreprises dans la création de sites web professionnels,
-            la gestion de leurs réseaux sociaux et la mise en place d’une stratégie digitale claire, adaptée à leur activité.
-        </p>
-    </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nos offres pour développer votre présence en ligne</h2>
-                <p>
-                    Site web, réseaux sociaux, stratégie digitale : vous choisissez ce dont vous avez besoin,
-                    on s’occupe de construire une présence claire, professionnelle et alignée avec votre activité.
-                </p>
-            </div>
-
-            <div class="services-grid">
-    <!-- Création de site web -->
-    <div class="service-card fade-in">
-        <i class="fas fa-laptop-code"></i>
-        <h3>Création de site web vitrine</h3>
-        <p>
-            Un site clair, moderne et professionnel pour présenter votre activité, rassurer vos futurs clients
-            et leur donner envie de vous contacter.
-        </p>
-        <ul class="service-features">
-            <li><i class="fas fa-check"></i> Structure de site pensée pour votre activité (indépendant, commerce, bien-être, BTP…)</li>
-            <li><i class="fas fa-check"></i> Design sur-mesure, responsive et adapté au mobile</li>
-            <li><i class="fas fa-check"></i> Textes accompagnés (vous n’êtes pas laissé·e seul·e face à la page blanche)</li>
-            <li><i class="fas fa-check"></i> Paramètres de base pour le SEO et connexion avec vos réseaux sociaux</li>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html">SkySocial <span>Agency</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
         </ul>
-		<p style="margin-top: 15px;">
-    <a href="contact.html">Demander un devis pour ce service</a>
-        </p>
-
+      </nav>
     </div>
+  </header>
 
-    <!-- Réseaux sociaux -->
-    <div class="service-card fade-in">
-        <i class="fas fa-hashtag"></i>
-        <h3>Community management & réseaux sociaux</h3>
-        <p>
-            Déléguez la gestion de vos réseaux sociaux pour garder une présence régulière,
-            cohérente et alignée avec votre image de marque.
-        </p>
-        <ul class="service-features">
-            <li><i class="fas fa-check"></i> Stratégie éditoriale adaptée à votre activité et vos objectifs</li>
-            <li><i class="fas fa-check"></i> Création de contenus (visuels, carrousels, reels courts)</li>
-            <li><i class="fas fa-check"></i> Planification des publications et gestion du calendrier éditorial</li>
-            <li><i class="fas fa-check"></i> Analyse des performances et recommandations d’amélioration</li>
-        </ul>
-		<p style="margin-top: 15px;">
-    <a href="contact.html">Demander un devis pour ce service</a>
-        </p>
-
-    </div>
-
-    <!-- Stratégie & accompagnement -->
-    <div class="service-card fade-in">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Stratégie digitale & accompagnement</h3>
-        <p>
-            Un accompagnement pour y voir plus clair sur votre présence en ligne et poser une vraie stratégie :
-            site, réseaux sociaux, positionnement, messages.
-        </p>
-        <ul class="service-features">
-            <li><i class="fas fa-check"></i> Audit de votre présence actuelle (site, réseaux sociaux, Google)</li>
-            <li><i class="fas fa-check"></i> Clarification de votre positionnement et de vos messages clés</li>
-            <li><i class="fas fa-check"></i> Plan d’actions concret sur 3 mois</li>
-            <li><i class="fas fa-check"></i> Accompagnement ponctuel ou suivi mensuel</li>
-        </ul>
-		<p style="margin-top: 15px;">
-    <a href="contact.html">Demander un devis pour ce service</a>
-        </p>
-
-    </div>
-</div>
-
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Nos offres</div>
+        <h1>Création de sites web, réseaux sociaux et contenus prêts à publier</h1>
+        <p>Des forfaits clairs, des livrables documentés et une équipe qui reste à vos côtés pour activer et optimiser chaque canal.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Demander un devis</a>
+          <a class="btn btn-outline" href="index.html">Retour à l'accueil</a>
         </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>Notre Processus en 4 Étapes</h2>
-                <p>Une méthodologie éprouvée pour des résultats tangibles</p>
-            </div>
-            <div class="process-steps">
-                <div class="process-step fade-in">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Audit &amp; Analyse</h3>
-                    <p class="step-description">
-    Nous analysons votre site web, vos réseaux sociaux et votre visibilité actuelle pour identifier les vraies opportunités d’amélioration.
-                    </p>
-                </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Stratégie &amp; Planification</h3>
-                    <p class="step-description">Nous développons une stratégie sur-mesure avec des objectifs clairs et un calendrier détaillé.</p>
-                </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Mise en Œuvre</h3>
-                    <p class="step-description">
-    Nous analysons votre site web, vos réseaux sociaux et votre visibilité actuelle pour identifier les vraies opportunités d’amélioration.
-                    </p>
-
-                </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Optimisation</h3>
-                    <p class="step-description">
-    Nous analysons votre site web, vos réseaux sociaux et votre visibilité actuelle pour identifier les vraies opportunités d’amélioration.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Solution Section -->
-    <section class="custom-solution">
-        <div class="container">
-            <div class="custom-content">
-                <h2>Une Solution Sur-Mesure Pour Votre Projet</h2>
-                <p>Nous ne croyons pas aux solutions standardisées. Chaque entreprise est unique, avec des objectifs, un public et des défis spécifiques. C'est pourquoi nous créons des stratégies entièrement personnalisées qui s'alignent parfaitement avec votre vision.</p>
-                
-                <div class="solution-features">
-                    <div class="feature-item fade-in">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Combinaison Flexible</h3>
-                        <p>Mélangez et associez nos services selon vos besoins spécifiques pour créer la formule parfaite.</p>
-                    </div>
-                    <div class="feature-item fade-in">
-                        <i class="fas fa-sliders-h"></i>
-                        <h3>Évolutivité</h3>
-                        <p>Adaptons notre intervention à mesure que votre entreprise grandit et que vos besoins évoluent.</p>
-                    </div>
-                    <div class="feature-item fade-in">
-                        <i class="fas fa-bullseye"></i>
-                        <h3>Objectifs Personnalisés</h3>
-                        <p>Nous définissons ensemble des KPI précis qui reflètent vos ambitions réelles.</p>
-                    </div>
-                </div>
-                
-                <div class="custom-cta fade-in">
-                    <h3>Discutons de Votre Projet</h3>
-                    <p>Prenez rendez-vous pour une consultation gratuite de 30 minutes. Nous analyserons vos besoins et vous proposerons une solution adaptée.</p>
-                    <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="btn-large" target="_blank">Prendre RDV Gratuit</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-    <div class="container footer-container">
-        <div class="footer-grid">
-            <!-- Colonne 1 : Branding -->
-            <div class="footer-brand">
-                <div class="footer-brand-logo">
-                    <span class="dot"></span>
-                    <span>Sky Social Agency</span>
-                </div>
-                <p>
-                    Création de sites web & accompagnement digital pour indépendants et petites entreprises.
-                </p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/skysocialagency" target="_blank" aria-label="Instagram SkySocial Agency">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/sky-social-agency" target="_blank" aria-label="LinkedIn SkySocial Agency">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Colonne 2 : Navigation -->
-            <div class="footer-links">
-                <h3 class="footer-title">Navigation</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 3 : Contact & CTA -->
-            <div class="footer-contact">
-                <h3 class="footer-title">Contact</h3>
-                <ul class="footer-contact-list">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+33669708046">+33 6 69 70 80 46</a>
-                    </li>
-                </ul>
-
-                <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="footer-cta-btn">
-                    <span>Réserver un appel découverte</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <p class="footer-subtext">Réponse sous 24–48h, sans engagement.</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Sky Social Agency – Tous droits réservés.</p>
-            <div class="footer-bottom-links">
-                <a href="mentions-legales.html" target="_blank" rel="noopener noreferrer">Mentions légales</a>
-                <span>•</span>
-                <a href="politique-confidentialite.html" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a>
-            </div>
       </div>
-    </div>
-</footer>
+    </section>
 
-    <script>
-        // Animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        fadeElements.forEach(el => {
-            observer.observe(el);
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '20px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            }
-        });
-    </script>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Services principaux</div>
+          <h2>Des prestations modulables pour s'adapter à vos besoins</h2>
+          <p>Composez votre accompagnement : nous pouvons intervenir sur un seul canal ou piloter l'ensemble de votre présence digitale.</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge">Site vitrine</div>
+            <h3>Création de sites web</h3>
+            <p>Maquettes modernes, textes optimisés SEO, intégration responsive et mise en ligne complète (domaine, hébergement, analytics).</p>
+            <ul class="list">
+              <li>3 à 6 pages clés (Accueil, Services, À propos, Contact, FAQ…)</li>
+              <li>Formulaires et appels à l'action reliés à vos outils</li>
+              <li>Guides d'utilisation pour gérer votre contenu en autonomie</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="badge">Réseaux sociaux</div>
+            <h3>Community management</h3>
+            <p>Planning éditorial, création des visuels, rédaction des légendes, modération et reporting mensuel.</p>
+            <ul class="list">
+              <li>Audit du feed et recommandations sur le ton</li>
+              <li>Création de templates visuels pour harmoniser vos posts</li>
+              <li>Suivi des KPIs (reach, engagement, clics, leads)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="badge">Vidéo</div>
+            <h3>Montage & motion design</h3>
+            <p>Conception de formats courts pour TikTok/Instagram/YouTube Shorts et montages plus longs pour vos pages web ou webinars.</p>
+            <ul class="list">
+              <li>Storyboards et scripts pour chaque vidéo</li>
+              <li>Sous-titres, habillages et déclinaisons multi-formats</li>
+              <li>Livraison prête à publier (formats verticaux et horizontaux)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="badge">Contenus</div>
+            <h3>Rédaction & emails</h3>
+            <p>Pages de vente, articles de blog, newsletters et séquences emails pour nourrir vos prospects.</p>
+            <ul class="list">
+              <li>Recherche de mots-clés et structure orientée conversion</li>
+              <li>Calendrier éditorial et guidelines de marque</li>
+              <li>Relecture et ajustements inclus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Processus</div>
+          <h2>Une méthode en 4 étapes</h2>
+          <p>Nous travaillons en sprints courts pour livrer rapidement et améliorer en continu.</p>
+        </div>
+        <div class="process">
+          <div class="process-step">
+            <div>
+              <h3>Audit & analyse</h3>
+              <p>Revue de votre positionnement, de vos concurrents et des contenus déjà performants.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div>
+              <h3>Stratégie & planification</h3>
+              <p>Objectifs clairs, calendrier de production, choix des canaux prioritaires.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div>
+              <h3>Production</h3>
+              <p>Design des maquettes, rédaction des contenus, tournage/montage vidéo et intégration web.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div>
+              <h3>Optimisation</h3>
+              <p>Suivi des KPIs, tests A/B, ajustements SEO et optimisation des campagnes sociales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <div class="card">
+          <div class="badge">Formules flexibles</div>
+          <h2>Une offre sur-mesure</h2>
+          <p>Choisissez un pack unique (site, social, vidéo, contenu) ou combinez plusieurs expertises. Nous pouvons également intégrer vos équipes internes pour accélérer.</p>
+          <ul class="list">
+            <li>Onboarding en moins d'une semaine</li>
+            <li>Livrables intermédiaires pour valider chaque étape</li>
+            <li>Support prioritaire et points de suivi réguliers</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge">Parlons-en</div>
+          <h2>Vous avez un projet ?</h2>
+          <p>Expliquez votre contexte, vos objectifs et votre budget : nous revenons vers vous avec un plan d'actions chiffré.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Parler à l'équipe</a>
+            <a class="btn btn-outline" href="blog.html">Lire nos articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>© 2025 SkySocial Agency – Services digitaux</div>
+      <nav>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
