@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Mentions légales | SkySocial Agency</title>
+    <meta name="description" content="Mentions légales du site SkySocial Agency : informations sur l’éditeur, l’hébergement et la propriété intellectuelle.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <style>
+        /* Global */
+        :root {
+            --primary: #4a6cf7;
+            --secondary: #ff6b00;
+            --accent: #00d2a0;
+            --dark: #1d2130;
+            --light: #f7f9fc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER (même style que les autres pages) */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s;
+            border-radius: 3px;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 20px rgba(74, 108, 247, 0.35);
+            border: none;
+        }
+
+        /* HERO LEGAL */
+        .legal-hero {
+            padding-top: 140px;
+            padding-bottom: 40px;
+        }
+
+
+        .legal-hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .legal-hero p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* CONTENU LEGAL */
+        .legal-section {
+            padding-bottom: 60px;
+        }
+
+        .legal-card {
+            background-color: var(--white);
+            padding: 30px 26px 36px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .legal-card h2 {
+            font-size: 1.35rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .legal-card h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-card h3 {
+            font-size: 1.05rem;
+            margin-top: 14px;
+            margin-bottom: 4px;
+        }
+
+        .legal-card p,
+        .legal-card li {
+            font-size: 0.98rem;
+        }
+
+        .legal-card ul {
+            margin-left: 18px;
+            margin-bottom: 10px;
+        }
+
+        .legal-card strong {
+            font-weight: 700;
+        }
+
+        .legal-highlight {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background-color: #eef2ff;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER (copié sur services/about) */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 55px 0 28px;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+            margin-bottom: 26px;
+        }
+
+        .footer-brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand-logo .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            max-width: 320px;
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .footer-social a {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.06);
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .footer-social a:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-2px);
+        }
+
+        .footer-title {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul,
+        .footer-contact-list {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 6px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            font-size: 0.93rem;
+            transition: all 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 4px;
+            color: var(--accent);
+        }
+
+        .footer-contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.93rem;
+        }
+
+        .footer-contact-list i {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .footer-contact-list a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.85;
+        }
+
+        .footer-contact-list a:hover {
+            opacity: 1;
+        }
+
+        .footer-cta-btn {
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        .footer-cta-btn i {
+            font-size: 0.9rem;
+        }
+
+        .footer-subtext {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.16);
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .legal-hero h1 {
+                font-size: 2rem;
+            }
+
+            .legal-card {
+                padding: 22px 18px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                SKY&nbsp;<span>SOCIAL AGENCY</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn">Prendre RDV</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Mentions légales</h1>
+            <p>Dernière mise à jour : 25 novembre 2025</p>
+        </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section class="legal-section">
+        <div class="container">
+            <div class="legal-card">
+              <h2>1. Éditeur du site</h2>
+                <p>
+                    Le site <strong>Sky Social Agency</strong> est édité par :
+                </p>
+                <p>
+                    <strong>Sky Social Agency</strong><br>
+                    Activité exercée à titre individuel par <strong>Meryne Ndjeyi</strong><br>
+                    E-mail : <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a><br>
+                    Téléphone : <a href="tel:+33669708046">+33 6 69 70 80 46</a><br>
+              </p>
+                <p class="legal-highlight">
+                    Les informations légales (forme juridique, numéro d’immatriculation, adresse complète, etc.)
+                    sont à compléter en fonction du statut définitif de l’activité.
+                </p>
+
+                <h2>2. Hébergement du site</h2>
+                <p>
+                    Le site est hébergé par :
+                </p>
+                <p>
+                    <strong>Amazon Web Services (AWS)</strong><br>
+                    Site web : <a href="https://aws.amazon.com/fr/" target="_blank" rel="noopener noreferrer">https://aws.amazon.com/fr/</a>
+                </p>
+
+              <h2>3. Propriété intellectuelle</h2>
+                <p>
+                    L’ensemble du contenu du site <strong>Sky Social Agency</strong> (textes, images, graphiques,
+                    logos, mise en page, éléments visuels, etc.) est protégé par le droit de la propriété
+                    intellectuelle.
+                </p>
+                <p>
+                    Toute reproduction, représentation, modification ou exploitation, totale ou partielle,
+                    du contenu du site, sans autorisation écrite préalable, est strictement interdite.
+                </p>
+
+                <h2>4. Liens hypertextes</h2>
+                <p>
+                    Le site peut contenir des liens vers d’autres sites ou ressources externes. Ces liens sont
+                    fournis uniquement pour faciliter la navigation. SkySocial Agency n’exerce aucun contrôle
+                    sur ces sites tiers et ne saurait être tenue responsable de leur contenu.
+                </p>
+
+                <h2>5. Responsabilité</h2>
+                <p>
+                    Les informations présentes sur ce site sont fournies à titre informatif et peuvent être
+                    amenées à évoluer. SkySocial Agency s’efforce de proposer des contenus à jour et de qualité,
+                    mais ne peut garantir l’absence totale d’erreurs.
+                </p>
+                <p>
+                    L’utilisateur est seul responsable de l’utilisation qu’il fait des informations disponibles
+                    sur le site.
+                </p>
+
+                <h2>6. Contact</h2>
+                <p>
+                    Pour toute question concernant le site ou les mentions légales, vous pouvez écrire à :
+                    <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <!-- Colonne 1 : Branding -->
+                <div class="footer-brand">
+                    <div class="footer-brand-logo">
+                        <span class="dot"></span>
+                        <span>Sky Social Agency</span>
+                    </div>
+                    <p>
+                        Création de sites web & accompagnement digital pour indépendants et petites entreprises.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/skysocialagency" target="_blank" aria-label="Instagram SkySocial Agency">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/sky-social-agency" target="_blank" aria-label="LinkedIn SkySocial Agency">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne 2 : Navigation -->
+                <div class="footer-links">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 : Contact & CTA -->
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+33669708046">+33 6 69 70 80 46</a>
+                        </li>
+                    </ul>
+
+                    <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="footer-cta-btn">
+                        <span>Réserver un appel découverte</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <p class="footer-subtext">Réponse sous 24–48h, sans engagement.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sky Social Agency – Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <span>•</span>
+                    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Effet de scroll sur le header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '20px 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>

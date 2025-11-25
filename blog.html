@@ -290,27 +290,38 @@ nav ul li a:hover::after {
 
 /* Bouton "Lire plus" */
 
-.blog-card a.read-more,
-.blog-card-btn {
-    margin-top: auto;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+.blog-card a.read-more {
+    display: inline-block !important;
+    width: auto !important;
+
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    padding: 12px 25px;
+    border-radius: 999px;
+    color: #fff !important;
+    text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--primary);
-    text-decoration: none;
+
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: 0.25s ease;
+	align-self: flex-start;
+
 }
 
-.blog-card a.read-more span,
-.blog-card-btn span {
+.blog-card a.read-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+    opacity: 0.95;
+}
+
+.blog-card a.read-more span {
     font-size: 1.1rem;
 }
 
-.blog-card a.read-more:hover,
-.blog-card-btn:hover {
-    color: var(--secondary);
-}
 
 /* ========== ANIMATIONS (désactivées) ========== */
 
@@ -642,7 +653,7 @@ footer {
     <!-- HERO -->
     <section class="page-hero">
         <div class="container">
-            <h1>Le blog de SkySocial</h1>
+            <h1>Le blog de Sky Social</h1>
             <p>Des articles clairs, modernes et faciles à lire pour comprendre le prix d’un site web,
                 améliorer votre visibilité et booster votre activité en ligne.</p>
         </div>
@@ -785,7 +796,7 @@ footer {
                 <div class="footer-bottom-links">
                     <a href="mentions-legales.html">Mentions légales</a>
                     <span>•</span>
-                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
                 </div>
             </div>
         </div>
