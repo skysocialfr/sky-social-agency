@@ -1098,6 +1098,53 @@
             margin-top: 30px;
         }
     }
+	 /* === Ajout de couleur légère sur les sections blanches === */
+
+/* Fonds services + témoignages + pourquoi SkySocial */
+.services,
+.testimonials,
+.why-skysocial {
+    background:
+        radial-gradient(circle at top left, rgba(74, 108, 247, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.12), transparent 55%),
+        #f7f9ff;
+}
+
+/* Cartes services plus "colorées" mais propres */
+.service-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f5ff 50%, #fff6f0 100%);
+    border: 1px solid rgba(29, 33, 48, 0.04);
+}
+
+/* Cartes "Pourquoi SkySocial" plus visibles */
+.why-card {
+    background: radial-gradient(circle at top left, #ffffff, #f5f7ff 70%);
+    border: 1px solid rgba(29, 33, 48, 0.06);
+}
+
+/* Stats avec un peu plus de peps */
+.stat-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 60%);
+}
+
+/* Témoignages moins gris, plus chaleureux */
+.testimonial-card {
+    background: linear-gradient(135deg, #f7f9ff 0%, #fff6f0 100%);
+}
+
+/* Sous-titres de sections un peu plus contrastés */
+.section-title p {
+    color: #444;
+}
+
+/* Légère couleur derrière la section "Nos réalisations" déjà sympa */
+.portfolio-preview {
+    background:
+        radial-gradient(circle at top left, rgba(0, 210, 160, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(74, 108, 247, 0.10), transparent 55%),
+        #f5f7ff;
+}
+
 </style>
 
 </head>
