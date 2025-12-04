@@ -5,6 +5,16 @@
     <title>À propos – Sky Social Agency</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDDXQ0CRP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FXDDXQ0CRP');
+</script>
+	
     <!-- Police -->
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
 
@@ -935,6 +945,15 @@
     height: auto !important; /* empêche l'étirement */
     border-radius: 15px;     /* option : bord arrondi propre */
 }
+		.social-links a img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.15);
+}
 
     </style>
 </head>
@@ -1102,9 +1121,14 @@
                         et la façon de parler à ton client idéal, pour que chaque page ait un vrai rôle.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i>IG</i></a>
-                        <a href="#" aria-label="LinkedIn"><i>in</i></a>
+                        <a href="https://www.instagram.com/meryne.eis/" aria-label="Instagram" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Logo Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/" aria-label="LinkedIn" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="Logo LinkedIn">
+                        </a>
                     </div>
+
                 </div>
 
                 <div class="team-member fade-in">
@@ -1119,7 +1143,9 @@
                         performance et sécurité, pour que ton site soit solide sur le long terme.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="Portfolio développeur"><i>💻</i></a>
+                        <a href="https://www.linkedin.com/in/giovanni-affogbolo-6a0919124/" aria-label="LinkedIn" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="Logo LinkedIn">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1149,7 +1175,7 @@
     <!-- CTA -->
     <section class="cta">
         <div class="container fade-in">
-            <h2>Prêt·e à poser les bases d’un site pro ?</h2>
+            <h2>Prêt à poser les bases d’un site pro ?</h2>
             <p>
                 On discute de ton projet, de tes objectifs et de la meilleure façon d’utiliser ton futur site
                 pour attirer des clients qui te correspondent vraiment.
@@ -1193,7 +1219,7 @@
                     <ul class="footer-contact-list">
                         <li>
                             <i>✉️</i>
-                            <a href="mailto:hello@skysocial.fr">hello@skysocial.fr</a>
+                            <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
                         </li>
                         <li>
                             <i>📍</i>
@@ -1201,7 +1227,7 @@
                         </li>
                     </ul>
 
-                    <a href="mailto:hello@skysocial.fr" class="footer-cta-btn">
+                    <a href="mailto:skysocialfr@gmail.com" class="footer-cta-btn">
                         <span>Décrire mon projet</span>
                     </a>
 
