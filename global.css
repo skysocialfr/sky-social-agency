@@ -1,0 +1,150 @@
+/* ================================
+   GLOBAL.CSS — Sky Social Agency
+   ================================ */
+
+/* 1) Variables globales */
+:root{
+  --primary:#4a6cf7;
+  --secondary:#ff6b00;
+  --accent:#00d2a0;
+  --dark:#1d2130;
+  --light:#f7f9fc;
+  --radius:18px;
+}
+
+/* 2) Reset léger */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  color:var(--dark);
+  background:#fff;
+  line-height:1.6;
+}
+
+/* 3) Containers */
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+/* 4) Typographie */
+h1,h2,h3{
+  line-height:1.2;
+}
+
+h1{font-size:2.8rem}
+h2{font-size:2.2rem}
+h3{font-size:1.4rem}
+
+p{margin:0}
+
+/* 5) Liens & boutons */
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.btn,
+.nav-btn{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:var(--radius);
+  background:var(--primary);
+  color:#fff;
+  font-weight:600;
+  transition:.25s;
+}
+
+.btn:hover,
+.nav-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* 6) Header + Navigation */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.header-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:72px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:28px;
+  padding:0;
+  margin:0;
+}
+
+/* 7) Footer */
+footer{
+  background:var(--light);
+  padding:60px 0 30px;
+}
+
+/* 8) Sections */
+section{
+  padding:90px 0;
+}
+
+/* 9) Responsive — TABLET */
+@media (max-width: 900px){
+  .container{padding:0 16px}
+  h1{font-size:2.2rem}
+  h2{font-size:1.9rem}
+  section{padding:70px 0}
+}
+
+/* 10) Responsive — MOBILE */
+@media (max-width: 768px){
+  h1{font-size:2rem}
+  h2{font-size:1.6rem}
+  section{padding:60px 0}
+}
+/* 11) Navigation mobile */
+.nav-toggle{display:none;border:0;background:transparent;cursor:pointer;width:44px;height:44px;border-radius:12px}
+.nav-toggle span{display:block;height:2px;margin:7px 8px;background:var(--dark);border-radius:999px;transition:.25s}
+
+@media (max-width: 900px){
+  .container{padding:0 16px}
+}
+
+@media (max-width: 768px){
+  header{position:sticky; top:0} /* plus stable que fixed + hacks */
+  .header-container{padding:12px 0}
+  .nav-toggle{display:inline-flex;flex-direction:column;justify-content:center}
+  
+  nav{position:relative}
+  nav ul{
+    position:absolute; right:0; top:52px;
+    width:min(320px, 92vw);
+    background:rgba(255,255,255,.98);
+    border:1px solid rgba(17,24,39,.08);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+    border-radius:18px;
+    padding:12px;
+    display:none; /* caché par défaut */
+    flex-direction:column;
+    gap:8px;
+  }
+  nav ul.is-open{display:flex}
+  nav ul li a{padding:10px 10px; border-radius:12px}
+  .nav-btn{width:100%; text-align:center}
+}
+
