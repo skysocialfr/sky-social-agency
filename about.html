@@ -119,6 +119,14 @@
             text-decoration: none;
             color: var(--primary);
         }
+		
+.logo-img {
+    width: 55px;     /* Taille idéale = ni trop grand ni trop petit */
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%; /* Garde le look arrondi de ton logo rond */
+    margin-right: 12px; /* espace entre image et texte */
+}
 
         .logo span {
             background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -171,23 +179,22 @@ font-weight: 700;
             font-weight: 600;
             text-decoration: none;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
-            box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
-            transition: 0.3s;
-        }
+            box-shadow: 0 4px 15px rgba(162, 58, 255, 0.35);  /* au lieu de 74,108,247 */
+            }
 
         .nav-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(74, 108, 247, 0.4);
-        }
+            box-shadow: 0 8px 20px rgba(162, 58, 255, 0.45);
+            }
 
         /* HERO À PROPOS */
         .page-hero {
-            padding: 140px 0 60px;
-            background:
-                radial-gradient(circle at top left, rgba(74,108,247,0.14), transparent 60%),
-                radial-gradient(circle at bottom right, rgba(255,107,0,0.14), transparent 60%),
-                var(--light);
-        }
+    padding: 140px 0 60px;
+    background:
+        radial-gradient(circle at top left, rgba(162, 58, 255, 0.18), transparent 60%), /* violet */
+        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.16), transparent 60%), /* orange */
+        var(--light);
+}
 
         .page-hero-content {
             max-width: 850px;
@@ -217,7 +224,7 @@ font-weight: 700;
             font-weight: 600;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            background: rgba(74, 108, 247, 0.08);
+            background: rgba(162, 58, 255, 0.10);
             color: var(--primary);
             margin-bottom: 14px;
         }
@@ -241,6 +248,15 @@ font-weight: 700;
         .section-title p {
             color: #4b5563;
         }
+		
+		.section-separator {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(90deg, rgba(162,58,255,0.12), rgba(255,107,0,0.12));
+    border-radius: 18px;
+    margin: 50px 0 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
         .about-grid {
             display: grid;
@@ -269,8 +285,8 @@ font-weight: 700;
         .about-badge {
             padding: 6px 10px;
             border-radius: 999px;
-            background: rgba(74,108,247,0.06);
-            border: 1px solid rgba(74,108,247,0.18);
+            background: rgba(162, 58, 255, 0.06);
+            border: 1px solid rgba(162, 58, 255, 0.18);
             font-size: 0.85rem;
         }
 
@@ -328,15 +344,15 @@ font-weight: 700;
     right: 0;
     height: 3px;
     border-radius: 999px;
-    background: linear-gradient(90deg, rgba(74,108,247,0.65), rgba(255,107,0,0.65));
+    background: linear-gradient(90deg, rgba(162, 58, 255, 0.55), rgba(255, 107, 0, 0.55));
     opacity: 0.9;
 }
 
 /* Blocs de texte sans boîte */
 .method-card {
     padding-top: 10px;
-    background: radial-gradient(circle at top left, rgba(74,108,247,0.08), transparent 60%),
-                radial-gradient(circle at bottom right, rgba(255,107,0,0.08), transparent 60%);
+      background: radial-gradient(circle at top left, rgba(162,58,255,0.10), transparent 60%),
+                radial-gradient(circle at bottom right, rgba(255,107,0,0.10), transparent 60%);
     border-radius: 14px;
     padding: 20px 18px 12px;
     position: relative;
@@ -406,7 +422,7 @@ font-weight: 700;
         bottom: 0;
         width: 3px;
         height: auto;
-        background: linear-gradient(180deg, rgba(74,108,247,0.65), rgba(255,107,0,0.65));
+        background: linear-gradient(90deg, rgba(162, 58, 255, 0.55), rgba(255, 107, 0, 0.55));
     }
 
     .method-card {
@@ -460,405 +476,674 @@ font-weight: 700;
             color: #4b5563;
         }
 
-        /* ÉQUIPE */
-        .team-section {
-            padding: 40px 0 40px;
-        }
+   /* ====== ÉQUIPE (option B gradient + réseaux) ====== */
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
-        }
+.team-section {
+    padding: 40px 0 40px;
+}
 
-       /* --- TEAM CARDS ÉLÉGANTES --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .team-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 20px;
-    border: 1px solid rgba(74, 108, 247, 0.15); /* Légère bordure bleutée */
-    box-shadow: 0 10px 28px rgba(74, 108, 247, 0.08); /* Ombre douce */
+.team-card {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 58, 255, 0.08),
+        rgba(255, 107, 0, 0.10)
+    );
+    border-radius: 26px;            /* plus premium */
+    padding: 28px 30px;             /* plus d’espace = plus luxe */
+    border: 1px solid rgba(162, 58, 255, 0.25);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(6px);
 }
-
-        .team-card:hover {
+		
+.team-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 32px rgba(74, 108, 247, 0.15);
+    box-shadow: 0 16px 34px rgba(162, 58, 255, 0.22);
 }
 
-        .team-header {
+.team-header {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
 }
 
-        .team-avatar {
-    width: 70px;
-    height: 70px;
+.team-avatar {
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: radial-gradient(circle at 30% 0,
+        rgba(255,255,255,0.9),
+        rgba(162,58,255,0.65)
+    );
+    padding: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    flex-shrink: 0;
 }
 
-        .team-avatar img {
+.team-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
-        /* Nom */
-        .team-card h3 {
+.team-card h3 {
     margin-bottom: 4px;
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     font-weight: 700;
 }
 
-/* Rôle */
 .team-role {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #6b7280;
 }
 
-/* Badge */
 .team-badge {
     display: inline-flex;
-    padding: 6px 12px;
+    padding: 6px 13px;
     border-radius: 999px;
-    background: linear-gradient(90deg, rgba(74,108,247,0.10), rgba(255,107,0,0.10));
-    border: 1px solid rgba(74,108,247,0.25);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(162, 58, 255, 0.35);
     font-size: 0.8rem;
     margin-top: 6px;
     color: #374151;
 }
 
-/* Texte */
 .team-card p {
     margin-top: 10px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #4b5563;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
-       /* CHIFFRES & CTA – BANDEAU */
-
-.metrics-section {
-    padding: 30px 0 60px;
-}
-
-/* Bandeau principal avec les 3 chiffres */
-.metrics-grid {
+.team-social {
+    margin-top: 12px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 26px;
-    padding: 14px 26px;
-    border-radius: 999px;
-    background: #ffffff;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    gap: 10px;
 }
 
-/* Chaque bloc chiffre */
-.metric-card {
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    position: relative;
-    min-width: 170px;
-}
-
-/* Traits de séparation entre les chiffres (sauf le premier) */
-.metric-card + .metric-card {
-    padding-left: 24px;
-    border-left: 1px solid rgba(148, 163, 184, 0.5);
-}
-
-.metric-number {
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 800;
-}
-
-.metric-label {
-    font-size: 0.9rem;
+.team-social span {
+    font-size: 0.86rem;
     color: #6b7280;
+    margin-right: 4px;
 }
 
-/* CTA en dessous – tu peux garder ton code actuel, je le remets pour que ce soit clair */
-.cta-panel {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: 20px;
-    padding: 22px 20px;
-    color: var(--white);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.cta-panel h2 {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-}
-
-.cta-panel p {
-    font-size: 0.95rem;
-    max-width: 500px;
-}
-
-.cta-panel a {
+.team-social a {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 18px;
-    border-radius: 999px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.9);
     color: var(--primary);
-    font-weight: 600;
-    font-size: 0.95rem;
     text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid rgba(162, 58, 255, 0.25);
+    transition: 0.2s ease;
 }
 
-.cta-panel a span {
-    margin-left: 6px;
+.team-social a:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(162, 58, 255, 0.45);
 }
 
-/* Mobile : le bandeau se met en colonne */
-@media (max-width: 700px) {
-    .metrics-grid {
-        border-radius: 22px;
-        padding: 18px 18px;
+/* Responsive équipe */
+@media (max-width: 768px) {
+    .team-card {
+        padding: 18px 16px;
     }
-
-    .metric-card + .metric-card {
-        padding-left: 0;
-        border-left: none;
-        padding-top: 14px;
-        border-top: 1px solid rgba(148, 163, 184, 0.5);
+    .team-avatar {
+        width: 76px;
+        height: 76px;
     }
 }
 
-        /* FOOTER (même structure que services / blog) */
-        footer {
-            background:
-                radial-gradient(circle at top left, rgba(74,108,247,0.20), transparent 50%),
-                radial-gradient(circle at top right, rgba(255,107,0,0.18), transparent 50%),
-                var(--dark);
-            color: var(--white);
-            padding: 70px 0 30px;
-            margin-top: 40px;
+/* ====== RÉSULTATS ====== */
+
+.results-section {
+    padding: 10px 0 40px;
+}
+
+/* Chiffres */
+
+.numbers-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.number-pill {
+    flex: 1 1 200px;
+    min-width: 200px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(162, 58, 255, 0.18);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.number-pill-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.number-pill-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 2px;
+    color: #111827;
+}
+
+.number-pill-text {
+    font-size: 0.85rem;
+    margin-top: 6px;
+    color: #4b5563;
+}
+
+/* Logos / “marques” */
+
+.brands-strip {
+    margin-bottom: 24px;
+}
+
+.brands-label {
+    display: block;
+    font-size: 0.86rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.brands-marquee {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.brands-marquee::before,
+.brands-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    pointer-events: none;
+}
+
+.brands-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #faf9ff, transparent);
+}
+
+.brands-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #faf9ff, transparent);
+}
+
+.brand-pill {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(17,24,39,0.08);
+    background: #ffffff;
+    font-size: 0.8rem;
+    color: #4b5563;
+    animation: marqueeScroll 18s linear infinite;
+}
+
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Carrousels images & avis (2 par 2) */
+
+.mockup-testimonial-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.mockup-carousel,
+.testimonial-carousel {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+	height: 100%;
+}
+
+/* Slides images – version fade */
+.mockup-slide {
+    position: absolute;
+    inset: 0;                /* top:0; right:0; bottom:0; left:0 */
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;    /* pour ne pas cliquer sur les images cachées */
+}
+
+/* Slide visible */
+.mockup-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Si un jour tu fais aussi un carrousel pour les avis, tu pourras réutiliser ça */
+.testimonial-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+}
+
+.testimonial-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Images projets */
+.mockup-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Boutons flèches */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
+    z-index: 5;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.carousel-btn:hover { background: #f3e9ff; }
+
+		/* Taille uniforme du carrousel */
+.mockup-carousel {
+    width: 100%;
+    max-width: 600px;
+    height: 470px; /* Hauteur uniforme */
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* Chaque slide occupe toute la zone */
+.mockup-slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* Toutes les images ont exactement la même taille */
+.mockup-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Coupe proprement pour garder un rendu luxueux */
+    object-position: center;
+    border-radius: 18px;
+}
+
+/* Responsive – tablette */
+@media (max-width: 768px) {
+    .mockup-carousel {
+        height: 300px;
+    }
+}
+
+/* Responsive – téléphone */
+@media (max-width: 480px) {
+    .mockup-carousel {
+        height: 230px;   /* Plus petit pour éviter la grosse image */
+    }
+}
+
+/* Slide de témoignages = 2 cartes */
+.testimonial-slide {
+    display: flex;
+    gap: 16px;
+}
+
+.testimonial-slide .testimonial-card {
+    flex: 1;
+}
+
+		.testimonials-box {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.testimonial-card {
+    background: linear-gradient(90deg, #fdf2fb, #f3e5ff);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: 0 8px 20px rgba(162,58,255,0.10);
+    border: 1px solid rgba(162,58,255,0.18);
+}
+
+.testimonial-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.55;
+}
+
+.testimonial-author {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .mockup-testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    .testimonial-slide {
+        flex-direction: column;
+    }
+}
+
+        /* CTA FINALE */
+
+        .cta-section {
+            padding: 10px 0 60px;
         }
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.6fr);
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        .footer-brand-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 6px 14px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.08);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-size: 0.8rem;
-            margin-bottom: 12px;
-        }
-
-        .footer-brand-logo .dot {
-            width: 9px;
-            height: 9px;
-            border-radius: 999px;
-            background: var(--accent);
-        }
-
-        .footer-brand p {
-            opacity: 0.85;
-            max-width: 360px;
-            margin-bottom: 18px;
-            font-size: 0.95rem;
-        }
-
-        .footer-social {
+        .cta-panel {
             display: flex;
-            gap: 12px;
-        }
-
-        .footer-social a {
-            width: 36px;
-            height: 36px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.85;
-            transition: 0.25s;
-        }
-
-        .footer-social a:hover {
-            opacity: 1;
-            transform: translateY(-3px);
-            border-color: var(--accent);
-        }
-
-        .footer-title {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-        }
-
-        .footer-links ul,
-        .footer-contact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links ul li + li,
-        .footer-contact-list li + li {
-            margin-top: 8px;
-        }
-
-        .footer-links a,
-        .footer-contact-list a {
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.82;
-            font-size: 0.95rem;
-            transition: 0.25s;
-        }
-
-        .footer-links a:hover,
-        .footer-contact-list a:hover {
-            opacity: 1;
-            color: var(--accent);
-            padding-left: 4px;
-        }
-
-        .footer-contact-list li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-contact-list i {
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-
-        .footer-cta-btn {
-            margin-top: 18px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border: none;
-            cursor: pointer;
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.95rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .footer-cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
-        }
-
-        .footer-subtext {
-            margin-top: 8px;
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.16);
-            margin-top: 30px;
-            padding-top: 18px;
-            display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
-
-        .footer-bottom-links {
-            display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .footer-bottom-links a {
+            justify-content: space-between;
+            gap: 16px;
+            padding: 22px 24px;
+            border-radius: 24px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             color: var(--white);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+        }
+
+        .cta-panel h2 {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .cta-panel p {
+            max-width: 520px;
+            font-size: 0.95rem;
+        }
+
+        .cta-panel .btn-primary {
+            background: #ffffff;
+            color: var(--primary);
+            border-radius: 999px;
+            padding: 10px 20px;
+            font-weight: 600;
             text-decoration: none;
-            opacity: 0.85;
-            transition: opacity 0.2s;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
 
-        .footer-bottom-links a:hover {
-            opacity: 1;
-        }
-
-        /* FADE-IN */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .cta-panel .btn-primary:hover {
+            background: #f3e9ff;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .header-container {
-                flex-direction: column;
-                gap: 10px;
-            }
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .page-hero {
-                padding-top: 130px;
-            }
-
-            .page-hero h1 {
-                font-size: 2.1rem;
-            }
-
-            .about-grid {
+        @media (max-width: 960px) {
+            .team-impact-grid {
                 grid-template-columns: 1fr;
             }
 
-            .footer-grid {
+            .mockup-testimonial-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .mockup-stack {
+                min-height: 190px;
+            }
+
+            .cta-panel {
+                align-items: flex-start;
             }
         }
+
+        @media (max-width: 640px) {
+            .numbers-row {
+                flex-direction: column;
+            }
+
+            .number-pill {
+                border-radius: 16px;
+            }
+        }
+
+       /* FOOTER CLAIR PREMIUM — VERSION FINALE OPTION A */
+.footer-light {
+    background:
+        radial-gradient(circle at top left, rgba(162, 58, 255, 0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.16), transparent 60%),
+        var(--light);
+    padding: 50px 0 25px;
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+    color: var(--dark);
+}
+
+.footer-light-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-light-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(162, 58, 255, 0.12);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.footer-light p {
+    max-width: 360px;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+/* Réseaux sociaux */
+.footer-light-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-light-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(162, 58, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+.footer-light-socials a:hover {
+    transform: translateY(-3px);
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* Colonnes liens */
+.footer-light-links h4,
+.footer-light-contact h4 {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+.footer-light-links a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    opacity: 0.75;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.footer-light-links a:hover {
+    opacity: 1;
+    color: var(--primary);
+    padding-left: 4px;
+}
+
+/* Contact */
+.footer-light-contact p {
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.footer-light-btn {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 18px rgba(162, 58, 255, 0.25);
+    transition: 0.25s;
+}
+
+.footer-light-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(162, 58, 255, 0.35);
+}
+
+
+/* Bas du footer */
+.footer-light-bottom {
+    margin-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 15px 0;
+}
+
+.footer-light-bottom-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.footer-light-bottom-inner p{
+    margin: 0;
+}
+
+/* Bloc Mentions légales */
+.footer-light-legal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.footer-light-legal a {
+    color: var(--dark);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.25s ease;
+}
+
+.footer-light-legal a:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-light-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-light p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-light-socials {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -867,8 +1152,9 @@ font-weight: 700;
     <header>
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <span>SKY SOCIAL AGENCY</span>
-            </a>
+    <img src="logo.png" alt="Sky Social Agency" class="logo-img">
+    <span>SKY SOCIAL AGENCY</span>
+</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -967,6 +1253,7 @@ font-weight: 700;
                         Webdesign, développement, contenus, identité visuelle… chaque élément est conçu
                         pour être cohérent, lisible et orienté conversion.
                     </p>
+
                 </div>
 
                 <div class="method-card fade-in">
@@ -1023,95 +1310,243 @@ font-weight: 700;
         </div>
     </section>
 
-    <!-- ÉQUIPE -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>L’équipe derrière Sky Social Agency</h2>
-                <p>
-                    Une équipe à taille humaine, complémentaire et impliquée, qui suit vos projets de A à Z.
-                </p>
-            </div>
-
-            <div class="team-grid">
-                <!-- Meryne -->
-                <article class="team-card fade-in">
-    <div class="team-header">
-        <div class="team-avatar">
-            <img src="meryne.png" alt="Meryne Ndjeyi">
+<!-- ÉQUIPE -->
+<section class="team-section" id="equipe">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>L’équipe derrière Sky Social Agency</h2>
+            <p>
+                Une équipe à taille humaine, complémentaire et impliquée, qui suit vos projets de A à Z.
+            </p>
         </div>
-        <div>
-            <h3>Meryne Ndjeyi</h3>
-            <p class="team-role">Fondatrice & Directrice</p>
-            <span class="team-badge">Stratégie digitale & Webdesign</span>
+
+        <div class="team-grid">
+            <!-- Meryne -->
+            <article class="team-card fade-in">
+                <div class="team-header">
+                    <div class="team-avatar">
+                        <img src="meryne.png" alt="Meryne Ndjeyi">
+                    </div>
+                    <div>
+                        <h3>Meryne Ndjeyi</h3>
+                        <p class="team-role">Fondatrice & Directrice</p>
+                        <span class="team-badge">Stratégie digitale & Webdesign</span>
+                    </div>
+                </div>
+                <p>
+                    Meryne accompagne chaque client dans la construction d’une présence digitale claire,
+                    professionnelle et alignée avec son positionnement.
+                    Elle conçoit des expériences web esthétiques, structurées et orientées conversion.
+                </p>
+
+                <div class="team-social">
+                    <span>Réseaux :</span>
+                    <a href="https://www.instagram.com/skysocial_agency/"
+                       target="_blank" rel="noopener" aria-label="Instagram Sky Social Agency">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr"
+                       target="_blank" rel="noopener" aria-label="LinkedIn Meryne Ndjeyi">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sky.socialfr"
+                       target="_blank" rel="noopener" aria-label="TikTok Sky Social Agency">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Giovanni -->
+            <article class="team-card fade-in">
+                <div class="team-header">
+                    <div class="team-avatar">
+                        <img src="giovanni.png" alt="Giovanni Affogbolo">
+                    </div>
+                    <div>
+                        <h3>Giovanni Affogbolo</h3>
+                        <p class="team-role">Développeur web partenaire</p>
+                        <span class="team-badge">Développement WordPress & sur-mesure</span>
+                    </div>
+                </div>
+                <p>
+                    Giovanni transforme les maquettes en sites rapides, sécurisés et techniquement solides.
+                    Il intervient sur le développement, les optimisations techniques et les fonctionnalités
+                    avancées dont votre activité a besoin.
+                </p>
+
+                <div class="team-social">
+                    <span>Réseaux :</span>
+                    <a href="https://www.linkedin.com/in/giovanni-affogbolo-6a0919124/?originalSubdomain=fr"
+                       target="_blank" rel="noopener" aria-label="LinkedIn Giovanni Affogbolo">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/skysocial_agency/"
+                       target="_blank" rel="noopener" aria-label="Instagram Sky Social Agency">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Donia -->
+            <article class="team-card fade-in">
+                <div class="team-header">
+                    <div class="team-avatar">
+                        <img src="donia.png" alt="Donia Chaïr">
+                    </div>
+                    <div>
+                        <h3>Donia Chaïr</h3>
+                        <p class="team-role">Community Manager</p>
+                        <span class="team-badge">Contenus & réseaux sociaux</span>
+                    </div>
+                </div>
+                <p>
+                    Donia donne vie à votre marque sur les réseaux sociaux : contenus, stories, engagement
+                    et cohérence entre votre image en ligne et votre réalité.
+                    Elle s’assure que votre message arrive aux bonnes personnes, au bon moment.
+                </p>
+
+                <div class="team-social">
+                    <span>Réseaux :</span>
+                    <a href="https://www.linkedin.com/in/dounia-cha%C3%AFr-21b3a31a0/?originalSubdomain=fr"
+                       target="_blank" rel="noopener" aria-label="LinkedIn Donia Chaïr">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/skysocial_agency/"
+                       target="_blank" rel="noopener" aria-label="Instagram Sky Social Agency">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
         </div>
     </div>
-                    <p>
-                        Meryne accompagne chaque client dans la construction d’une présence digitale claire,
-                        professionnelle et alignée avec son positionnement.
-                        Elle conçoit des expériences web esthétiques, structurées et orientées conversion.
-                    </p>
-                </article>
+	<div class="section-separator"></div>
+</section>
+	
 
-                <!-- Giovanni -->
-                <article class="team-card fade-in">
-                       <div class="team-header">
-                           <div class="team-avatar">
-                               <img src="giovanni.png" alt="Meryne Ndjeyi">
-                           </div>
-                           <div>
-                               <h3>Meryne Ndjeyi</h3>
-                                  <p class="team-role">Fondatrice & Directrice</p>
-                                    <span class="team-badge">Stratégie digitale & Webdesign</span>
-                          </div>
-                          </div>
-                    <p>
-                        Giovanni transforme les maquettes en sites rapides, sécurisés et techniquement solides.
-                        Il intervient sur le développement, les optimisations techniques et les fonctionnalités avancées
-                        dont votre activité a besoin.
-                    </p>
-                </article>
+	<!-- RÉSULTATS -->
+<section class="results-section" id="resultats">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>Les résultats derrière Sky Social Agency</h2>
+            <p>
+                Des chiffres, des projets concrets et des retours clients qui montrent l’impact
+                d’une présence digitale travaillée.
+            </p>
+        </div>
 
-                <!-- Donia -->
-                <article class="team-card fade-in">
-                       <div class="team-header">
-                           <div class="team-avatar">
-                               <img src="donia.png" alt="Meryne Ndjeyi">
-                           </div>
-                           <div>
-                               <h3>Meryne Ndjeyi</h3>
-                                  <p class="team-role">Fondatrice & Directrice</p>
-                                    <span class="team-badge">Stratégie digitale & Webdesign</span>
-                          </div>
-                          </div>
-                    <p>
-                        Donia donne vie à votre marque sur les réseaux sociaux : contenus, stories, engagement
-                        et cohérence entre votre image en ligne et votre réalité.
-                        Elle s’assure que votre message arrive aux bonnes personnes, au bon moment.
-                    </p>
-                </article>
+        <!-- Chiffres -->
+        <div class="numbers-row fade-in">
+            <div class="number-pill">
+                <div class="number-pill-value">+20</div>
+                <div class="number-pill-title">projets digitaux pilotés</div>
+                <p class="number-pill-text">
+                    Sites web, stratégies social media, refontes et audits complets.
+                </p>
+            </div>
+            <div class="number-pill">
+                <div class="number-pill-value">+10</div>
+                <div class="number-pill-title">sites web créés ou optimisés</div>
+                <p class="number-pill-text">
+                    Des sites pensés pour convertir : clairs, rapides et alignés avec votre positionnement.
+                </p>
+            </div>
+            <div class="number-pill">
+                <div class="number-pill-value">+300</div>
+                <div class="number-pill-title">contenus social media produits</div>
+                <p class="number-pill-text">
+                    Posts, stories, scripts de vidéos et carrousels pensés pour attirer les bons clients.
+                </p>
             </div>
         </div>
-    </section>
 
-    <!-- CHIFFRES & CTA -->
-    <section class="metrics-section">
-        <div class="container">
-            <div class="metrics-grid fade-in">
-                <div class="metric-card">
-                    <div class="metric-number">+20</div>
-                    <div class="metric-label">projets digitaux accompagnés</div>
+        <!-- “Logos” de marques (fictifs pour l’instant) -->
+        <div class="brands-strip fade-in">
+            <span class="brands-label">Ils nous font confiance (ou très bientôt 😉)&nbsp;:</span>
+            <div class="brands-marquee">
+                <span class="brand-pill">Cabinet de coaching</span>
+                <span class="brand-pill">Studio bien-être</span>
+                <span class="brand-pill">Thérapeute indépendante</span>
+                <span class="brand-pill">Agence B2B</span>
+                <span class="brand-pill">Coach business</span>
+                <span class="brand-pill">Cabinet de conseil</span>
+            </div>
+        </div>
+
+        <!-- Mockups + avis -->
+        <div class="mockup-testimonial-grid fade-in">
+
+            <!-- CARROUSEL IMAGES / PROJETS -->
+            <div class="mockup-carousel" data-carousel="mockups">
+                <button class="carousel-btn prev" data-carousel-prev="mockups">‹</button>
+
+                <div class="carousel-track">
+                    <div class="mockup-slide is-active">
+                        <img src="stratmedia.jpeg"
+                             alt="Exemple de site web réalisé par Sky Social Agency">
+                    </div>
+                    <div class="mockup-slide">
+                        <img src="chagptim.png"
+                             alt="Exemple d’interface ou de dashboard digital">
+                    </div>
+                    <div class="mockup-slide">
+                        <img src="projet-3.jpeg"
+                             alt="Autre projet client réalisé par l’agence">
+                    </div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-number">+10</div>
-                    <div class="metric-label">sites web créés ou optimisés</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-number">+300</div>
-                    <div class="metric-label">contenus social media produits</div>
-                </div>
+
+                <button class="carousel-btn next" data-carousel-next="mockups">›</button>
             </div>
 
+            <!-- AVIS CLIENTS - VERSION ORIGINALE RESTAURÉE -->
+<div class="testimonials-box">
+    
+    <!-- Avis 1 -->
+    <article class="testimonial-card fade-in">
+        <div class="testimonial-tag">Avis client</div>
+        <p class="testimonial-text">
+            « Notre nouveau site et la stratégie réseaux sociaux mise en place
+            par Sky Social Agency ont doublé nos demandes de rendez-vous en
+            quelques mois. »
+        </p>
+        <p class="testimonial-author">
+            ⭐⭐⭐⭐⭐ &nbsp; <strong>Camille R.</strong> – Fondatrice d’un cabinet de services
+        </p>
+    </article>
+
+    <!-- Avis 2 -->
+    <article class="testimonial-card fade-in">
+        <div class="testimonial-tag">Avis Google</div>
+        <p class="testimonial-text">
+            « Équipe très professionnelle, à l’écoute et force de proposition.
+            Le site est fluide, moderne et nos clients nous font régulièrement
+            des retours positifs. »
+        </p>
+        <p class="testimonial-author">
+            ⭐⭐⭐⭐⭐ &nbsp; <strong>Omar B.</strong> – Dirigeant d’une PME
+        </p>
+    </article>
+
+    <!-- Avis 3 -->
+    <article class="testimonial-card fade-in">
+        <div class="testimonial-tag">Avis client</div>
+        <p class="testimonial-text">
+            « Grâce à la refonte de notre présence en ligne, nous avons enfin une
+            image en phase avec la qualité de nos services. »
+        </p>
+        <p class="testimonial-author">
+            ⭐⭐⭐⭐⭐ &nbsp; <strong>Julie M.</strong> – Thérapeute indépendante
+        </p>
+    </article>
+
+</div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA FINALE -->
+    <section class="cta-section">
+        <div class="container">
             <div class="cta-panel fade-in">
                 <div>
                     <h2>Prêt·e à construire une présence digitale qui convertit&nbsp;?</h2>
@@ -1120,110 +1555,136 @@ font-weight: 700;
                         adapté à vos objectifs et à votre niveau d’ambition.
                     </p>
                 </div>
-                <a href="contact.html">
-                    Discuter de mon projet <span>→</span>
+                <a href="contact.html" class="btn-primary">
+                    Discuter de mon projet&nbsp; →
                 </a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Colonne 1 : Branding -->
-                <div class="footer-brand">
-                    <div class="footer-brand-logo">
-                        <span class="dot"></span>
-                        <span>Sky Social Agency</span>
-                    </div>
-                    <p>
-                        Création de sites web & accompagnement digital pour entreprises ambitieuses qui veulent une présence en ligne claire, professionnelle et rentable.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/skysocialagency" target="_blank" aria-label="Instagram SkySocial Agency">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/sky-social-agency" target="_blank" aria-label="LinkedIn SkySocial Agency">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
+   <footer class="footer-light">
+    <div class="container footer-light-grid">
+        
+        <div class="footer-light-brand">
+            <div class="footer-light-badge">Sky Social Agency</div>
+            <p>
+                Création de sites web & accompagnement digital pour entreprises
+                ambitieuses qui veulent une présence en ligne claire,
+                professionnelle et rentable.
+            </p>
 
-                <!-- Colonne 2 : Navigation -->
-                <div class="footer-links">
-                    <h3 class="footer-title">Navigation</h3>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Colonne 3 : Contact & CTA -->
-                <div class="footer-contact">
-                    <h3 class="footer-title">Contact</h3>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+33669708046">+33 6 69 70 80 46</a>
-                        </li>
-                    </ul>
-
-                    <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="footer-cta-btn" target="_blank">
-                        <span>Réserver un appel découverte</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <p class="footer-subtext">Réponse sous 24–48h, sans engagement.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 Sky Social Agency – Tous droits réservés.</p>
-                <div class="footer-bottom-links">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <span>•</span>
-                    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-                </div>
+            <div class="footer-light-socials">
+                <a href="https://www.instagram.com/skysocial_agency/" target="_blank">IG</a>
+                <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198" target="_blank">IN</a>
+                <a href="https://www.tiktok.com/@sky.socialfr" target="_blank">TT</a>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-light-links">
+            <h4>Navigation</h4>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-light-contact">
+            <h4>Contact</h4>
+            <p>📩 skysocialfr@gmail.com</p>
+            <p>📞 +33 6 69 70 80 46</p>
+            <a class="footer-light-btn" href="contact.html">
+                Réserver un appel →
+            </a>
+        </div>
+
+    </div>
+
+   <div class="footer-light-bottom">
+        <div class="footer-light-bottom-inner">
+            <p>© 2025 Sky Social Agency — Tous droits réservés.</p>
+
+            <div class="footer-light-legal">
+                <a href="mentions-legales.html">Mentions légales</a>
+                <span>•</span>
+                <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+            </div>
 
     <!-- SCRIPT ANIMATIONS & HEADER -->
     <script>
-        // Fade-in
-        document.addEventListener('DOMContentLoaded', function () {
-            const observed = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
+    document.addEventListener('DOMContentLoaded', function () {
+        /* =========================
+           1. Effet fade-in au scroll
+           ========================= */
+        const observed = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
 
-            observed.forEach(el => observer.observe(el));
-        });
+        observed.forEach(el => observer.observe(el));
 
-        // Effet de scroll sur le header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 80) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '18px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
+        /* =========================
+           2. Carrousels (mockups & avis)
+           ========================= */
+        function initCarousel(groupName) {
+            const container = document.querySelector('[data-carousel="' + groupName + '"]');
+            if (!container) return;
+
+            const track = container.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const prevBtn = container.querySelector('[data-carousel-prev="' + groupName + '"]');
+            const nextBtn = container.querySelector('[data-carousel-next="' + groupName + '"]');
+
+            let currentIndex = slides.findIndex(slide => slide.classList.contains('is-active'));
+            if (currentIndex === -1) currentIndex = 0;
+            slides[currentIndex].classList.add('is-active');
+
+            function showSlide(index) {
+                slides[currentIndex].classList.remove('is-active');
+                currentIndex = (index + slides.length) % slides.length;
+                slides[currentIndex].classList.add('is-active');
             }
-        });
-    </script>
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    showSlide(currentIndex - 1);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    showSlide(currentIndex + 1);
+                });
+            }
+        }
+
+        // On initialise les 2 carrousels définis dans le HTML
+        initCarousel('mockups');
+        initCarousel('testimonials');
+    });
+
+    /* =========================
+       3. Effet de scroll sur le header
+       ========================= */
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (!header) return;
+
+        if (window.scrollY > 80) {
+            header.style.padding = '10px 0';
+            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.padding = '18px 0';
+            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
+        }
+    });
+</script>
 
 </body>
 </html>

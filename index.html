@@ -1,1543 +1,816 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- === BALISES SEO SKYSOCIAL - OPTIMISÉES === -->
-    <title>SkySocial – Création de Site Web & Gestion des Réseaux Sociaux pour Indépendants et TPE</title>
-    <meta name="description" content="SkySocial accompagne les indépendants, thérapeutes et petites entreprises dans la création de sites web professionnels et la gestion stratégique de leurs réseaux sociaux.">
-    <meta name="keywords" content="création site web, création site vitrine, gestion réseaux sociaux, community manager, agence digitale, web design, stratégie digitale, indépendants, TPE, thérapeutes">
-    <meta name="robots" content="index, follow">
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Social Agency | Création de sites web & stratégie digitale</title>
+  <meta name="description" content="Sky Social Agency accompagne les entreprises ambitieuses : création de sites web premium, stratégie digitale, social media & branding. Sur-mesure, orienté résultats." />
+  <link rel="canonical" href="index.html" />
+  <meta name="robots" content="index,follow" />
 
-    <!-- Balises Open Graph -->
-    <meta property="og:title" content="SkySocial – Création de Site Web & Gestion des Réseaux Sociaux pour Indépendants et TPE">
-    <meta property="og:description" content="Site web + Réseaux sociaux : SkySocial crée une présence digitale professionnelle et pensée pour convertir vos visiteurs en clients.">
-    <meta property="og:image" content="https://www.skysocial.fr/stratmedia.jpeg">
-    <meta property="og:url" content="https://www.skysocial.fr/">
-    <meta property="og:type" content="website">
-
-    <!-- Balise Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SkySocial – Création de Site Web & Gestion des Réseaux Sociaux">
-    <meta name="twitter:description" content="Votre agence digitale tout-en-un pour développer votre business en ligne.">
-    <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg">
-    <!-- === FIN DES BALISES SEO === -->
-
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDDXQ0CRP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FXDDXQ0CRP');
-</script>
-	
-        <!-- Données structurées Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SkySocial Agency",
-      "url": "https://www.skysocial.fr",
-      "logo": "https://www.skysocial.fr/stratmedia.jpeg",
-      "description": "Agence digitale spécialisée en création de sites web et gestion des réseaux sociaux pour indépendants, thérapeutes et petites entreprises.",
-      "sameAs": [
-        "https://www.instagram.com/skysocialagency",
-        "https://www.linkedin.com/company/sky-social-agency"
-      ]
-    }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
-	 
-	<!-- Optimisation des polices -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-	
- <style>
-	  :root {
-    --primary: #a23aff;       /* Violet signature */
-    --secondary: #ff6b00;     /* Orange dynamique */
-    --dark: #1f1f1f;
-    --light: #faf9ff;
-    --white: #ffffff;
-}
-
-    /* Raccourcis globaux / resets venant du minify */
-
-    .logo,
-    nav ul {
-        display: flex;
+  <style>
+    :root {
+      --primary: #a23aff;
+      --secondary: #ff6b00;
+      --accent: #00d2a0;
+      --dark: #1d2130;
+      --light: #faf9ff;
+      --white: #ffffff;
+      --text: #2a2f3a;
+      --muted: #6b7280;
+      --radius: 18px;
+      --shadow: 0 12px 30px rgba(15,23,42,.10);
     }
 
-    .btn:before,
-    nav ul li a:after {
-        position: absolute;
-        left: 0;
-        content: '';
-    }
-
-    header,
-    nav ul li a:hover:after {
-        width: 100%;
-    }
-
-    .nav-btn,
-    nav ul li a:after {
-        background: linear-gradient(90deg, var(--primary), var(--secondary));
-    }
-
-    .hero p,
-    body,
-    nav ul li a {
-        color: var(--dark);
-    }
-
-    .btn,
-    .btn span,
-    .hero,
-    .hero-content,
-    nav ul li a {
-        position: relative;
-    }
-
-    *,
-    .hero-buttons .btn {
-        margin: 0;
-    }
-
-    .about-preview,
-    .btn,
-    .hero,
-    .service-card {
-        overflow: hidden;
-    }
-
-    .hero h1,
-    .logo span,
-    .service-card i,
-    .stat-number {
-        -webkit-text-fill-color: transparent;
-    }
-
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s, transform 0.6s;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .btn:hover,
-    .nav-btn:hover {
-        transform: translateY(-3px);
-    }
-
-    .btn:before {
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, var(--secondary), var(--primary));
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .logo span,
-    .service-card:before {
-        background: linear-gradient(135deg, var(--primary) 0, var(--accent) 100%);
-    }
-
-    .btn:hover:before {
-        left: 100%;
-        opacity: 1;
-    }
-
-  
-
-    * {
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Bricolage Grotesque', sans-serif;
-    }
-
+    * { box-sizing: border-box; }
     body {
-        background-color: var(--light);
-        line-height: 1.6;
-        overflow-x: hidden;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.55;
     }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
 
     .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
-    header {
-        background-color: var(--white);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-        transition: 0.4s;
+     /* HEADER (identique about.html) */
+    header{
+      background:var(--white);
+      position:fixed;top:0;left:0;width:100%;
+      z-index:1000;
+      transition:0.35s ease;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      padding:18px 0;
     }
-
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
+    .header-container{display:flex;justify-content:space-between;align-items:center}
+    .logo{
+      display:flex;align-items:center;gap:12px;
+      font-size:26px;font-weight:800;text-decoration:none;color:var(--primary);
     }
-
-    .logo,
-    .service-card .learn-more {
-        color: var(--primary);
-        align-items: center;
+    .logo-img{
+      width:55px;height:55px;border-radius:50%;
+      object-fit:cover;flex-shrink:0;
     }
-
-    .logo {
-        font-size: 28px;
-        font-weight: 800;
-        text-decoration: none;
+    .logo span{
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      -webkit-background-clip:text;
+      color:transparent;
+      font-weight:800;
+      letter-spacing:0.02em;
     }
-
-    .btn,
-    .nav-btn {
-        color: var(--white);
-        border-radius: 30px;
-        transition: 0.3s;
-        text-decoration: none;
-        font-weight: 600;
+    nav ul{list-style:none;display:flex;align-items:center}
+    nav ul li{margin-left:28px}
+    nav ul li a{
+      text-decoration:none;font-weight:600;color:var(--dark);
+      position:relative;padding:8px 0;opacity:0.92;
+      transition:0.25s ease;
     }
-
-    .logo span {
-        -webkit-background-clip: text;
+    nav ul li a:hover{opacity:1;color:var(--primary)}
+    nav ul li a:after{
+      content:"";position:absolute;left:0;bottom:0;height:3px;width:0;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      border-radius:999px;transition:0.25s ease;
     }
+    nav ul li a:hover:after{width:100%}
 
-    nav ul {
-        list-style: none;
+    .nav-btn{
+      text-decoration:none;
+      font-weight:700;
+      color:var(--white);
+      padding:12px 22px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      box-shadow:0 10px 22px rgba(162,58,255,0.20);
+      transition:0.25s ease;
+      display:inline-flex;align-items:center;gap:8px;
     }
+    .nav-btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(162,58,255,0.28)}
 
-    nav ul li {
-        margin-left: 30px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-        padding: 8px 0;
-    }
-
-    nav ul li a:after {
-        width: 0;
-        height: 3px;
-        bottom: 0;
-        transition: width 0.3s;
-        border-radius: 3px;
-    }
-
-    nav ul li a:hover {
-        color: var(--primary);
-    }
-
-    .nav-btn {
-        padding: 12px 25px;
-        box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
-    }
-
-    .nav-btn:hover {
-        box-shadow: 0 8px 20px rgba(74, 108, 247, 0.4);
-    }
-
+    /* HERO */
     .hero {
-        padding: 180px 0 100px;
-        background: linear-gradient(135deg, var(--light) 0, #e8ecfb 100%);
+      padding: 200px 0 80px;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(162,58,255,.20), transparent 55%),
+        radial-gradient(circle at 85% 15%, rgba(255,107,0,.16), transparent 55%),
+        radial-gradient(circle at 70% 85%, rgba(0,210,160,.10), transparent 55%),
+        linear-gradient(135deg, rgba(162,58,255,.06), rgba(255,107,0,.05));
     }
-
-    .btn,
-    .section-title h2:after {
-        background: linear-gradient(90deg, var(--primary), var(--secondary));
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+      gap: 34px;
+      align-items: center;
     }
-
-    .hero-content {
-        z-index: 2;
+    .hero-badge {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--primary);
+      border: 1px solid rgba(162,58,255,.20);
+      background: rgba(255,255,255,.75);
+      width: fit-content;
+      margin-bottom: 14px;
     }
-
     .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        background: linear-gradient(135deg, var(--primary) 0, var(--secondary) 100%);
-        -webkit-background-clip: text;
-        animation: 1s fadeInUp;
+      margin: 0 0 12px;
+      font-size: clamp(2.0rem, 4vw, 3.0rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
     }
-
     .hero p {
-        font-size: 1.4rem;
-        max-width: 700px;
-        margin: 0 auto 40px;
-        animation: 1s 0.2s both fadeInUp;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 58ch;
     }
-
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
     .btn {
-        display: inline-block;
-        padding: 16px 35px;
-        font-size: 1.1rem;
-        animation: 1s 0.4s both fadeInUp;
-        box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: .2s;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      box-shadow: 0 16px 34px rgba(162,58,255,.22);
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-ghost {
+      background: rgba(255,255,255,.85);
+      border-color: rgba(162,58,255,.22);
+      color: var(--primary);
+    }
+    .btn-ghost:hover { transform: translateY(-2px); }
+
+    .hero-card {
+      border-radius: 24px;
+      background: rgba(255,255,255,.85);
+      border: 1px solid rgba(162,58,255,.16);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      overflow: hidden;
+    }
+    .hero-card .mock {
+      border-radius: 18px;
+      overflow: hidden;
+      height: 320px;
+      background: #eee;
+    }
+    .hero-card .mock img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .proof-pill {
+      border-radius: 14px;
+      padding: 10px 10px;
+      border: 1px solid rgba(162,58,255,.14);
+      background: rgba(250,249,255,.9);
+      text-align: center;
+    }
+    .proof-pill b {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+    .proof-pill span {
+      font-size: .85rem;
+      color: var(--muted);
     }
 
-    .btn:hover {
-        box-shadow: 0 10px 25px rgba(74, 108, 247, 0.4);
-    }
-
-    .btn span {
-        z-index: 1;
-    }
-
-    .hero-buttons {
-        margin-top: 30px;
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .btn-secondary,
-    .section-title h2 {
-        color: var(--dark);
-        display: inline-block;
-    }
-
-    .btn-secondary {
-        padding: 14px 30px;
-        border-radius: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        background: rgba(255, 255, 255, 0.95);
-        font-weight: 600;
-        text-decoration: none;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        transition: 0.3s;
-    }
-
-    .shape-1,
-    .shape-2 {
-        border-radius: 50%;
-    }
-
-    .btn-secondary:hover {
-        transform: translateY(-2px);
-        border-color: var(--primary);
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .hero-shape {
-        position: absolute;
-        z-index: 1;
-    }
-
-    .shape-1 {
-        width: 400px;
-        height: 400px;
-        background: linear-gradient(135deg, rgba(74, 108, 247, 0.1) 0, rgba(255, 107, 0, 0.1) 100%);
-        top: -100px;
-        right: -100px;
-        animation: 8s ease-in-out infinite float;
-    }
-
-    .shape-2 {
-        width: 300px;
-        height: 300px;
-        background: linear-gradient(135deg, rgba(0, 210, 160, 0.1) 0, rgba(74, 108, 247, 0.1) 100%);
-        bottom: -50px;
-        left: -50px;
-        animation: 10s ease-in-out infinite float;
-    }
-
-    .service-card,
-    .why-card,
-    .why-skysocial {
-        background: var(--white);
-    }
-
-    .services,
-    .testimonials {
-        padding: 100px 0;
-        background-color: var(--white);
-    }
-
+    /* SECTION */
+    section { padding: 70px 0; }
     .section-title {
-        text-align: center;
-        margin-bottom: 80px;
+      margin-bottom: 26px;
     }
-
     .section-title h2 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
-        position: relative;
+      margin: 0 0 10px;
+      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+      letter-spacing: -.01em;
     }
-
-    .section-title h2:after {
-        content: '';
-        position: absolute;
-        width: 80px;
-        height: 4px;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-    }
-
     .section-title p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 30px auto 0;
-        color: #666;
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+    .underline {
+      width: 54px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      margin-top: 12px;
     }
 
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 40px;
+    /* TRUST / LOGOS */
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .trust-chip {
+      font-size: .85rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(162,58,255,.16);
+      background: rgba(255,255,255,.75);
+      color: #374151;
     }
 
-    .service-card {
-        border-radius: 15px;
-        padding: 40px 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        transition: 0.4s;
-        position: relative;
-        z-index: 1;
+    /* SERVICES TEASER */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      background: #fff;
+      border: 1px solid rgba(162,58,255,.14);
+      box-shadow: 0 10px 26px rgba(162,58,255,.08);
+      transition: .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(162,58,255,.14); }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 0, rgba(162,58,255,.10), transparent 55%);
+      pointer-events: none;
+    }
+    .card h3 { margin: 0 0 8px; position: relative; }
+    .card p { margin: 0; color: var(--muted); position: relative; font-size: .95rem; }
+    .card .mini {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .mini span {
+      font-size: .8rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(162,58,255,.18);
+      background: rgba(250,249,255,.9);
     }
 
-    .service-card:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        transition: height 0.4s;
-        z-index: -1;
-        opacity: 0.05;
+    /* DIFFERENCE */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      gap: 18px;
+      align-items: start;
     }
-
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    .diff {
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid rgba(162,58,255,.14);
+      background: rgba(250,249,255,.75);
     }
+    .diff ul { margin: 10px 0 0; padding-left: 18px; color: #374151; }
+    .diff li + li { margin-top: 8px; }
 
-    .service-card:hover:before {
-        height: 100%;
+    /* PROCESS (short) */
+    .process {
+      border-radius: 26px;
+      padding: 34px 26px;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(162,58,255,.14), transparent 60%),
+        radial-gradient(circle at 88% 30%, rgba(255,107,0,.12), transparent 60%),
+        var(--light);
+      border: 1px solid rgba(162,58,255,.12);
+      box-shadow: var(--shadow);
     }
-
-    .service-card i {
-        font-size: 3rem;
-        margin-bottom: 25px;
-        background: linear-gradient(135deg, var(--primary) 0, var(--secondary) 100%);
-        -webkit-background-clip: text;
-
+    .process-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
     }
-
-    .service-card h3 {
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        color: var(--dark);
+    .step {
+      background: rgba(255,255,255,.85);
+      border: 1px solid rgba(162,58,255,.14);
+      border-radius: 18px;
+      padding: 14px;
     }
+    .step b { display: block; margin-bottom: 6px; }
+    .step span { color: var(--muted); font-size: .92rem; }
 
-    .service-card p {
-        color: #666;
-        margin-bottom: 20px;
+    /* TESTIMONIALS */
+    .test-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+      gap: 18px;
+      align-items: stretch;
     }
-
-    .service-card .learn-more {
-        text-decoration: none;
-        font-weight: 600;
-        display: inline-flex;
-        transition: 0.3s;
+    .shot {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(162,58,255,.14);
+      box-shadow: var(--shadow);
+      min-height: 420px;
+      background: #eee;
     }
-
-    .service-card .learn-more i {
-        font-size: 1rem;
-        margin: 0 0 0 8px;
-        transition: transform 0.3s;
+    .shot img { width: 100%; height: 100%; object-fit: cover; }
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-
-    .service-card .learn-more:hover {
-        color: var(--secondary);
+    .review {
+      border-radius: 20px;
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(162,58,255,.18);
+      background: linear-gradient(135deg, rgba(162,58,255,.08), rgba(255,107,0,.06));
+      box-shadow: 0 10px 24px rgba(162,58,255,.08);
     }
-
-    .service-card .learn-more:hover i {
-        transform: translateX(5px);
+    .review .tag {
+      display: inline-flex;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(162,58,255,.18);
+      color: var(--primary);
+      margin-bottom: 10px;
     }
+    .review p { margin: 0 0 10px; color: #1f2937; }
+    .review .who { margin: 0; color: #374151; font-size: .92rem; }
+    .stars { color: #f4b400; letter-spacing: 1px; }
 
-    .why-skysocial {
-        padding: 80px 0 60px;
-    }
-
-    .why-skysocial .section-title {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .why-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 24px;
-    }
-
-    .why-card {
-        border-radius: 18px;
-        padding: 26px 22px;
-        border: 1px solid rgba(29, 33, 48, 0.06);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
-    }
-
-    .why-card h3 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-    }
-
-    .why-card p {
-        font-size: 0.97rem;
-        color: #555;
-    }
-
-    .about-preview {
-        padding: 100px 0;
-        background: linear-gradient(135deg, var(--light) 0, #e8ecfb 100%);
-        position: relative;
-    }
-
-    .about-content {
-        display: flex;
-        align-items: center;
-        gap: 60px;
-    }
-
-    .about-text {
-        flex: 1;
-    }
-
-    .about-text h2 {
-        font-size: 2.8rem;
-        margin-bottom: 25px;
-        color: var(--dark);
-    }
-
-    .about-text p {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-        color: #555;
-    }
-
-    .about-image {
-        flex: 1;
-        position: relative;
-    }
-
-    .about-image-placeholder {
-        width: 100%;
-        height: 400px;
-        background: linear-gradient(135deg, var(--primary) 0, var(--secondary) 100%);
-        border-radius: 20px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .about-image-placeholder:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="%23ffffff" opacity="0.2" d="M50,0 L100,50 L50,100 L0,50 Z"/></svg>') 0 0 / 200px;
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin-top: 50px;
-    }
-
-    .stat-item {
-        text-align: center;
-        padding: 20px;
-        background: var(--white);
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, var(--primary) 0, var(--secondary) 100%);
-        -webkit-background-clip: text;
-        margin-bottom: 10px;
-    }
-
-    .stat-label {
-        color: #666;
-        font-weight: 600;
-    }
-
-    .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    .testimonial-card {
-        background: var(--light);
-        border-radius: 15px;
-        padding: 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        transition: 0.3s;
-        position: relative;
-    }
-
-    .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    }
-
-    .testimonial-card:before {
-        content: """;
-        font-size: 6rem;
-        color: var(--primary);
-        opacity: 0.1;
-        position: absolute;
-        top: 10px;
-        left: 20px;
-        font-family: Georgia, serif;
-    }
-
-    .testimonial-content {
-        position: relative;
-        z-index: 1;
-    }
-
-    .testimonial-text {
-        font-style: italic;
-        margin-bottom: 20px;
-        color: #555;
-    }
-
-    .testimonial-author {
-        display: flex;
-        align-items: center;
-    }
-
-    .author-avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        font-weight: 600;
-        margin-right: 15px;
-    }
-
-    .author-details h4 {
-        color: var(--dark);
-        margin-bottom: 5px;
-    }
-
-    .author-details p {
-        color: #777;
-        font-size: 0.9rem;
-    }
-
-    /* Portfolio Preview */
-    .portfolio-preview {
-        padding: 100px 0;
-        background: linear-gradient(135deg, var(--light) 0%, #e8ecfb 100%);
-    }
-
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    .portfolio-item {
-        border-radius: 15px;
-        overflow: hidden;
-        position: relative;
-        height: 300px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s;
-    }
-
-    .portfolio-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .portfolio-image {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        font-size: 3rem;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .portfolio-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 30px;
-        background: linear-gradient(to top, rgba(29, 33, 48, 0.9), transparent);
-        color: var(--white);
-        transform: translateY(100px);
-        transition: all 0.4s;
-    }
-
-    .portfolio-item:hover .portfolio-overlay {
-        transform: translateY(0);
-    }
-
-    .portfolio-item:hover .portfolio-image img {
-        transform: scale(1.1);
-    }
-
-    .portfolio-overlay h3 {
-        margin-bottom: 10px;
-        font-size: 1.4rem;
-    }
-
-    .portfolio-overlay p {
-        opacity: 0;
-        transition: all 0.4s;
-        transition-delay: 0.1s;
-    }
-
-    .portfolio-item:hover .portfolio-overlay p {
-        opacity: 1;
-    }
-
-    /* CTA Section */
+    /* FINAL CTA */
     .cta {
-        padding: 100px 0;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        color: var(--white);
-        text-align: center;
-        position: relative;
-        overflow: hidden;
+      border-radius: 26px;
+      padding: 26px 26px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff;
+      box-shadow: 0 18px 42px rgba(162,58,255,.22);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cta h3 { margin: 0; font-size: 1.35rem; }
+    .cta p { margin: 6px 0 0; opacity: .92; max-width: 70ch; }
+    .cta .btn {
+      background: #fff;
+      color: var(--primary);
+      border: none;
+      padding: 12px 18px;
     }
 
-    .cta:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="%23ffffff" opacity="0.1" d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z"/></svg>');
-        background-size: 150px;
+   /* FOOTER LIGHT (identique about.html, compact) */
+    .footer-light{
+      background:
+        radial-gradient(circle at top left, rgba(162, 58, 255, 0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.16), transparent 60%),
+        var(--light);
+      padding: 50px 0 25px;
+      border-top: 3px solid;
+      border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+      color: var(--dark);
     }
-
-    .cta-content {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        margin: 0 auto;
+    .footer-light-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 40px;
+      align-items:start;
     }
-
-    .cta h2 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
+    .footer-light-badge{
+      display:inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(162, 58, 255, 0.12);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 12px;
     }
-
-    .cta p {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-        opacity: 0.9;
+    .footer-light p{max-width: 380px;color:#4b5563}
+    .footer-light-socials{display:flex;gap:12px;margin-top:12px}
+    .footer-light-socials a{
+      width:36px;height:36px;border-radius:999px;
+      border:1px solid rgba(162,58,255,0.25);
+      display:flex;align-items:center;justify-content:center;
+      font-size:0.85rem;color:var(--primary);
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(4px);
+      text-decoration:none;
+      transition:0.25s ease;
     }
-
-    .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+    .footer-light-socials a:hover{transform:translateY(-2px);color:var(--secondary);border-color:var(--secondary)}
+    .footer-light-links h4,.footer-light-contact h4{margin-bottom:12px;font-size:1.05rem}
+    .footer-light-links a{
+      display:block;text-decoration:none;color:var(--dark);
+      opacity:0.75;margin-bottom:10px;
+      transition:0.2s ease;
     }
-
-    .btn-light {
-        background: var(--white);
-        color: var(--primary);
-        padding: 16px 35px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s;
-        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    .footer-light-links a:hover{opacity:1;color:var(--primary);padding-left:4px}
+    .footer-light-contact p{margin-bottom:8px;opacity:0.82}
+    .footer-light-btn{
+      margin-top: 12px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding: 10px 18px;border-radius:999px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;text-decoration:none;font-weight:700;
+      box-shadow: 0 10px 25px rgba(162, 58, 255, 0.20);
+      transition:0.25s ease;
     }
-
-    .btn-light:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+    .footer-light-btn:hover{transform:translateY(-2px);opacity:0.92}
+    .footer-light-bottom{
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(0, 0, 0, 0.10);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size: 0.9rem;
+      color: var(--dark);
     }
-
-    /* Footer */
-    footer {
-        background:
-            radial-gradient(circle at top left, rgba(74, 108, 247, 0.22), transparent 60%),
-            radial-gradient(circle at top right, rgba(255, 107, 0, 0.2), transparent 60%),
-            var(--dark);
-        color: var(--white);
-        padding: 70px 0 30px;
-        margin-top: 80px;
+    .footer-light-bottom p{margin:0;color:rgba(31,31,31,0.75)}
+    .footer-light-legal{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .footer-light-legal a{
+      color: var(--dark);
+      text-decoration:none;
+      opacity: 0.7;
+      transition: 0.25s ease;
     }
+    .footer-light-legal a:hover{opacity:1;color:var(--primary)}
 
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+    /* FADE-IN */
+    .fade-in{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease, transform 0.55s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media (max-width: 992px){
+      .process-steps{grid-template-columns:1fr;gap:14px}
+      .process-steps:before{
+        left:16px;right:auto;top:16px;bottom:0;width:2px;height:auto;
+        background:linear-gradient(180deg,var(--primary),var(--secondary));
+      }
+      .process-step{padding-left:44px}
+      .step-number{position:absolute;left:12px;top:14px;margin:0}
+      .two-col{grid-template-columns:1fr}
     }
-
-    .footer-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.6fr);
-        gap: 40px;
-        align-items: flex-start;
+    @media (max-width: 900px){
+      .footer-light-grid{grid-template-columns:1fr}
+      .footer-light-socials{justify-content:flex-start}
     }
-
-    @media (max-width: 900px) {
-        .footer-grid {
-            grid-template-columns: 1fr;
-        }
+    @media (max-width: 768px){
+      header{position:relative}
+      .header-container{flex-direction:column;gap:10px}
+      nav ul{flex-direction:column;gap:10px;margin-top:10px}
+      nav ul li{margin-left:0}
+      .page-hero{padding:115px 0 60px}
+      .page-hero h1{font-size:2.15rem}
+      .page-hero p{font-size:1.05rem}
+      section{padding:70px 0}
+      .section-title h2{font-size:2rem}
     }
-
-    .footer-brand-logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 6px 14px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.08);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.8rem;
-        margin-bottom: 12px;
-    }
-
-    .footer-brand-logo .dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 999px;
-        background: var(--accent);
-    }
-
-    .footer-brand p {
-        opacity: 0.85;
-        max-width: 360px;
-        margin-bottom: 18px;
-    }
-
-    .footer-social {
-        display: flex;
-        gap: 12px;
-    }
-
-    .footer-social a {
-        width: 36px;
-        height: 36px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: var(--white);
-        opacity: 0.85;
-        transition: all 0.25s ease;
-    }
-
-    .footer-social a:hover {
-        opacity: 1;
-        transform: translateY(-3px);
-        border-color: var(--accent);
-    }
-
-    .footer-title {
-        font-size: 1.1rem;
-        margin-bottom: 16px;
-    }
-
-    .footer-links ul,
-    .footer-contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-links ul li + li,
-    .footer-contact-list li + li {
-        margin-top: 8px;
-    }
-
-    .footer-links a,
-    .footer-contact-list a {
-        color: var(--white);
-        text-decoration: none;
-        opacity: 0.82;
-        font-size: 0.95rem;
-        transition: all 0.25s ease;
-    }
-
-    .footer-links a:hover,
-    .footer-contact-list a:hover {
-        opacity: 1;
-        color: var(--accent);
-        padding-left: 4px;
-    }
-
-    .footer-contact-list li {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .footer-contact-list i {
-        font-size: 0.95rem;
-        opacity: 0.8;
-    }
-
-    .footer-cta-btn {
-        margin-top: 18px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 18px;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--primary), var(--secondary));
-        color: var(--white);
-        font-size: 0.95rem;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .footer-cta-btn i {
-        font-size: 0.9rem;
-    }
-
-    .footer-cta-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
-    }
-
-    .footer-subtext {
-        margin-top: 8px;
-        font-size: 0.85rem;
-        opacity: 0.8;
-    }
-
-    .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.16);
-        font-size: 0.85rem;
-        opacity: 0.85;
-    }
-
-    .footer-bottom-links {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footer-bottom-links a {
-        color: var(--white);
-        text-decoration: none;
-        opacity: 0.85;
-        transition: opacity 0.2s ease;
-    }
-
-    .footer-bottom-links a:hover {
-        opacity: 1;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes float {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-    }
-
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-        .about-content {
-            flex-direction: column;
-        }
-
-        .about-image {
-            margin-top: 40px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .header-container {
-            flex-direction: column;
-        }
-
-        nav ul {
-            margin-top: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 5px 15px;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        .services-grid,
-        .testimonials-grid,
-        .portfolio-grid,
-        .stats-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-        }
-    }
-
-    /* Responsive mobile header override */
-    @media (max-width: 768px) {
-        header {
-            position: relative !important;
-            padding: 10px 0 !important;
-        }
-
-        .header-container {
-            flex-direction: column;
-            padding: 10px 0 !important;
-        }
-
-        .hero {
-            padding: 120px 0 80px !important;
-        }
-
-        nav ul {
-            margin-top: 15px;
-            flex-direction: column;
-            gap: 10px;
-            text-align: center;
-        }
-
-        nav ul li {
-            margin: 0 !important;
-        }
-
-        .hero h1 {
-            font-size: 2.2rem !important;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.1rem !important;
-        }
-    }
-
-    /* Responsive images about */
-    @media (max-width: 768px) {
-        .about-image-placeholder img,
-        .about-image-container img {
-            height: 300px;
-        }
-
-        .about-image-container {
-            margin-top: 30px;
-        }
-    }
-	 /* === Ajout de couleur légère sur les sections blanches === */
-
-/* Fonds services + témoignages + pourquoi SkySocial */
-.services,
-.testimonials,
-.why-skysocial {
-    background:
-        radial-gradient(circle at top left, rgba(74, 108, 247, 0.12), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.12), transparent 55%),
-        #f7f9ff;
-}
-
-/* Cartes services plus "colorées" mais propres */
-.service-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f4f5ff 50%, #fff6f0 100%);
-    border: 1px solid rgba(29, 33, 48, 0.04);
-}
-
-/* Cartes "Pourquoi SkySocial" plus visibles */
-.why-card {
-    background: radial-gradient(circle at top left, #ffffff, #f5f7ff 70%);
-    border: 1px solid rgba(29, 33, 48, 0.06);
-}
-
-/* Stats avec un peu plus de peps */
-.stat-item {
-    background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 60%);
-}
-
-/* Témoignages moins gris, plus chaleureux */
-.testimonial-card {
-    background: linear-gradient(135deg, #f7f9ff 0%, #fff6f0 100%);
-}
-
-/* Sous-titres de sections un peu plus contrastés */
-.section-title p {
-    color: #444;
-}
-
-/* Légère couleur derrière la section "Nos réalisations" déjà sympa */
-.portfolio-preview {
-    background:
-        radial-gradient(circle at top left, rgba(0, 210, 160, 0.12), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(74, 108, 247, 0.10), transparent 55%),
-        #f5f7ff;
-}
-
-</style>
-
+  </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <span>SKY SOCIAL AGENCY</span>
+<!-- HEADER -->
+<header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
+        <span>SKY SOCIAL AGENCY</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
+              Prendre RDV
             </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn">Prendre RDV</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+		  </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- Hero Section -->
+  <main>
+
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-shape shape-1"></div>
-        <div class="hero-shape shape-2"></div>
-        <div class="container hero-content">
-            <h1>Création de sites web & gestion des réseaux sociaux pour indépendants et petites entreprises</h1>
-            <p>
-                Sky Social est une <strong>agence digitale</strong> qui combine deux expertises à part entière :
-                <strong>la création de sites web professionnels</strong> et la <strong>stratégie social media</strong>.
-                <br><br>
-                On conçoit des <strong>sites vitrines modernes, clairs et optimisés</strong> pour ton activité
-                (thérapeutes, commerces, prestataires de services, TPE…), tout en t’aidant à
-                <strong>structurer et gérer tes réseaux sociaux</strong> (Instagram, TikTok, LinkedIn, etc.)
-                pour attirer les bons clients et transformer tes visites en prises de contact.
-            </p>
+      <div class="container hero-grid">
+        <div class="fade-in">
+          <div class="hero-badge">Agence digitale • Sites web • Social media</div>
+          <h1>Création de sites web & stratégie digitale pour entreprises ambitieuses</h1>
+          <p>
+            Des sites et des stratégies pensés pour <strong>convertir</strong>, renforcer votre image et
+            générer des clients — avec une approche <strong>sur‑mesure</strong>, humaine et premium.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Réserver un appel</a>
+            <a class="btn btn-ghost" href="services.html">Voir nos services</a>
+          </div>
 
-            <div class="hero-buttons">
-                <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="btn">
-                    <span>Parler de mon projet</span>
-                </a>
-                <a href="services.html" class="btn-secondary">
-                    Découvrir les services
-                </a>
-            </div>
+          <div class="trust-row" aria-label="Secteurs accompagnés">
+            <div class="trust-chip">Cabinet de coaching</div>
+            <div class="trust-chip">Thérapeute indépendante</div>
+            <div class="trust-chip">Studio bien‑être</div>
+            <div class="trust-chip">PME & TPE</div>
+            <div class="trust-chip">Marque lifestyle</div>
+          </div>
         </div>
+
+        <div class="hero-card fade-in">
+          <div class="mock">
+            <img src="notrvision.jpeg" alt="Aperçu d’un projet web Sky Social Agency">
+          </div>
+          <div class="hero-proof" aria-label="Preuves rapides">
+            <div class="proof-pill"><b>+20</b><span>projets accompagnés</span></div>
+            <div class="proof-pill"><b>+10</b><span>sites créés / optimisés</span></div>
+            <div class="proof-pill"><b>+300</b><span>contenus produits</span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-        <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Deux expertises pour développer ton business en ligne</h2>
-                <p>
-                    Chez Sky Social, la <strong>création de sites web</strong> et la
-                    <strong>gestion des réseaux sociaux</strong> sont deux services à part entière.
-                    Tu peux choisir l’un, l’autre ou combiner les deux pour créer un écosystème digital cohérent,
-                    visible et rentable.
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <!-- Service 1 : Création de site web -->
-                <div class="service-card fade-in">
-                    <i class="fas fa-desktop"></i>
-                    <h3>Création de sites web vitrines</h3>
-                    <p>
-                        Site vitrine professionnel, clair et rassurant : structure des pages, design moderne,
-                        textes orientés conversion, intégration des prises de rendez-vous et optimisation de base
-                        pour le référencement. L’objectif : donner envie de te contacter dès l’arrivée sur ton site.
-                    </p>
-                    <a href="services.html" class="learn-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Service 2 : Stratégie & gestion social media -->
-                <div class="service-card fade-in">
-                    <i class="fas fa-hashtag"></i>
-                    <h3>Stratégie & gestion des réseaux sociaux</h3>
-                    <p>
-                        Audit de tes comptes, définition de ton positionnement, création d’un calendrier éditorial
-                        et gestion de tes réseaux sociaux (Instagram, TikTok, LinkedIn…) pour publier régulièrement
-                        du contenu qui attire, engage et parle vraiment à ta cible.
-                    </p>
-                    <a href="services.html" class="learn-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Service 3 : Contenu & accompagnement digital -->
-                <div class="service-card fade-in">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Contenu & accompagnement digital</h3>
-                    <p>
-                        Création de visuels (carrousels, stories, posts), idées de contenus, optimisation de ta bio,
-                        cohérence visuelle entre ton site web et tes réseaux, accompagnement sur la stratégie globale :
-                        tu n’es plus seule pour faire vivre ta communication au quotidien.
-                    </p>
-                    <a href="services.html" class="learn-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+    <!-- SERVICES -->
+    <section>
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Nos expertises</h2>
+          <p>Des services complémentaires pour construire une présence digitale cohérente, crédible et rentable.</p>
+          <div class="underline"></div>
         </div>
+
+        <div class="cards">
+          <article class="card fade-in">
+            <h3>Création de sites web professionnels</h3>
+            <p>Sites modernes, rapides et pensés pour convertir (UX/UI, SEO technique, mobile, outils pro).</p>
+            <div class="mini">
+              <span>WordPress</span><span>Sur‑mesure</span><span>SEO</span>
+            </div>
+          </article>
+
+          <article class="card fade-in">
+            <h3>Social Media Management Premium</h3>
+            <p>Stratégie, calendrier éditorial, contenus, community management et optimisation continue.</p>
+            <div class="mini">
+              <span>Instagram</span><span>TikTok</span><span>LinkedIn</span>
+            </div>
+          </article>
+
+          <article class="card fade-in">
+            <h3>Stratégie digitale & audit</h3>
+            <p>Un diagnostic complet + un plan d’action clair (30 à 90 jours) pour gagner en performance.</p>
+            <div class="mini">
+              <span>Positionnement</span><span>KPI</span><span>Roadmap</span>
+            </div>
+          </article>
+
+          <article class="card fade-in">
+            <h3>Branding & identité visuelle</h3>
+            <p>Une marque cohérente, mémorable et premium : direction artistique, charte digitale, univers visuel.</p>
+            <div class="mini">
+              <span>DA</span><span>Charte</span><span>Templates</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:22px" class="fade-in">
+          <a class="btn btn-primary" href="services.html">Découvrir tous nos services</a>
+        </div>
+      </div>
     </section>
 
-	
-    <!-- Pourquoi SkySocial -->
-    <section class="why-skysocial">
-        <div class="container">
-            <div class="section-title">
-                <h2>Pourquoi travailler avec l’agence digitale Sky Social&nbsp;?</h2>
-                <p>Un duo design + stratégie pour des sites web et réseaux sociaux qui travaillent vraiment pour votre business.</p>
-            </div>
-
-            <div class="why-grid">
-                <div class="why-card fade-in">
-                    <h3>Design moderne & sur-mesure</h3>
-                    <p>
-                        Chaque site est pensé en fonction de votre activité, de vos clients et de votre univers.
-                        Pas de template générique&nbsp;: une image pro, claire et alignée avec qui vous êtes.
-                    </p>
-                </div>
-
-                <div class="why-card fade-in">
-                    <h3>Site web + réseaux sociaux alignés</h3>
-                    <p>
-                        On crée un écosystème cohérent : site, Instagram, Google, LinkedIn…
-                        Tout raconte la même histoire pour rassurer et convertir vos futurs clients.
-                    </p>
-                </div>
-
-                <div class="why-card fade-in">
-                    <h3>Accompagnement humain de A à Z</h3>
-                    <p>
-                        On vous guide à chaque étape, même si vous “n’êtes pas du tout digital”.
-                        Pédago, bienveillance, et dispo pour répondre à vos questions du début à la mise en ligne.
-                    </p>
-                </div>
-            </div>
+    <!-- DIFFERENCE -->
+    <section style="background: var(--light);">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Pourquoi Sky Social Agency ?</h2>
+          <p>Pas de “packs” impersonnels : on construit des solutions adaptées à vos objectifs et à votre marché.</p>
+          <div class="underline"></div>
         </div>
+
+        <div class="diff-grid">
+          <div class="diff fade-in">
+            <h3 style="margin:0 0 8px;">Une approche business</h3>
+            <ul>
+              <li>Chaque décision sert un objectif (leads, crédibilité, conversions).</li>
+              <li>Un message clair qui explique ce que vous faites en 5 secondes.</li>
+              <li>Un parcours simple qui guide vers l’action.</li>
+            </ul>
+          </div>
+          <div class="diff fade-in">
+            <h3 style="margin:0 0 8px;">Une équipe complémentaire</h3>
+            <ul>
+              <li><strong>Meryne</strong> : stratégie digitale, webdesign & UX.</li>
+              <li><strong>Giovanni</strong> : développement web (WordPress / sur‑mesure).</li>
+              <li><strong>Donia</strong> : contenus & community management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- PROCESS (short) -->
+    <section>
+      <div class="container">
+        <div class="process fade-in">
+          <div class="section-title" style="margin:0;">
+            <h2 style="margin:0 0 10px;">Notre méthode en 4 étapes</h2>
+            <p style="margin:0; color: var(--muted);">Un cadre clair, une exécution soignée, une approche orientée résultats.</p>
+            <div class="underline"></div>
+          </div>
 
-    <!-- About Preview -->
-<section class="about-preview">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Sky Social, une agence digitale pour les indépendants &amp; petites entreprises</h2>
-                <p>
-                  Je m’appelle Meryne, fondatrice de Sky Social. J’accompagne les indépendants et petites
-                  structures – commerces de proximité, restaurants, cabinets de bien-être, thérapeutes,
-                  artisans, pros du BTP, etc. – à clarifier leur présence en ligne et à avoir une image plus professionnelle.
-              </p>
-                <p>
-                    Avec Giovanni, développeur web, on forme un duo design + technique&nbsp;: je conçois
-                    l’univers visue, la&nbsp; &nbsp;structure de votre site et la stratégie SEO, et lui le développe pour qu’il soit fluide,
-                    rapide et professionnel. On pense <strong>site web</strong> et <strong>réseaux sociaux</strong>
-                    ensemble, pour que votre visibilité se transforme en vrais clients.
-                </p>
-                <a href="about.html" class="btn"><span>En savoir plus sur l’agence</span></a>
+          <div class="process-grid">
+            <div class="step">
+              <b>1. Audit & objectifs</b>
+              <span>On analyse votre situation et on définit un cap mesurable.</span>
             </div>
+            <div class="step">
+              <b>2. Stratégie & plan</b>
+              <span>On structure votre message, vos priorités et votre feuille de route.</span>
+            </div>
+            <div class="step">
+              <b>3. Production</b>
+              <span>Design, contenus, site, outils : on construit votre écosystème.</span>
+            </div>
+            <div class="step">
+              <b>4. Optimisation</b>
+              <span>On mesure, on ajuste et on améliore les résultats dans le temps.</span>
+            </div>
+          </div>
 
-            <div class="about-image">
-                <div class="about-image-container" style="position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.15);">
-                    <img src="stratmedia.jpeg" alt="Stratégie digitale et création de site web" style="width:100%; height:400px; object-fit: cover;">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(74, 108, 247, 0.1), rgba(255, 107, 0, 0.1));"></div>
-                </div>
-            </div>
+          <div style="margin-top:18px;">
+            <a class="btn btn-ghost" href="services.html#processus">Voir la méthode détaillée</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF / REVIEWS -->
+    <section style="background: var(--light);">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Projets & retours clients</h2>
+          <p>Des preuves visuelles et des avis qui montrent l’impact d’une présence digitale travaillée.</p>
+          <div class="underline"></div>
         </div>
 
-        <div class="stats-grid">
-            <div class="stat-item fade-in">
-                <div class="stat-number">15+</div>
-                <div class="stat-label">Projets accompagnés</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Secteurs d’activité (bien-être, restauration, BTP…)</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">2</div>
-                <div class="stat-label">Ans d’expérience</div>
-            </div>
+        <div class="test-grid">
+          <div class="shot fade-in" aria-label="Carrousel projets (image placeholder)">
+            <img src="mockup.png" alt="Exemple de projet Sky Social Agency">
+          </div>
+
+          <div class="reviews fade-in" aria-label="Avis clients">
+            <article class="review">
+              <div class="tag">Avis client</div>
+              <p>« Notre nouveau site et la stratégie réseaux sociaux ont doublé nos demandes de rendez‑vous en quelques mois. »</p>
+              <p class="who"><span class="stars">★★★★★</span> <strong>Camille R.</strong> — Fondatrice d’un cabinet de services</p>
+            </article>
+
+            <article class="review">
+              <div class="tag">Avis Google</div>
+              <p>« Équipe très professionnelle, à l’écoute et force de proposition. Le site est fluide et moderne. »</p>
+              <p class="who"><span class="stars">★★★★★</span> <strong>Omar B.</strong> — Dirigeant d’une PME</p>
+            </article>
+
+            <article class="review">
+              <div class="tag">Avis client</div>
+              <p>« Enfin une image en phase avec la qualité de nos services. Très clair, structuré et humain. »</p>
+              <p class="who"><span class="stars">★★★★★</span> <strong>Julie M.</strong> — Thérapeute indépendante</p>
+            </article>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section>
+      <div class="container">
+        <div class="cta fade-in">
+          <div>
+            <h3>Prête à construire une présence digitale qui convertit ?</h3>
+            <p>Contactez‑nous pour échanger sur votre projet et recevoir un devis sur‑mesure, adapté à vos objectifs.</p>
+          </div>
+          <a class="btn" href="contact.html">Discuter de mon projet →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+   <!-- FOOTER -->
+  <footer class="footer-light">
+    <div class="container footer-light-grid">
+      <div class="footer-light-brand">
+        <div class="footer-light-badge">Sky Social Agency</div>
+        <p>
+          Création de sites web & accompagnement digital pour entreprises ambitieuses
+          qui veulent une présence en ligne claire, professionnelle et rentable.
+        </p>
+        <div class="footer-light-socials">
+          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+
+      <div class="footer-light-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-light-contact">
+        <h4>Contact</h4>
+        <p>📩 skysocialfr@gmail.com</p>
+        <p>📞 +33 6 69 70 80 46</p>
+        <a class="footer-light-btn" href="contact.html">Réserver un appel →</a>
+      </div>
     </div>
-</section>
 
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Ils nous font confiance</h2>
-                <p>Découvrez les témoignages de nos clients</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Sky Social Agency&nbsp; nous a fait un site web&nbsp; magnifique pour son prix, Meryne a bien veillée à respecter nous charte graphique et vison. Merci beaucoup !&nbsp; &nbsp;"</p>
-                        <div class="testimonial-author">
-                          <div class="author-avatar">EPN&nbsp;</div>
-                            <div class="author-details">
-                                <h4>EPANA</h4>
-                                <p>Brand Owner</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Une équipe à l'écoute et créative qui comprend parfaitement nos besoins. Les résultats sont au rendez-vous !"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">AMD&nbsp;</div>
-                            <div class="author-details">
-                                <h4>Anaïs Millon-Devigne</h4>
-                                <p>Sophrologue</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Preview -->
-    <section class="portfolio-preview">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nos Réalisations</h2>
-                <p>Découvrez quelques-unes de nos réussites</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-image">
-                        <img src="sitesphro.png" alt="Confection site web" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Confection site web</h3>
-                        <p>Confection d'un site web pour un cabinet de sophrologie</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-image">
-						<img src="montage.png" alt="Création de contenu" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Création de contenu</h3>
-                        <p>Production de visuels engageants pour réseaux sociaux</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-image">
-                        <img src="creationcontenu.png" alt="Campagne publicitaire" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Campagne Publicitaire</h3>
-                        <p>Stratégie axée sur la promotion pour attirer de nouveaux clients</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container cta-content">
-            <h2>Prêt à transformer votre présence sociale ?</h2>
-            <p>Contactez-nous dès aujourd'hui pour une analyse gratuite de vos réseaux sociaux et une proposition sur-mesure.</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn-light">Nous contacter</a>
-                <a href="rdv.html" class="btn">Prendre RDV</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-    <div class="container footer-container">
-        <div class="footer-grid">
-            <!-- Colonne 1 : Branding -->
-            <div class="footer-brand">
-                <div class="footer-brand-logo">
-                    <span class="dot"></span>
-                    <span>Sky Social Agency</span>
-                </div>
-                <p>
-                    Création de sites web & accompagnement digital pour indépendants et petites entreprises.
-                </p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/skysocialagency" target="_blank" aria-label="Instagram SkySocial Agency">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/sky-social-agency" target="_blank" aria-label="LinkedIn SkySocial Agency">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Colonne 2 : Navigation -->
-            <div class="footer-links">
-                <h3 class="footer-title">Navigation</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 3 : Contact & CTA -->
-            <div class="footer-contact">
-                <h3 class="footer-title">Contact</h3>
-                <ul class="footer-contact-list">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+33669708046">+33 6 69 70 80 46</a>
-                    </li>
-                </ul>
-
-                <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="footer-cta-btn">
-                    <span>Réserver un appel découverte</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <p class="footer-subtext">Réponse sous 24–48h, sans engagement.</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Sky Social Agency – Tous droits réservés.</p>
-            <div class="footer-bottom-links">
-                <a href="#">Mentions légales</a>
-                <span>•</span>
-                <a href="#">Politique de confidentialité</a>
-            </div>
-        </div>
+    <div class="container footer-light-bottom">
+      <p>© 2025 Sky Social Agency — Tous droits réservés.</p>
+      <div class="footer-light-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span>•</span>
+        <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+      </div>
     </div>
-</footer>
+  </footer>
 
+  <script>
+    // Fade-in
+    document.addEventListener('DOMContentLoaded', function () {
+      const observed = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
 
-    <script>
-        // Animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        fadeElements.forEach(el => {
-            observer.observe(el);
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '20px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            }
-        });
-        
-        // Simple form validation
-        const newsletterForm = document.querySelector('.newsletter-form');
-        if(newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Merci de vous être abonné à notre newsletter !');
-                this.reset();
-            });
-        }
-    </script>
+      observed.forEach(el => observer.observe(el));
+    });
+
+    // Effet de scroll sur le header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (!header) return;
+      if (window.scrollY > 80) {
+        header.style.padding = '10px 0';
+        header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.10)';
+      } else {
+        header.style.padding = '18px 0';
+        header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
+      }
+    });
+  </script>
 </body>
 </html>

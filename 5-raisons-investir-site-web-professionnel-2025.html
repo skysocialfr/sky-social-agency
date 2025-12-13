@@ -68,12 +68,12 @@
     <style>
 /* ========= VARIABLES GLOBALES ========= */
 :root {
-    --primary: #8c52ff;      /* Violet logo */
-    --secondary: #ff914d;    /* Orange logo */
-    --dark: #1f1f1f;         /* À garder neutre */
-    --light: #faf9ff;        /* Un blanc légèrement violet */
+    --primary: #a23aff;       /* Violet signature */
+    --secondary: #ff6b00;     /* Orange dynamique */
+    --dark: #1f1f1f;
+    --light: #faf9ff;
     --white: #ffffff;
-}
+		}
 
 /* ========= RESET & BASE ========= */
 * {
@@ -102,91 +102,59 @@ img {
     padding: 0 20px;
 }
 
-/* ========= HEADER GLOBAL ========= */
-header {
-    background-color: var(--white);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: 0.4s;
-}
+/* HEADER (identique about.html) */
+    header{
+      background:var(--white);
+      position:fixed;top:0;left:0;width:100%;
+      z-index:1000;
+      transition:0.35s ease;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      padding:18px 0;
+    }
+    .header-container{display:flex;justify-content:space-between;align-items:center}
+    .logo{
+      display:flex;align-items:center;gap:12px;
+      font-size:26px;font-weight:800;text-decoration:none;color:var(--primary);
+    }
+    .logo-img{
+      width:55px;height:55px;border-radius:50%;
+      object-fit:cover;flex-shrink:0;
+    }
+    .logo span{
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      -webkit-background-clip:text;
+      color:transparent;
+      font-weight:800;
+      letter-spacing:0.02em;
+    }
+    nav ul{list-style:none;display:flex;align-items:center}
+    nav ul li{margin-left:28px}
+    nav ul li a{
+      text-decoration:none;font-weight:600;color:var(--dark);
+      position:relative;padding:8px 0;opacity:0.92;
+      transition:0.25s ease;
+    }
+    nav ul li a:hover{opacity:1;color:var(--primary)}
+    nav ul li a:after{
+      content:"";position:absolute;left:0;bottom:0;height:3px;width:0;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      border-radius:999px;transition:0.25s ease;
+    }
+    nav ul li a:hover:after{width:100%}
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 18px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .nav-btn{
+      text-decoration:none;
+      font-weight:700;
+      color:var(--white);
+      padding:12px 22px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      box-shadow:0 10px 22px rgba(162,58,255,0.20);
+      transition:0.25s ease;
+      display:inline-flex;align-items:center;gap:8px;
+    }
+    .nav-btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(162,58,255,0.28)}
 
-.logo {
-    font-size: 26px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--primary);
-}
-
-.logo span {
-    background: linear-gradient(135deg, var(--primary) 0, var(--accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-}
-
-nav ul li a {
-    font-weight: 600;
-    padding: 6px 0;
-    text-decoration: none;
-    color: var(--dark);
-    position: relative;
-    transition: 0.25s;
-}
-
-nav ul li a:hover {
-    color: var(--primary);
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    border-radius: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    transition: width 0.3s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-.nav-btn {
-    color: var(--white);
-    padding: 10px 22px;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
-    transition: 0.3s;
-}
-
-.nav-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(74, 108, 247, 0.4);
-}
 
 /* ========= HERO ARTICLE ========= */
 .article-hero {
@@ -461,179 +429,92 @@ nav ul li a:hover::after {
     border-color: rgba(255, 107, 0, 0.6);
 }
 
-/* ========= FOOTER ========= */
-footer {
-    background:
-        radial-gradient(circle at top left, rgba(74,108,247,0.20), transparent 50%),
-        radial-gradient(circle at top right, rgba(255,107,0,0.18), transparent 50%),
-        var(--dark);
-    color: var(--white);
-    padding: 70px 0 30px;
-    margin-top: 80px;
-}
+  /* FOOTER LIGHT (identique about.html, compact) */
+    .footer-light{
+      background:
+        radial-gradient(circle at top left, rgba(162, 58, 255, 0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.16), transparent 60%),
+        var(--light);
+      padding: 50px 0 25px;
+      border-top: 3px solid;
+      border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+      color: var(--dark);
+    }
+    .footer-light-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 40px;
+      align-items:start;
+    }
+    .footer-light-badge{
+      display:inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(162, 58, 255, 0.12);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .footer-light p{max-width: 380px;color:#4b5563}
+    .footer-light-socials{display:flex;gap:12px;margin-top:12px}
+    .footer-light-socials a{
+      width:36px;height:36px;border-radius:999px;
+      border:1px solid rgba(162,58,255,0.25);
+      display:flex;align-items:center;justify-content:center;
+      font-size:0.85rem;color:var(--primary);
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(4px);
+      text-decoration:none;
+      transition:0.25s ease;
+    }
+    .footer-light-socials a:hover{transform:translateY(-2px);color:var(--secondary);border-color:var(--secondary)}
+    .footer-light-links h4,.footer-light-contact h4{margin-bottom:12px;font-size:1.05rem}
+    .footer-light-links a{
+      display:block;text-decoration:none;color:var(--dark);
+      opacity:0.75;margin-bottom:10px;
+      transition:0.2s ease;
+    }
+    .footer-light-links a:hover{opacity:1;color:var(--primary);padding-left:4px}
+    .footer-light-contact p{margin-bottom:8px;opacity:0.82}
+    .footer-light-btn{
+      margin-top: 12px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding: 10px 18px;border-radius:999px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;text-decoration:none;font-weight:700;
+      box-shadow: 0 10px 25px rgba(162, 58, 255, 0.20);
+      transition:0.25s ease;
+    }
+    .footer-light-btn:hover{transform:translateY(-2px);opacity:0.92}
+    .footer-light-bottom{
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(0, 0, 0, 0.10);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+    .footer-light-bottom p{margin:0;color:rgba(31,31,31,0.75)}
+    .footer-light-legal{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .footer-light-legal a{
+      color: var(--dark);
+      text-decoration:none;
+      opacity: 0.7;
+      transition: 0.25s ease;
+    }
+    .footer-light-legal a:hover{opacity:1;color:var(--primary)}
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    /* FADE-IN */
+    .fade-in{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease, transform 0.55s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.6fr);
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.footer-brand-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.8rem;
-    margin-bottom: 12px;
-}
-
-.footer-brand-logo .dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 999px;
-    background: var(--accent);
-}
-
-.footer-brand p {
-    opacity: 0.85;
-    max-width: 360px;
-    margin-bottom: 18px;
-}
-
-.footer-social {
-    display: flex;
-    gap: 12px;
-}
-
-.footer-social a {
-    width: 36px;
-    height: 36px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.85;
-    transition: 0.25s;
-}
-
-.footer-social a:hover {
-    opacity: 1;
-    transform: translateY(-3px);
-    border-color: var(--accent);
-}
-
-.footer-title {
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-}
-
-.footer-links ul,
-.footer-contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links ul li + li,
-.footer-contact-list li + li {
-    margin-top: 8px;
-}
-
-.footer-links a,
-.footer-contact-list a {
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.82;
-    font-size: 0.95rem;
-    transition: 0.25s;
-}
-
-.footer-links a:hover,
-.footer-contact-list a:hover {
-    opacity: 1;
-    color: var(--accent);
-    padding-left: 4px;
-}
-
-.footer-contact-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-contact-list i {
-    font-size: 0.95rem;
-    opacity: 0.8;
-}
-
-.footer-cta-btn {
-    margin-top: 18px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    border: none;
-    cursor: pointer;
-    color: var(--white);
-    text-decoration: none;
-    font-size: 0.95rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.footer-cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
-}
-
-.footer-subtext {
-    margin-top: 8px;
-    font-size: 0.85rem;
-    opacity: 0.8;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
-    margin-top: 30px;
-    padding-top: 18px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
-    opacity: 0.9;
-}
-
-.footer-bottom-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-bottom-links a {
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.85;
-    transition: opacity 0.2s;
-}
-
-.footer-bottom-links a:hover {
-    opacity: 1;
-}
 
 /* ========= RESPONSIVE ========= */
 @media (max-width: 900px) {
@@ -652,24 +533,29 @@ footer {
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <span>SKY SOCIAL AGENCY</span>
+      <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
+        <span>SKY SOCIAL AGENCY</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
+              Prendre RDV
             </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn">Prendre RDV</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     <!-- HERO ARTICLE -->
     <section class="article-hero">
@@ -906,72 +792,48 @@ footer {
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-grid">
-                <!-- Colonne 1 : Branding -->
-                <div class="footer-brand">
-                    <div class="footer-brand-logo">
-                        <span class="dot"></span>
-                        <span>Sky Social Agency</span>
-                    </div>
-                    <p>
-                        Création de sites web & accompagnement digital pour indépendants et petites entreprises.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/skysocialagency" target="_blank" aria-label="Instagram SkySocial Agency">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/sky-social-agency" target="_blank" aria-label="LinkedIn SkySocial Agency">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Colonne 2 : Navigation -->
-                <div class="footer-links">
-                    <h3 class="footer-title">Navigation</h3>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Colonne 3 : Contact & CTA -->
-                <div class="footer-contact">
-                    <h3 class="footer-title">Contact</h3>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:skysocialfr@gmail.com">skysocialfr@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+33669708046">+33 6 69 70 80 46</a>
-                        </li>
-                    </ul>
-
-                    <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="footer-cta-btn">
-                        <span>Réserver un appel découverte</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <p class="footer-subtext">Réponse sous 24–48h, sans engagement.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 Sky Social Agency – Tous droits réservés.</p>
-                <div class="footer-bottom-links">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <span>•</span>
-                    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-                </div>
-            </div>
+  <footer class="footer-light">
+    <div class="container footer-light-grid">
+      <div class="footer-light-brand">
+        <div class="footer-light-badge">Sky Social Agency</div>
+        <p>
+          Création de sites web & accompagnement digital pour entreprises ambitieuses
+          qui veulent une présence en ligne claire, professionnelle et rentable.
+        </p>
+        <div class="footer-light-socials">
+          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
         </div>
-    </footer>
+      </div>
+
+      <div class="footer-light-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-light-contact">
+        <h4>Contact</h4>
+        <p>📩 skysocialfr@gmail.com</p>
+        <p>📞 +33 6 69 70 80 46</p>
+        <a class="footer-light-btn" href="contact.html">Réserver un appel →</a>
+      </div>
+    </div>
+
+    <div class="container footer-light-bottom">
+      <p>© 2025 Sky Social Agency — Tous droits réservés.</p>
+      <div class="footer-light-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span>•</span>
+        <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
 
     <!-- SCRIPT ANIMATIONS FADE-IN (au cas où) -->
     <script>
