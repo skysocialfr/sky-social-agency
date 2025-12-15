@@ -134,7 +134,7 @@ font-weight: 700;
             box-shadow: 0 8px 20px rgba(162, 58, 255, 0.45);
             } 
 
-/* 7) Menu mobile (hamburger) */
+/* ========== HAMBURGER (VISIBLE + COLORÉ) ========== */
 .nav-toggle{
   display:none;
   border:0;
@@ -143,18 +143,30 @@ font-weight: 700;
   width:44px;
   height:44px;
   border-radius:14px;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:10px;
+  position:relative;
+  z-index:1200;
 }
 
 .nav-toggle span{
   display:block;
+  width:22px;
   height:3px;
-  margin:6px 6px;
-  background: linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary)
-  );
   border-radius:999px;
+
+  /* fallback (si gradient bug) */
+  background-color: var(--primary);
+
+  /* dégradé Sky Social */
+  background-image: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+/* mobile only */
+@media (max-width: 768px){
+  .nav-toggle{ display:inline-flex; flex-direction:column; }
 }
 
 /* 8) Footer (footer-light) */
@@ -413,7 +425,12 @@ font-weight: 700;
 
 /* Très petit */
 @media (max-width: 420px){
-  .logo span{display:none}
+  .logo span{
+    display:inline;
+    font-size:0.85rem;
+    letter-spacing:0.06em;
+  }
 }
+
 
 
