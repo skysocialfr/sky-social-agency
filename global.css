@@ -1,150 +1,506 @@
-/* ================================
-   GLOBAL.CSS — Sky Social Agency
-   ================================ */
+/* =========================================
+   GLOBAL.CSS — Sky Social Agency (UNIFIÉ)
+   Objectif : 1 seul header + 1 seul footer + responsive propre
+   ========================================= */
 
-/* 1) Variables globales */
-:root{
-  --primary:#4a6cf7;
-  --secondary:#ff6b00;
-  --accent:#00d2a0;
-  --dark:#1d2130;
-  --light:#f7f9fc;
-  --radius:18px;
+ :root {
+    --primary: #a23aff;       /* Violet signature */
+    --secondary: #ff6b00;     /* Orange dynamique */
+    --dark: #1f1f1f;
+    --light: #faf9ff;
+    --white: #ffffff;
+	--accent: #ff6b00; 
+    --muted:#6b7280; 
 }
 
-/* 2) Reset léger */
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display:block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+        }
+		
+.logo-img {
+    width: 55px;     /* Taille idéale = ni trop grand ni trop petit */
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%; /* Garde le look arrondi de ton logo rond */
+    margin-right: 12px; /* espace entre image et texte */
 }
 
-body{
-  margin:0;
-  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
-  color:var(--dark);
-  background:#fff;
-  line-height:1.6;
+        .logo span {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+-webkit-background-clip: text;
+color: transparent;
+font-weight: 700;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            padding: 6px 0;
+            text-decoration: none;
+            color: var(--dark);
+            position: relative;
+            transition: 0.25s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            color: var(--white);
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            box-shadow: 0 4px 15px rgba(162, 58, 255, 0.35);  /* au lieu de 74,108,247 */
+            }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(162, 58, 255, 0.45);
+            } 
+
+/* 7) Menu mobile (hamburger) */
+.nav-toggle{
+  display:none;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  width:44px;
+  height:44px;
+  border-radius:14px;
 }
 
-/* 3) Containers */
-.container{
-  width:100%;
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 24px;
-}
-
-/* 4) Typographie */
-h1,h2,h3{
-  line-height:1.2;
-}
-
-h1{font-size:2.8rem}
-h2{font-size:2.2rem}
-h3{font-size:1.4rem}
-
-p{margin:0}
-
-/* 5) Liens & boutons */
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-.btn,
-.nav-btn{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:var(--radius);
-  background:var(--primary);
-  color:#fff;
-  font-weight:600;
+.nav-toggle span{
+  display:block;
+  height:2px;
+  margin:7px 8px;
+  background: var(--dark);
+  border-radius:999px;
   transition:.25s;
 }
 
-.btn:hover,
-.nav-btn:hover{
-  transform:translateY(-2px);
+/* 8) Footer (footer-light) */
+.footer-light {
+    background:
+        radial-gradient(circle at top left, rgba(162, 58, 255, 0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.16), transparent 60%),
+        var(--light);
+    padding: 50px 0 25px;
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+    color: var(--dark);
 }
 
-/* 6) Header + Navigation */
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#fff;
-  border-bottom:1px solid rgba(0,0,0,.06);
+.footer-light-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-.header-container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  height:72px;
+.footer-light-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(162, 58, 255, 0.12);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 12px;
 }
 
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:28px;
-  padding:0;
-  margin:0;
+.footer-light p {
+    max-width: 360px;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
 }
 
-/* 7) Footer */
-footer{
-  background:var(--light);
-  padding:60px 0 30px;
+/* Réseaux sociaux */
+.footer-light-socials {
+    display: flex;
+    gap: 12px;
 }
 
-/* 8) Sections */
-section{
-  padding:90px 0;
+.footer-light-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(162, 58, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    transition: 0.25s;
+    text-decoration: none;
 }
 
-/* 9) Responsive — TABLET */
-@media (max-width: 900px){
-  .container{padding:0 16px}
-  h1{font-size:2.2rem}
-  h2{font-size:1.9rem}
-  section{padding:70px 0}
+.footer-light-socials a:hover {
+    transform: translateY(-3px);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
-/* 10) Responsive — MOBILE */
+/* Colonnes liens */
+.footer-light-links h4,
+.footer-light-contact h4 {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+.footer-light-links a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    opacity: 0.75;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.footer-light-links a:hover {
+    opacity: 1;
+    color: var(--primary);
+    padding-left: 4px;
+}
+
+/* Contact */
+.footer-light-contact p {
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.footer-light-btn {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 18px rgba(162, 58, 255, 0.25);
+    transition: 0.25s;
+}
+
+.footer-light-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(162, 58, 255, 0.35);
+}
+
+
+/* Bas du footer */
+.footer-light-bottom {
+    margin-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 15px 0;
+}
+
+.footer-light-bottom-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.footer-light-bottom-inner p{
+    margin: 0;
+}
+
+/* Bloc Mentions légales */
+.footer-light-legal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.footer-light-legal a {
+    color: var(--dark);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.25s ease;
+}
+
+.footer-light-legal a:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+
+
+/* 9) Animations utiles (fade-in utilisé sur index + articles) */
+.fade-in{
+  opacity:0;
+  transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+
+.fade-in.visible{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* 10) Helpers responsive généraux */
+@media (max-width: 980px){
+  .container{ padding:0 16px; }
+  .container-narrow{ padding:0 16px; }
+  section{ padding:70px 0; }
+
+  h1{ font-size:2.2rem; }
+  h2{ font-size:1.85rem; }
+}
+
 @media (max-width: 768px){
-  h1{font-size:2rem}
-  h2{font-size:1.6rem}
-  section{padding:60px 0}
-}
-/* 11) Navigation mobile */
-.nav-toggle{display:none;border:0;background:transparent;cursor:pointer;width:44px;height:44px;border-radius:12px}
-.nav-toggle span{display:block;height:2px;margin:7px 8px;background:var(--dark);border-radius:999px;transition:.25s}
+  h1{ font-size:2.0rem; }
+  h2{ font-size:1.6rem; }
+  section{ padding:60px 0; }
 
-@media (max-width: 900px){
-  .container{padding:0 16px}
-}
+  /* Header : logo + bouton, nav en dropdown */
+  .logo span{ font-size:0.95rem; }
+  .logo-img{ width:46px; height:46px; }
 
-@media (max-width: 768px){
-  header{position:sticky; top:0} /* plus stable que fixed + hacks */
-  .header-container{padding:12px 0}
-  .nav-toggle{display:inline-flex;flex-direction:column;justify-content:center}
-  
-  nav{position:relative}
+  .nav-toggle{
+    display:inline-flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
   nav ul{
-    position:absolute; right:0; top:52px;
-    width:min(320px, 92vw);
-    background:rgba(255,255,255,.98);
-    border:1px solid rgba(17,24,39,.08);
-    box-shadow:0 18px 40px rgba(0,0,0,.12);
-    border-radius:18px;
-    padding:12px;
-    display:none; /* caché par défaut */
+    position:absolute;
+    right:0;
+    top: calc(var(--header-h) - 12px);
+    width: min(330px, 92vw);
+    background: rgba(255,255,255,0.98);
+    border: 1px solid rgba(17,24,39,0.10);
+    box-shadow: var(--shadow-md);
+    border-radius: 18px;
+    padding: 12px;
+    display:none;
     flex-direction:column;
     gap:8px;
   }
-  nav ul.is-open{display:flex}
-  nav ul li a{padding:10px 10px; border-radius:12px}
-  .nav-btn{width:100%; text-align:center}
+
+  nav ul.is-open{ display:flex; }
+
+  nav ul li a{
+    display:block;
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  nav ul li a:hover{
+    background: rgba(74,108,247,0.08);
+    transform:none;
+  }
+
+  .nav-btn{
+    width:100%;
+    text-align:center;
+    box-shadow:none;
+  }
+
+  /* Footer */
+  .footer-light-grid{ grid-template-columns: 1fr; }
+  .footer-light-socials{ justify-content:flex-start; }
 }
 
+@media (max-width: 420px){
+  .logo span{ display:none; } /* ultra small : logo seul */
+}
+/* ================================
+   RESPONSIVE GLOBAL — MOBILE FIRST
+   ================================ */
+
+/* 1️⃣ Empêcher tout débordement horizontal */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2️⃣ Header fixe → espace compensé */
+body {
+  padding-top: 90px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+/* 3️⃣ Grilles → 1 colonne sur mobile */
+@media (max-width: 768px) {
+
+  .hero-grid,
+  .about-grid,
+  .two-columns,
+  .diff-grid,
+  .test-grid,
+  .mockup-testimonial-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+}
+
+/* 4️⃣ Images jamais trop grandes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5️⃣ Sections plus respirantes */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 0 !important;
+  }
+}
+@media (max-width: 768px) {
+
+  .page-hero,
+  .hero {
+    text-align: center;
+  }
+
+  .hero-actions,
+  .cta-buttons,
+  .hero-proof {
+    justify-content: center;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 2rem !important;
+    line-height: 1.15;
+  }
+
+  .hero p,
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .services-grid,
+  .cards,
+  .values-grid,
+  .team-grid,
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-card,
+  .card,
+  .blog-card {
+    margin-bottom: 16px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .footer-light-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .footer-light {
+    text-align: center;
+  }
+
+  .footer-light-socials {
+    justify-content: center;
+  }
+
+}

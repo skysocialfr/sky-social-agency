@@ -21,92 +21,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="global.css">
+
 
 <style>
-/* 🎨 VARIABLES DE COULEURS GLOBALES */
-:root {
-    --primary: #a23aff;       /* Violet signature */
-    --secondary: #ff6b00;     /* Orange dynamique */
-    --dark: #1f1f1f;
-    --light: #faf9ff;
-    --white: #ffffff;
-}
-
-
-/* RESET BASE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bricolage Grotesque', sans-serif;
-}
-
-body {
-    background-color: var(--light);
-    color: var(--dark);
-    overflow-x: hidden;
-    line-height: 1.7;
-}
-
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* HEADER (identique about.html) */
-    header{
-      background:var(--white);
-      position:fixed;top:0;left:0;width:100%;
-      z-index:1000;
-      transition:0.35s ease;
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
-      padding:18px 0;
-    }
-    .header-container{display:flex;justify-content:space-between;align-items:center}
-    .logo{
-      display:flex;align-items:center;gap:12px;
-      font-size:26px;font-weight:800;text-decoration:none;color:var(--primary);
-    }
-    .logo-img{
-      width:55px;height:55px;border-radius:50%;
-      object-fit:cover;flex-shrink:0;
-    }
-    .logo span{
-      background:linear-gradient(90deg,var(--primary),var(--secondary));
-      -webkit-background-clip:text;
-      color:transparent;
-      font-weight:800;
-      letter-spacing:0.02em;
-    }
-    nav ul{list-style:none;display:flex;align-items:center}
-    nav ul li{margin-left:28px}
-    nav ul li a{
-      text-decoration:none;font-weight:600;color:var(--dark);
-      position:relative;padding:8px 0;opacity:0.92;
-      transition:0.25s ease;
-    }
-    nav ul li a:hover{opacity:1;color:var(--primary)}
-    nav ul li a:after{
-      content:"";position:absolute;left:0;bottom:0;height:3px;width:0;
-      background:linear-gradient(90deg,var(--primary),var(--secondary));
-      border-radius:999px;transition:0.25s ease;
-    }
-    nav ul li a:hover:after{width:100%}
-
-    .nav-btn{
-      text-decoration:none;
-      font-weight:700;
-      color:var(--white);
-      padding:12px 22px;
-      border-radius:999px;
-      background:linear-gradient(90deg,var(--primary),var(--secondary));
-      box-shadow:0 10px 22px rgba(162,58,255,0.20);
-      transition:0.25s ease;
-      display:inline-flex;align-items:center;gap:8px;
-    }
-    .nav-btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(162,58,255,0.28)}
 
 /* ⭐ HERO ARTICLE */
 .article-hero {
@@ -237,92 +155,6 @@ body {
     font-weight: 600;
     text-decoration: none;
 }
-
- /* FOOTER LIGHT (identique about.html, compact) */
-    .footer-light{
-      background:
-        radial-gradient(circle at top left, rgba(162, 58, 255, 0.18), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.16), transparent 60%),
-        var(--light);
-      padding: 50px 0 25px;
-      border-top: 3px solid;
-      border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
-      color: var(--dark);
-    }
-    .footer-light-grid{
-      display:grid;
-      grid-template-columns: 1.2fr 0.8fr 1fr;
-      gap: 40px;
-      align-items:start;
-    }
-    .footer-light-badge{
-      display:inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(162, 58, 255, 0.12);
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-    .footer-light p{max-width: 380px;color:#4b5563}
-    .footer-light-socials{display:flex;gap:12px;margin-top:12px}
-    .footer-light-socials a{
-      width:36px;height:36px;border-radius:999px;
-      border:1px solid rgba(162,58,255,0.25);
-      display:flex;align-items:center;justify-content:center;
-      font-size:0.85rem;color:var(--primary);
-      background: rgba(255,255,255,0.6);
-      backdrop-filter: blur(4px);
-      text-decoration:none;
-      transition:0.25s ease;
-    }
-    .footer-light-socials a:hover{transform:translateY(-2px);color:var(--secondary);border-color:var(--secondary)}
-    .footer-light-links h4,.footer-light-contact h4{margin-bottom:12px;font-size:1.05rem}
-    .footer-light-links a{
-      display:block;text-decoration:none;color:var(--dark);
-      opacity:0.75;margin-bottom:10px;
-      transition:0.2s ease;
-    }
-    .footer-light-links a:hover{opacity:1;color:var(--primary);padding-left:4px}
-    .footer-light-contact p{margin-bottom:8px;opacity:0.82}
-    .footer-light-btn{
-      margin-top: 12px;
-      display:inline-flex;align-items:center;gap:8px;
-      padding: 10px 18px;border-radius:999px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: white;text-decoration:none;font-weight:700;
-      box-shadow: 0 10px 25px rgba(162, 58, 255, 0.20);
-      transition:0.25s ease;
-    }
-    .footer-light-btn:hover{transform:translateY(-2px);opacity:0.92}
-    .footer-light-bottom{
-      margin-top: 25px;
-      padding-top: 15px;
-      border-top: 1px solid rgba(0, 0, 0, 0.10);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:10px;
-      font-size: 0.9rem;
-      color: var(--dark);
-    }
-    .footer-light-bottom p{margin:0;color:rgba(31,31,31,0.75)}
-    .footer-light-legal{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .footer-light-legal a{
-      color: var(--dark);
-      text-decoration:none;
-      opacity: 0.7;
-      transition: 0.25s ease;
-    }
-    .footer-light-legal a:hover{opacity:1;color:var(--primary)}
-
-    /* FADE-IN */
-    .fade-in{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease, transform 0.55s ease}
-    .fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 
@@ -338,6 +170,9 @@ body {
       </a>
       <nav>
         <ul>
+			<button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">À propos</a></li>
           <li><a href="services.html">Services</a></li>
@@ -640,6 +475,31 @@ body {
     </div>
   </footer>
 
+<script>
+  const btn = document.querySelector(".nav-toggle");
+  const menu = document.querySelector("nav ul");
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      const open = menu.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    menu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
