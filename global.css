@@ -415,7 +415,6 @@ font-weight: 700;
   .nav-btn{width:100%;text-align:center;box-shadow:none}
 
   /* ✅ Grilles -> 1 colonne (SAUF si la grille est un carrousel) */
-.process-grid:not(.is-carousel),
 .method-grid:not(.is-carousel),
 .services-grid:not(.is-carousel),
 .values-grid:not(.is-carousel),
@@ -461,9 +460,7 @@ font-weight: 700;
   .process-card{
     width: 100%;
   }
-	/* 6) OPTION Carrousel tactile (recommandé Expertises + Témoignages)
-        -> Active en ajoutant class="is-carousel" sur la grille concernée dans le HTML
-        Exemple: <div class="services-grid is-carousel"> ... </div>
+	
   /* ✅ Carrousel tactile (stable) */
 .is-carousel{
   display: flex !important;
