@@ -363,6 +363,27 @@ font-weight: 700;
 
   .logo-img{width:46px;height:46px}
   .logo span{font-size:.95rem}
+	
+	/* éviter les débordements horizontaux (source n°1 des “bugs” mobile) */
+  html, body{ overflow-x: hidden; }
+
+  /* 2) Typo mobile (titres qui respirent) */
+  h1{
+    font-size: clamp(1.95rem, 7vw, 2.35rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em;
+  }
+
+  h2{
+    font-size: clamp(1.45rem, 5.4vw, 1.85rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em;
+  }
+
+  p{
+    font-size: 1rem;
+    line-height: 1.7;
+  }
 
   /* hamburger visible */
   .nav-toggle{display:inline-flex;flex-direction:column;justify-content:center}
@@ -394,6 +415,8 @@ font-weight: 700;
   .nav-btn{width:100%;text-align:center;box-shadow:none}
 
   /* ✅ Grilles -> 1 colonne (safe) */
+  .process-grid,
+  .method-grid,
   .services-grid,
   .values-grid,
   .team-grid,
@@ -402,19 +425,112 @@ font-weight: 700;
   .diff-grid,
   .test-grid,
   .mockup-testimonial-grid,
-  .process-grid{
+  .footer-light-grid{
     display:grid;
     grid-template-columns:1fr !important;
   }
 
   /* flex -> colonne */
   .two-columns,
-  .process-steps{
-    display:flex;
-    flex-direction:column !important;
-    gap:16px;
+  .hero-grid,
+  .process-steps,
+  .hero-actions,
+  .cta-buttons{
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+/* 4) Hero: centré + CTAs confortables */
+  .hero,
+  .page-hero{
+    text-align: left; /* mets "center" si tu préfères un style full mobile */
   }
 
+  .hero-actions .btn,
+  .hero-actions .nav-btn,
+  .cta-buttons .btn,
+  .cta-buttons .nav-btn{
+    width: 100%;
+    justify-content: center;
+  }
+	
+	/* 5) Cartes “Expertises” — mode empilé (par défaut, premium) */
+  .service-card,
+  .card,
+  .blog-card,
+  .method-card,
+  .process-card{
+    width: 100%;
+  }
+	/* 6) OPTION Carrousel tactile (recommandé Expertises + Témoignages)
+        -> Active en ajoutant class="is-carousel" sur la grille concernée dans le HTML
+        Exemple: <div class="services-grid is-carousel"> ... </div>
+  */
+  .is-carousel{
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .is-carousel > *{
+    scroll-snap-align: start;
+  }
+	/* petit confort visuel (masque la barre de scroll) */
+  .is-carousel::-webkit-scrollbar{ height: 6px; }
+  .is-carousel::-webkit-scrollbar-thumb{
+    background: rgba(162,58,255,0.25);
+    border-radius: 999px;
+  }
+
+  /* 7) Témoignages: cartes plus compactes (si tu as un grand padding) */
+  .testimonial-card,
+  .test-card{
+    padding: 16px !important;
+  }
+	
+	/* 8) Formulaire contact: 100% largeur + confort tactile */
+  input, textarea, select{
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px; /* évite le zoom auto iOS */
+  }
+
+  /* 9) Images adaptatives */
+  img, video{
+    max-width: 100%;
+    height: auto;
+  }
+	
+	/* 10) CTA persistant (float en bas) — option conversion */
+  .mobile-cta{
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-cta a{
+    width: 100%;
+    max-width: 520px;
+    padding: 14px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    box-shadow: 0 14px 34px rgba(17,24,39,0.20);
+  }
+
+  /* pour ne pas que le CTA cache le footer */
+  body{ padding-bottom: 88px; }
+}
   /* Footer mobile compact */
   .footer-light{padding:34px 0 16px;text-align:center}
   .footer-light-grid{grid-template-columns:1fr;gap:20px}
