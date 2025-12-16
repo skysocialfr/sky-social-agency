@@ -414,21 +414,21 @@ font-weight: 700;
   nav ul li a:hover{background:rgba(162,58,255,0.08)}
   .nav-btn{width:100%;text-align:center;box-shadow:none}
 
-  /* ✅ Grilles -> 1 colonne (safe) */
-  .process-grid,
-  .method-grid,
-  .services-grid,
-  .values-grid,
-  .team-grid,
-  .blog-grid,
-  .about-grid,
-  .diff-grid,
-  .test-grid,
-  .mockup-testimonial-grid,
-  .footer-light-grid{
-    display:grid;
-    grid-template-columns:1fr !important;
-  }
+  /* ✅ Grilles -> 1 colonne (SAUF si la grille est un carrousel) */
+.process-grid:not(.is-carousel),
+.method-grid:not(.is-carousel),
+.services-grid:not(.is-carousel),
+.values-grid:not(.is-carousel),
+.team-grid:not(.is-carousel),
+.blog-grid:not(.is-carousel),
+.about-grid:not(.is-carousel),
+.diff-grid:not(.is-carousel),
+.test-grid:not(.is-carousel),
+.mockup-testimonial-grid:not(.is-carousel),
+.footer-light-grid:not(.is-carousel){
+  display: grid;
+  grid-template-columns: 1fr !important;
+}
 
   /* flex -> colonne */
   .two-columns,
@@ -464,27 +464,27 @@ font-weight: 700;
 	/* 6) OPTION Carrousel tactile (recommandé Expertises + Témoignages)
         -> Active en ajoutant class="is-carousel" sur la grille concernée dans le HTML
         Exemple: <div class="services-grid is-carousel"> ... </div>
-  */
-  .is-carousel{
-    display: grid !important;
-    grid-auto-flow: column;
-    grid-auto-columns: 85%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 14px;
-    padding-bottom: 10px;
-    scroll-snap-type: x mandatory;
-  }
+  /* ✅ Carrousel tactile (stable) */
+.is-carousel{
+  display: flex !important;
+  gap: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
 
-  .is-carousel > *{
-    scroll-snap-align: start;
-  }
-	/* petit confort visuel (masque la barre de scroll) */
-  .is-carousel::-webkit-scrollbar{ height: 6px; }
-  .is-carousel::-webkit-scrollbar-thumb{
-    background: rgba(162,58,255,0.25);
-    border-radius: 999px;
-  }
+.is-carousel > *{
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+}
+
+/* Confort scrollbar */
+.is-carousel::-webkit-scrollbar{ height: 6px; }
+.is-carousel::-webkit-scrollbar-thumb{
+  background: rgba(162,58,255,0.25);
+  border-radius: 999px;
+}
 
   /* 7) Témoignages: cartes plus compactes (si tu as un grand padding) */
   .testimonial-card,
@@ -530,6 +530,30 @@ font-weight: 700;
 
   /* pour ne pas que le CTA cache le footer */
   body{ padding-bottom: 88px; }
+}
+
+/* ✅ Footer bottom : compatible avec TON HTML actuel */
+.footer-light-bottom{
+  max-width: 1200px;
+  margin: 25px auto 0;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(0,0,0,0.10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-light-bottom p{ margin: 0; }
+
+@media (max-width:768px){
+  .footer-light-bottom{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer-light-legal{ justify-content: center; }
 }
   /* Footer mobile compact */
   .footer-light{padding:34px 0 16px;text-align:center}
