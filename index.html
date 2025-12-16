@@ -398,7 +398,7 @@
           <div class="mock">
             <img src="notrvision.jpeg" alt="Aperçu d’un projet web Sky Social Agency">
           </div>
-          <div class="hero-proof" aria-label="Preuves rapides">
+          <div class="hero-proof is-carousel" aria-label="Preuves rapides">
             <div class="proof-pill"><b>+20</b><span>projets accompagnés</span></div>
             <div class="proof-pill"><b>+10</b><span>sites créés / optimisés</span></div>
             <div class="proof-pill"><b>+300</b><span>contenus produits</span></div>
@@ -416,7 +416,7 @@
           <div class="underline"></div>
         </div>
 
-        <div class="cards">
+        <div class="cards is-carousel">
           <article class="card fade-in">
             <h3>Création de sites web professionnels</h3>
             <p>Sites modernes, rapides et pensés pour convertir (UX/UI, SEO technique, mobile, outils pro).</p>
@@ -531,7 +531,7 @@
           <div class="underline"></div>
         </div>
 
-        <div class="test-grid is-carousel">
+        <div class="test-grid">
           <div class="shot fade-in" aria-label="Carrousel projets (image placeholder)">
             <img src="mockup.png" alt="Exemple de projet Sky Social Agency">
           </div>
@@ -671,16 +671,6 @@
     });
   }
 		
-</script>
-	<script>
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.site-nav');
-  if(btn && nav){
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
 </script>
 
 
