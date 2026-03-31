@@ -7,17 +7,21 @@
   <meta name="description" content="Sky Social Agency accompagne les entreprises ambitieuses : création de sites web premium, stratégie digitale, social media & branding. Sur-mesure, orienté résultats." />
   <link rel="canonical" href="index.html" />
   <meta name="robots" content="index,follow" />
-	<link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-:root {
+    :root {
       --text: #2a2f3a;
       --radius: 18px;
       --shadow: 0 12px 30px rgba(15,23,42,.10);
     }
-    /* HERO */
+
+    /* ===== HERO ===== */
     .hero {
-      padding: 200px 0 80px;
+      padding: 160px 0 80px;
       background:
         radial-gradient(circle at 20% 25%, rgba(162,58,255,.20), transparent 55%),
         radial-gradient(circle at 85% 15%, rgba(255,107,0,.16), transparent 55%),
@@ -61,13 +65,14 @@
       gap: 12px;
       flex-wrap: wrap;
       align-items: center;
+      margin-bottom: 22px;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 12px 18px;
+      padding: 12px 22px;
       border-radius: 999px;
       font-weight: 800;
       text-decoration: none;
@@ -79,14 +84,13 @@
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       box-shadow: 0 16px 34px rgba(162,58,255,.22);
     }
-    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(162,58,255,.32); }
     .btn-ghost {
       background: rgba(255,255,255,.85);
       border-color: rgba(162,58,255,.22);
       color: var(--primary);
     }
-    .btn-ghost:hover { transform: translateY(-2px); }
-
+    .btn-ghost:hover { transform: translateY(-2px); background: rgba(255,255,255,1); }
     .hero-card {
       border-radius: 24px;
       background: rgba(255,255,255,.85);
@@ -101,11 +105,7 @@
       height: 320px;
       background: #eee;
     }
-    .hero-card .mock img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .hero-card .mock img { width: 100%; height: 100%; object-fit: cover; }
     .hero-proof {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -114,51 +114,14 @@
     }
     .proof-pill {
       border-radius: 14px;
-      padding: 10px 10px;
+      padding: 10px;
       border: 1px solid rgba(162,58,255,.14);
       background: rgba(250,249,255,.9);
       text-align: center;
     }
-    .proof-pill b {
-      display: block;
-      font-size: 1.05rem;
-      color: var(--primary);
-    }
-    .proof-pill span {
-      font-size: .85rem;
-      color: var(--muted);
-    }
-
-    /* SECTION */
-    section { padding: 70px 0; }
-    .section-title {
-      margin-bottom: 26px;
-    }
-    .section-title h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
-      letter-spacing: -.01em;
-    }
-    .section-title p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 70ch;
-    }
-    .underline {
-      width: 54px;
-      height: 4px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      margin-top: 12px;
-    }
-
-    /* TRUST / LOGOS */
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
+    .proof-pill b { display: block; font-size: 1.05rem; color: var(--primary); }
+    .proof-pill span { font-size: .78rem; color: var(--muted); }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 10px; }
     .trust-chip {
       font-size: .85rem;
       padding: 8px 12px;
@@ -168,484 +131,612 @@
       color: #374151;
     }
 
-    /* SERVICES TEASER */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+    /* ===== SECTIONS ===== */
+    section { padding: 80px 0; }
+    .section-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(162,58,255,.10);
+      color: var(--primary);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
+    .section-title { margin-bottom: 32px; }
+    .section-title h2 { margin: 0 0 10px; font-size: clamp(1.6rem, 2.4vw, 2.2rem); letter-spacing: -.01em; }
+    .section-title p { margin: 0; color: var(--muted); max-width: 70ch; }
+    .underline {
+      width: 54px; height: 4px; border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      margin-top: 12px;
+    }
+
+    /* ===== SERVICES ===== */
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
     .card {
-      border-radius: 20px;
-      padding: 18px 18px 16px;
-      background: #fff;
-      border: 1px solid rgba(162,58,255,.14);
+      border-radius: 20px; padding: 22px 20px 18px;
+      background: #fff; border: 1px solid rgba(162,58,255,.14);
       box-shadow: 0 10px 26px rgba(162,58,255,.08);
-      transition: .25s;
-      position: relative;
-      overflow: hidden;
+      transition: .25s; position: relative; overflow: hidden;
     }
     .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(162,58,255,.14); }
     .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+      content: ""; position: absolute; inset: 0;
       background: radial-gradient(circle at 30% 0, rgba(162,58,255,.10), transparent 55%);
       pointer-events: none;
     }
-    .card h3 { margin: 0 0 8px; position: relative; }
-    .card p { margin: 0; color: var(--muted); position: relative; font-size: .95rem; }
-    .card .mini {
-      margin-top: 12px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      position: relative;
-    }
+    .card-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .card h3 { margin: 0 0 8px; position: relative; font-size: 1rem; }
+    .card p { margin: 0; color: var(--muted); position: relative; font-size: .92rem; }
+    .card .mini { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; position: relative; }
     .mini span {
-      font-size: .8rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(162,58,255,.18);
-      background: rgba(250,249,255,.9);
+      font-size: .78rem; padding: 5px 10px; border-radius: 999px;
+      border: 1px solid rgba(162,58,255,.18); background: rgba(250,249,255,.9);
     }
 
-    /* DIFFERENCE */
-    .diff-grid {
-      display: grid;
-      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-      gap: 18px;
-      align-items: start;
-    }
-    .diff {
-      border-radius: 20px;
-      padding: 18px;
-      border: 1px solid rgba(162,58,255,.14);
-      background: rgba(250,249,255,.75);
-    }
-    .diff ul { margin: 10px 0 0; padding-left: 18px; color: #374151; }
-    .diff li + li { margin-top: 8px; }
+    /* ===== DIFFÉRENCE ===== */
+    .diff-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 18px; align-items: start; }
+    .diff { border-radius: 20px; padding: 22px; border: 1px solid rgba(162,58,255,.14); background: rgba(250,249,255,.75); }
+    .diff ul { margin: 12px 0 0; padding-left: 18px; color: #374151; }
+    .diff li + li { margin-top: 10px; }
 
-    /* PROCESS (short) */
+    /* ===== PROCESS ===== */
     .process {
-      border-radius: 26px;
-      padding: 34px 26px;
+      border-radius: 26px; padding: 38px 30px;
       background:
         radial-gradient(circle at 18% 20%, rgba(162,58,255,.14), transparent 60%),
         radial-gradient(circle at 88% 30%, rgba(255,107,0,.12), transparent 60%),
         var(--light);
-      border: 1px solid rgba(162,58,255,.12);
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(162,58,255,.12); box-shadow: var(--shadow);
     }
-    .process-grid {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+    .process-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .step { background: rgba(255,255,255,.85); border: 1px solid rgba(162,58,255,.14); border-radius: 18px; padding: 16px; }
+    .step-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff; font-size: .8rem; font-weight: 800; margin-bottom: 10px;
     }
-    .step {
-      background: rgba(255,255,255,.85);
-      border: 1px solid rgba(162,58,255,.14);
-      border-radius: 18px;
-      padding: 14px;
-    }
-    .step b { display: block; margin-bottom: 6px; }
-    .step span { color: var(--muted); font-size: .92rem; }
+    .step b { display: block; margin-bottom: 6px; font-size: .95rem; }
+    .step span { color: var(--muted); font-size: .88rem; }
 
-    /* TESTIMONIALS */
-    .test-grid {
+    /* ===== MERYNE STUDIO ===== */
+    .meryne-studio-section {
+      background:
+        radial-gradient(circle at 10% 50%, rgba(162,58,255,.12), transparent 55%),
+        radial-gradient(circle at 90% 20%, rgba(255,107,0,.10), transparent 55%),
+        radial-gradient(circle at 60% 90%, rgba(0,210,160,.08), transparent 50%),
+        var(--light);
+      padding: 90px 0;
+    }
+    .meryne-studio-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
-      gap: 18px;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 48px; align-items: center;
     }
-    .shot {
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid rgba(162,58,255,.14);
-      box-shadow: var(--shadow);
-      min-height: 420px;
-      background: #eee;
+    .studio-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px;
+      background: linear-gradient(90deg, rgba(162,58,255,.12), rgba(255,107,0,.10));
+      border: 1px solid rgba(162,58,255,.22);
+      font-size: .82rem; font-weight: 800; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--primary); margin-bottom: 16px;
     }
+    .badge-new {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 999px; font-weight: 800;
+    }
+    .studio-content h2 {
+      font-size: clamp(1.6rem, 2.6vw, 2.3rem); line-height: 1.1;
+      letter-spacing: -.02em; margin: 0 0 14px;
+    }
+    .studio-content > p {
+      color: var(--muted); font-size: 1rem; line-height: 1.7;
+      margin: 0 0 24px; max-width: 52ch;
+    }
+    .studio-abo-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border-radius: 999px;
+      background: rgba(0,210,160,.10); border: 1px solid rgba(0,210,160,.25);
+      color: #00a87d; font-size: .82rem; font-weight: 700; margin-bottom: 20px;
+    }
+    .studio-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .studio-feat {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 16px; border-radius: 14px;
+      background: rgba(255,255,255,.85); border: 1px solid rgba(162,58,255,.12);
+      box-shadow: 0 4px 14px rgba(162,58,255,.06); transition: .2s;
+    }
+    .studio-feat:hover { transform: translateX(4px); border-color: rgba(162,58,255,.28); }
+    .studio-feat-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+    .studio-feat-text strong { display: block; font-size: .95rem; margin-bottom: 2px; }
+    .studio-feat-text span { font-size: .85rem; color: var(--muted); }
+    .studio-cta-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .studio-sub-note { font-size: .82rem; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .studio-mockup-wrap { position: relative; }
+    .studio-mockup-frame {
+      border-radius: 24px; overflow: hidden;
+      border: 1px solid rgba(162,58,255,.18);
+      box-shadow: 0 24px 60px rgba(162,58,255,.16), 0 8px 20px rgba(0,0,0,.08);
+      background: #fff;
+    }
+    .studio-mockup-frame img { width: 100%; display: block; }
+    .studio-float-card {
+      position: absolute; bottom: -18px; left: -22px;
+      background: rgba(255,255,255,.95); border: 1px solid rgba(162,58,255,.18);
+      border-radius: 16px; padding: 12px 16px;
+      box-shadow: 0 12px 30px rgba(162,58,255,.14);
+      display: flex; align-items: center; gap: 10px;
+      backdrop-filter: blur(8px); min-width: 190px;
+    }
+    .studio-float-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: #fff; flex-shrink: 0;
+    }
+    .studio-float-card b { display: block; font-size: .88rem; }
+    .studio-float-card span { font-size: .75rem; color: var(--muted); }
+    .studio-float-badge {
+      position: absolute; top: -14px; right: -14px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff; border-radius: 14px; padding: 10px 14px;
+      font-size: .78rem; font-weight: 700;
+      box-shadow: 0 8px 20px rgba(162,58,255,.30);
+      text-align: center; line-height: 1.4;
+    }
+
+    /* ===== PORTFOLIO ===== */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 10px; }
+    .portfolio-card {
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(162,58,255,.12);
+      box-shadow: 0 10px 26px rgba(162,58,255,.08);
+      background: #fff; transition: .25s;
+    }
+    .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(162,58,255,.14); }
+    .portfolio-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .portfolio-card-body { padding: 16px; }
+    .portfolio-card-body h4 { margin: 0 0 6px; font-size: 1rem; }
+    .portfolio-card-body p { margin: 0 0 12px; font-size: .88rem; color: var(--muted); }
+    .portfolio-tag {
+      font-size: .75rem; padding: 4px 10px; border-radius: 999px;
+      border: 1px solid rgba(162,58,255,.18); background: rgba(250,249,255,.9);
+      color: var(--primary); font-weight: 600;
+    }
+
+    /* ===== TÉMOIGNAGES ===== */
+    .test-grid { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); gap: 18px; align-items: stretch; }
+    .shot { border-radius: 22px; overflow: hidden; border: 1px solid rgba(162,58,255,.14); box-shadow: var(--shadow); min-height: 420px; background: #eee; }
     .shot img { width: 100%; height: 100%; object-fit: cover; }
-    .reviews {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    .reviews { display: flex; flex-direction: column; gap: 12px; }
     .review {
-      border-radius: 20px;
-      padding: 16px 16px 14px;
+      border-radius: 20px; padding: 18px 18px 14px;
       border: 1px solid rgba(162,58,255,.18);
       background: linear-gradient(135deg, rgba(162,58,255,.08), rgba(255,107,0,.06));
       box-shadow: 0 10px 24px rgba(162,58,255,.08);
     }
     .review .tag {
-      display: inline-flex;
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.75);
-      border: 1px solid rgba(162,58,255,.18);
-      color: var(--primary);
-      margin-bottom: 10px;
+      display: inline-flex; font-size: .78rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 6px 10px; border-radius: 999px;
+      background: rgba(255,255,255,.75); border: 1px solid rgba(162,58,255,.18);
+      color: var(--primary); margin-bottom: 10px;
     }
-    .review p { margin: 0 0 10px; color: #1f2937; }
-    .review .who { margin: 0; color: #374151; font-size: .92rem; }
+    .review p { margin: 0 0 10px; color: #1f2937; font-size: .95rem; }
+    .review .who { margin: 0; color: #374151; font-size: .88rem; }
     .stars { color: #f4b400; letter-spacing: 1px; }
 
-    /* FINAL CTA */
+    /* ===== CTA FINAL ===== */
     .cta {
-      border-radius: 26px;
-      padding: 26px 26px;
+      border-radius: 26px; padding: 34px 30px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: #fff;
-      box-shadow: 0 18px 42px rgba(162,58,255,.22);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      color: #fff; box-shadow: 0 18px 42px rgba(162,58,255,.22);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
     }
-    .cta h3 { margin: 0; font-size: 1.35rem; }
-    .cta p { margin: 6px 0 0; opacity: .92; max-width: 70ch; }
-    .cta .btn {
-      background: #fff;
-      color: var(--primary);
-      border: none;
-      padding: 12px 18px;
-    }
+    .cta h3 { margin: 0; font-size: 1.4rem; }
+    .cta p { margin: 6px 0 0; opacity: .92; max-width: 60ch; }
+    .cta .btn { background: #fff; color: var(--primary); border: none; padding: 14px 22px; white-space: nowrap; flex-shrink: 0; }
+    .cta .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.12); }
 
-    /* RESPONSIVE */
-    @media (max-width: 992px){
-      .process-steps{grid-template-columns:1fr;gap:14px}
-      .process-steps:before{
-        left:16px;right:auto;top:16px;bottom:0;width:2px;height:auto;
-        background:linear-gradient(180deg,var(--primary),var(--secondary));
-      }
-      .process-step{padding-left:44px}
-      .step-number{position:absolute;left:12px;top:14px;margin:0}
-      .two-col{grid-template-columns:1fr}
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .meryne-studio-grid { grid-template-columns: 1fr; gap: 32px; }
+      .studio-float-card { display: none; }
     }
-    
-    @media (max-width: 768px){
-      .page-hero{padding:115px 0 60px}
-      .page-hero h1{font-size:2.15rem}
-      .page-hero p{font-size:1.05rem}
-      section{padding:70px 0}
-      .section-title h2{font-size:2rem}
+    @media (max-width: 768px) {
+      .hero { padding: 120px 0 55px; }
+      .hero-grid, .diff-grid, .test-grid, .meryne-studio-grid { grid-template-columns: 1fr; }
+      .hero-proof, .cards, .portfolio-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .cta { flex-direction: column; text-align: center; }
+      .studio-cta-row { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .process-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
+
 <!-- HEADER -->
 <header>
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
-        <span>SKY SOCIAL AGENCY</span>
-      </a>
-      <nav aria-label="Navigation principale">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
-              Prendre RDV
-            </a>
-		  </li>
-        </ul>
-		  <!-- ✅ le bouton DOIT être ici, en dehors du UL -->
-  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-	  </button>
-      </nav>
-    </div>
-  </header>
-	
-  <main>
+  <div class="container header-container">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
+      <span>SKY SOCIAL AGENCY</span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;">
+            ✦ Meryne Studio
+          </a>
+        </li>
+        <li>
+          <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
+            Prendre RDV
+          </a>
+        </li>
+      </ul>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="fade-in">
-          <div class="hero-badge">Agence digitale • Sites web • Social media</div>
-          <h1>Création de sites web & stratégie digitale pour entreprises ambitieuses</h1>
-          <p>
-            Des sites et des stratégies pensés pour <strong>convertir</strong>, renforcer votre image et
-            générer des clients avec une approche <strong>sur‑mesure</strong>, humaine et premium.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html">Réserver un appel</a>
-            <a class="btn btn-ghost" href="services.html">Voir nos services</a>
-          </div>
+<main>
 
-          <div class="trust-row" aria-label="Secteurs accompagnés">
-            <div class="trust-chip">EPANA Woman</div>
-            <div class="trust-chip">Cabinet Millon-Devigne</div>
-            <div class="trust-chip">Laura BL</div>
-            <div class="trust-chip">PME & TPE</div>
-            <div class="trust-chip">Besti.co</div>
-          </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="fade-in">
+        <div class="hero-badge">✦ Agence digitale · Sites web · Social media</div>
+        <h1>Création de sites web &amp; stratégie digitale pour entreprises ambitieuses</h1>
+        <p>Des sites et des stratégies pensés pour <strong>convertir</strong>, renforcer votre image et générer des clients — avec une approche <strong>sur‑mesure</strong>, humaine et premium.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Réserver un appel →</a>
+          <a class="btn btn-ghost" href="services.html">Voir nos services</a>
         </div>
-
-        <div class="hero-card fade-in">
-          <div class="mock">
-            <img src="notrvision.jpeg" alt="Aperçu d’un projet web Sky Social Agency">
-          </div>
-          <div class="hero-proof is-carousel" aria-label="Preuves rapides">
-            <div class="proof-pill"><b>+15</b><span>projets accompagnés</span></div>
-            <div class="proof-pill"><b>+10</b><span>sites créés / optimisés</span></div>
-            <div class="proof-pill"><b>+200</b><span>contenus produits</span></div>
-          </div>
+        <div class="trust-row">
+          <div class="trust-chip">EPANA Woman</div>
+          <div class="trust-chip">Cabinet Millon-Devigne</div>
+          <div class="trust-chip">Laura BL</div>
+          <div class="trust-chip">PME &amp; TPE</div>
+          <div class="trust-chip">Besti.co</div>
         </div>
       </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section>
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Nos expertises</h2>
-          <p>Des services complémentaires pour construire une présence digitale cohérente, crédible et rentable.</p>
-          <div class="underline"></div>
+      <div class="hero-card fade-in">
+        <div class="mock">
+          <img src="notrvision.jpeg" alt="Aperçu d'un projet web Sky Social Agency" />
         </div>
-
-        <div class="cards is-carousel">
-          <article class="card fade-in">
-            <h3>Création de sites web professionnels</h3>
-            <p>Sites modernes, rapides et pensés pour convertir (UX/UI, SEO technique, mobile, outils pro).</p>
-            <div class="mini">
-              <span>WordPress</span><span>Sur‑mesure</span><span>SEO</span>
-            </div>
-          </article>
-
-          <article class="card fade-in">
-            <h3>Social Media Management Premium</h3>
-            <p>Stratégie, calendrier éditorial, contenus, community management et optimisation continue.</p>
-            <div class="mini">
-              <span>Instagram</span><span>TikTok</span><span>LinkedIn</span>
-            </div>
-          </article>
-
-          <article class="card fade-in">
-            <h3>Stratégie digitale & audit</h3>
-            <p>Un diagnostic complet + un plan d’action clair (30 à 90 jours) pour gagner en performance.</p>
-            <div class="mini">
-              <span>Positionnement</span><span>KPI</span><span>Roadmap</span>
-            </div>
-          </article>
-
-          <article class="card fade-in">
-            <h3>Branding & identité visuelle</h3>
-            <p>Une marque cohérente, mémorable et premium : direction artistique, charte digitale, univers visuel.</p>
-            <div class="mini">
-              <span>DA</span><span>Charte</span><span>Templates</span>
-            </div>
-          </article>
+        <div class="hero-proof">
+          <div class="proof-pill"><b>+15</b><span>projets accompagnés</span></div>
+          <div class="proof-pill"><b>+10</b><span>sites créés</span></div>
+          <div class="proof-pill"><b>+200</b><span>contenus produits</span></div>
         </div>
-
-        <div style="margin-top:22px" class="fade-in">
-          <a class="btn btn-primary" href="services.html">Découvrir tous nos services</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIFFERENCE -->
-    <section style="background: var(--light);">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Pourquoi Sky Social Agency ?</h2>
-          <p>Pas de “packs” impersonnels : on construit des solutions adaptées à vos objectifs et à votre marché.</p>
-          <div class="underline"></div>
-        </div>
-
-        <div class="diff-grid">
-          <div class="diff fade-in">
-            <h3 style="margin:0 0 8px;">Une approche business</h3>
-            <ul>
-              <li>Chaque décision sert un objectif (leads, crédibilité, conversions).</li>
-              <li>Un message clair qui explique ce que vous faites en 5 secondes.</li>
-              <li>Un parcours simple qui guide vers l’action.</li>
-            </ul>
-          </div>
-          <div class="diff fade-in">
-            <h3 style="margin:0 0 8px;">Une équipe complémentaire</h3>
-            <ul>
-              <li><strong>Meryne</strong> : stratégie digitale, webdesign & UX.</li>
-              <li><strong>Giovanni</strong> : développement web (WordPress / sur‑mesure).</li>
-              <li><strong>Donia</strong> : contenus & community management.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS (short) -->
-    <section>
-      <div class="container">
-        <div class="process fade-in">
-          <div class="section-title" style="margin:0;">
-            <h2 style="margin:0 0 10px;">Notre méthode en 4 étapes</h2>
-            <p style="margin:0; color: var(--muted);">Un cadre clair, une exécution soignée, une approche orientée résultats.</p>
-            <div class="underline"></div>
-          </div>
-
-          <div class="process-grid is-carousel">
-            <div class="step">
-              <b>1. Audit & objectifs</b>
-              <span>On analyse votre situation et on définit un cap mesurable.</span>
-            </div>
-            <div class="step">
-              <b>2. Stratégie & plan</b>
-              <span>On structure votre message, vos priorités et votre feuille de route.</span>
-            </div>
-            <div class="step">
-              <b>3. Production</b>
-              <span>Design, contenus, site, outils : on construit votre écosystème.</span>
-            </div>
-            <div class="step">
-              <b>4. Optimisation</b>
-              <span>On mesure, on ajuste et on améliore les résultats dans le temps.</span>
-            </div>
-          </div>
-
-          <div style="margin-top:18px;">
-            <a class="btn btn-ghost" href="services.html#processus">Voir la méthode détaillée</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROOF / REVIEWS -->
-    <section style="background: var(--light);">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Projets & retours clients</h2>
-          <p>Des preuves visuelles et des avis qui montrent l’impact d’une présence digitale travaillée.</p>
-          <div class="underline"></div>
-        </div>
-
-        <div class="test-grid is-carousel">
-          <div class="shot fade-in" aria-label="Carrousel projets (image placeholder)">
-            <img src="mockup.png" alt="Exemple de projet Sky Social Agency">
-          </div>
-			<div class="shot fade-in" aria-label="Carrousel projets (image placeholder)">
-            <img src="persona.png" alt="Exemple de projet Sky Social Agency">
-          </div>
-      </div>
-		</div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section>
-      <div class="container">
-        <div class="cta fade-in">
-          <div>
-            <h3>Prête à construire une présence digitale qui convertit ?</h3>
-            <p>Contactez‑nous pour échanger sur votre projet et recevoir un devis sur‑mesure, adapté à vos objectifs.</p>
-          </div>
-          <a class="btn" href="contact.html">Discuter de mon projet →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-   <!-- FOOTER -->
-  <footer class="footer-light">
-    <div class="container footer-light-grid">
-      <div class="footer-light-brand">
-        <div class="footer-light-badge">Sky Social Agency</div>
-        <p>
-          Création de sites web & accompagnement digital pour entreprises ambitieuses
-          qui veulent une présence en ligne claire, professionnelle et rentable.
-        </p>
-        <div class="footer-light-socials">
-          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
-          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
-        </div>
-      </div>
-
-      <div class="footer-light-links">
-        <h4>Navigation</h4>
-        <a href="index.html">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-light-contact">
-        <h4>Contact</h4>
-        <p>📩 skysocialfr@gmail.com</p>
-        <p>📞 +33 6 69 70 80 46</p>
-        <a class="footer-light-btn" href="contact.html">Réserver un appel →</a>
       </div>
     </div>
+  </section>
 
-    <div class="container footer-light-bottom">
-      <p>© 2025 Sky Social Agency — Tous droits réservés.</p>
-      <div class="footer-light-legal">
-        <a href="mentions-legales.html">Mentions légales</a>
-        <span>•</span>
-        <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-badge">Nos expertises</div>
+        <h2>Des solutions digitales sur‑mesure</h2>
+        <p>Des services complémentaires pour construire une présence en ligne cohérente, crédible et rentable.</p>
+        <div class="underline"></div>
+      </div>
+      <div class="cards is-carousel">
+        <article class="card fade-in">
+          <div class="card-icon">🌐</div>
+          <h3>Création de sites web professionnels</h3>
+          <p>Sites modernes, rapides et pensés pour convertir (UX/UI, SEO technique, mobile-first, outils pro).</p>
+          <div class="mini"><span>WordPress</span><span>Sur‑mesure</span><span>SEO</span></div>
+        </article>
+        <article class="card fade-in">
+          <div class="card-icon">📱</div>
+          <h3>Social Media Management Premium</h3>
+          <p>Stratégie, calendrier éditorial, contenus premium, community management et optimisation continue.</p>
+          <div class="mini"><span>Instagram</span><span>TikTok</span><span>LinkedIn</span></div>
+        </article>
+        <article class="card fade-in">
+          <div class="card-icon">🎯</div>
+          <h3>Stratégie digitale &amp; audit</h3>
+          <p>Un diagnostic complet + un plan d'action clair (30 à 90 jours) pour gagner en visibilité et performance.</p>
+          <div class="mini"><span>Positionnement</span><span>KPI</span><span>Roadmap</span></div>
+        </article>
+        <article class="card fade-in">
+          <div class="card-icon">✦</div>
+          <h3>Branding &amp; identité visuelle</h3>
+          <p>Une marque cohérente, mémorable et premium : direction artistique, charte digitale, univers visuel.</p>
+          <div class="mini"><span>Direction artistique</span><span>Charte</span><span>Templates</span></div>
+        </article>
+      </div>
+      <div style="margin-top:26px" class="fade-in">
+        <a class="btn btn-primary" href="services.html">Découvrir tous nos services</a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Fade-in
-    document.addEventListener('DOMContentLoaded', function () {
-      const observed = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
+  <!-- MERYNE STUDIO -->
+  <section class="meryne-studio-section">
+    <div class="container">
+      <div class="meryne-studio-grid">
+        <div class="studio-content fade-in">
+          <div class="studio-label">✦ Meryne Studio <span class="badge-new">NOUVEAU</span></div>
+          <div class="studio-abo-pill">✅ <span>Inclus dans votre abonnement mensuel</span></div>
+          <h2>Pilotez votre production média en temps réel</h2>
+          <p>Meryne Studio est la plateforme exclusive réservée à nos clients abonnés. Suivez, planifiez et gérez toute votre production de contenu et vos réseaux sociaux depuis un seul espace personnel et intuitif.</p>
+          <div class="studio-features">
+            <div class="studio-feat">
+              <div class="studio-feat-icon">📅</div>
+              <div class="studio-feat-text">
+                <strong>Planification de production</strong>
+                <span>Calendrier éditorial visuel, programmation des posts Instagram &amp; TikTok</span>
+              </div>
+            </div>
+            <div class="studio-feat">
+              <div class="studio-feat-icon">📊</div>
+              <div class="studio-feat-text">
+                <strong>Dashboard analytique</strong>
+                <span>KPIs en temps réel : vues, likes, saves, commentaires, évolution abonnés</span>
+              </div>
+            </div>
+            <div class="studio-feat">
+              <div class="studio-feat-icon">🎯</div>
+              <div class="studio-feat-text">
+                <strong>Suivi des objectifs</strong>
+                <span>Fixez vos cibles de croissance et suivez votre progression semaine par semaine</span>
+              </div>
+            </div>
+            <div class="studio-feat">
+              <div class="studio-feat-icon">📤</div>
+              <div class="studio-feat-text">
+                <strong>Export &amp; rapports</strong>
+                <span>Exportez vos données en CSV, accédez à vos top 5 posts et heatmaps de publication</span>
+              </div>
+            </div>
+          </div>
+          <div class="studio-cta-row">
+            <a class="btn btn-primary" href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener">Découvrir Meryne Studio →</a>
+            <a class="btn btn-ghost" href="contact.html">Souscrire un abonnement</a>
+          </div>
+          <p class="studio-sub-note" style="margin-top:14px;">🔒 Accès réservé aux clients abonnés Sky Social Agency</p>
+        </div>
+        <div class="studio-mockup-wrap fade-in">
+          <div class="studio-float-badge">Abonnement<br>mensuel inclus</div>
+          <div class="studio-mockup-frame">
+            <img src="mockupchatgpt.png" alt="Interface Meryne Studio" />
+          </div>
+          <div class="studio-float-card">
+            <div class="studio-float-icon">📈</div>
+            <div><b>Stats automatiques</b><span>Mise à jour en temps réel</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      observed.forEach(el => observer.observe(el));
-    });
+  <!-- POURQUOI SKY SOCIAL -->
+  <section style="background: var(--light);">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-badge">Notre différence</div>
+        <h2>Pourquoi Sky Social Agency ?</h2>
+        <p>Pas de "packs" impersonnels : on construit des solutions adaptées à vos objectifs et à votre marché.</p>
+        <div class="underline"></div>
+      </div>
+      <div class="diff-grid">
+        <div class="diff fade-in">
+          <h3 style="margin:0 0 8px;">🎯 Une approche business</h3>
+          <ul>
+            <li>Chaque décision sert un objectif (leads, crédibilité, conversions).</li>
+            <li>Un message clair qui explique ce que vous faites en 5 secondes.</li>
+            <li>Un parcours simple qui guide vers l'action.</li>
+            <li>Des résultats mesurables et un suivi transparent.</li>
+          </ul>
+        </div>
+        <div class="diff fade-in">
+          <h3 style="margin:0 0 8px;">👥 Une équipe complémentaire</h3>
+          <ul>
+            <li><strong>Meryne</strong> : stratégie digitale, webdesign &amp; UX, fondatrice de l'agence.</li>
+            <li><strong>Giovanni</strong> : développement web (WordPress / sur‑mesure).</li>
+            <li><strong>Donia</strong> : création de contenus &amp; community management.</li>
+            <li>Une collaboration humaine, réactive et orientée résultats.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Effet de scroll sur le header
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      if (!header) return;
-      if (window.scrollY > 80) {
-        header.style.padding = '10px 0';
-        header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.10)';
-      } else {
-        header.style.padding = '18px 0';
-        header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
-      }
-    });
-  </script>
-	<script>
+  <!-- MÉTHODE -->
+  <section>
+    <div class="container">
+      <div class="process fade-in">
+        <div class="section-title" style="margin:0;">
+          <div class="section-badge">Notre méthode</div>
+          <h2 style="margin:8px 0 10px;">Un cadre clair, une exécution soignée</h2>
+          <p style="margin:0;color:var(--muted);">Une approche en 4 étapes orientée résultats, du brief à l'optimisation continue.</p>
+          <div class="underline"></div>
+        </div>
+        <div class="process-grid is-carousel">
+          <div class="step"><div class="step-num">1</div><b>Audit &amp; objectifs</b><span>On analyse votre situation et on définit un cap mesurable.</span></div>
+          <div class="step"><div class="step-num">2</div><b>Stratégie &amp; plan</b><span>On structure votre message, vos priorités et votre feuille de route.</span></div>
+          <div class="step"><div class="step-num">3</div><b>Production</b><span>Design, contenus, site, outils : on construit votre écosystème digital.</span></div>
+          <div class="step"><div class="step-num">4</div><b>Optimisation</b><span>On mesure, on ajuste et on améliore les résultats dans le temps.</span></div>
+        </div>
+        <div style="margin-top:20px;">
+          <a class="btn btn-ghost" href="services.html#processus">Voir la méthode détaillée →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO & AVIS -->
+  <section style="background: var(--light);">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-badge">Portfolio</div>
+        <h2>Projets &amp; retours clients</h2>
+        <p>Des preuves visuelles et des avis qui montrent l'impact d'une présence digitale travaillée.</p>
+        <div class="underline"></div>
+      </div>
+      <div class="portfolio-grid fade-in" style="margin-bottom:32px;">
+        <div class="portfolio-card">
+          <img src="sitewebinstitut.png" alt="Projet site web professionnel" />
+          <div class="portfolio-card-body">
+            <h4>Site web professionnel</h4>
+            <p>Création d'un site vitrine moderne orienté conversion pour un cabinet professionnel.</p>
+            <span class="portfolio-tag">Création web</span>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="mockup.png" alt="Stratégie réseaux sociaux" />
+          <div class="portfolio-card-body">
+            <h4>Stratégie réseaux sociaux</h4>
+            <p>Accompagnement complet — édito, contenus et gestion de communauté.</p>
+            <span class="portfolio-tag">Social Media</span>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="persona.png" alt="Branding et identité visuelle" />
+          <div class="portfolio-card-body">
+            <h4>Branding &amp; identité visuelle</h4>
+            <p>Direction artistique et charte graphique pour une marque ambitieuse.</p>
+            <span class="portfolio-tag">Branding</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-grid is-carousel">
+        <div class="shot fade-in">
+          <img src="mockup.png" alt="Exemple de projet Sky Social Agency" />
+        </div>
+        <div class="reviews fade-in">
+          <div class="review">
+            <div class="tag">Site web</div>
+            <div class="stars">★★★★★</div>
+            <p>"Meryne et son équipe ont complètement transformé notre présence en ligne. Le site est professionnel, rapide et génère vraiment des demandes."</p>
+            <p class="who">— Cabinet Millon-Devigne</p>
+          </div>
+          <div class="review">
+            <div class="tag">Social Media</div>
+            <div class="stars">★★★★★</div>
+            <p>"Un accompagnement sérieux, humain et orienté résultats. Notre communauté a vraiment grandi depuis qu'on travaille ensemble."</p>
+            <p class="who">— EPANA Woman</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section>
+    <div class="container">
+      <div class="cta fade-in">
+        <div>
+          <h3>Prête à construire une présence digitale qui convertit ?</h3>
+          <p>Contactez-nous pour échanger sur votre projet et recevoir un devis sur-mesure, adapté à vos objectifs.</p>
+        </div>
+        <a class="btn" href="contact.html">Discuter de mon projet →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-light">
+  <div class="container footer-light-grid">
+    <div class="footer-light-brand">
+      <div class="footer-light-badge">Sky Social Agency</div>
+      <p>Création de sites web &amp; accompagnement digital pour entreprises ambitieuses qui veulent une présence en ligne claire, professionnelle et rentable.</p>
+      <div class="footer-light-socials">
+        <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+        <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+    <div class="footer-light-links">
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener">✦ Meryne Studio</a>
+    </div>
+    <div class="footer-light-contact">
+      <h4>Contact</h4>
+      <p>📩 skysocialfr@gmail.com</p>
+      <p>📞 +33 6 69 70 80 46</p>
+      <a class="footer-light-btn" href="contact.html">Réserver un appel →</a>
+    </div>
+  </div>
+  <div class="container footer-light-bottom">
+    <p>© 2025 Sky Social Agency — Tous droits réservés.</p>
+    <div class="footer-light-legal">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <span>•</span>
+      <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observed = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    observed.forEach(el => observer.observe(el));
+  });
+
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (!header) return;
+    if (window.scrollY > 80) {
+      header.style.padding = '10px 0';
+      header.style.boxShadow = '0 5px 20px rgba(0,0,0,.10)';
+    } else {
+      header.style.padding = '18px 0';
+      header.style.boxShadow = '0 5px 20px rgba(0,0,0,.08)';
+    }
+  });
+
   const btn = document.querySelector(".nav-toggle");
   const menu = document.querySelector("nav ul");
-
   if (btn && menu) {
     btn.addEventListener("click", () => {
       const open = menu.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
-
     menu.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
         menu.classList.remove("is-open");
         btn.setAttribute("aria-expanded", "false");
       });
     });
-
     document.addEventListener("click", (e) => {
       if (!menu.contains(e.target) && !btn.contains(e.target)) {
         menu.classList.remove("is-open");
@@ -653,9 +744,7 @@
       }
     });
   }
-		
 </script>
-
 
 </body>
 </html>
