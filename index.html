@@ -38,10 +38,9 @@
       border-radius: 999px;
       font-size: .82rem;
       font-weight: 700;
-      color: #C98FDC;
+      color: var(--primary);
       border: 1px solid rgba(155,89,182,.30);
-      background: rgba(155,89,182,.10);
-      backdrop-filter: blur(6px);
+      background: rgba(155,89,182,.08);
       width: fit-content;
       margin-bottom: 16px;
     }
@@ -86,7 +85,7 @@
       border-radius: 16px;
       overflow: hidden;
       height: 320px;
-      background: #1a1a1a;
+      background: #E9E3F7;
     }
     .hero-card .mock img {
       width: 100%;
@@ -103,7 +102,7 @@
       border-radius: 14px;
       padding: 12px 10px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.04);
+      background: rgba(155,89,182,.06);
       text-align: center;
     }
     .proof-pill b {
@@ -180,7 +179,7 @@
       position: relative;
     }
     .step {
-      background: rgba(255,255,255,.05);
+      background: #FFFFFF;
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 18px;
@@ -206,7 +205,7 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       min-height: 420px;
-      background: #1a1a1a;
+      background: #E9E3F7;
     }
     .shot img { width: 100%; height: 100%; object-fit: cover; }
     .reviews {
@@ -234,9 +233,9 @@
       text-transform: uppercase;
       padding: 5px 12px;
       border-radius: 999px;
-      background: rgba(155,89,182,.15);
-      border: 1px solid rgba(155,89,182,.30);
-      color: #C98FDC;
+      background: rgba(155,89,182,.10);
+      border: 1px solid rgba(155,89,182,.25);
+      color: var(--primary);
       margin-bottom: 12px;
     }
     .review p { margin: 0 0 10px; color: var(--muted); }
@@ -284,6 +283,82 @@
 
     /* SECTION alt backgrounds */
     .section-dark { background-color: var(--bg-section); }
+
+    /* PORTFOLIO */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 24px;
+    }
+    .portfolio-card {
+      border-radius: 20px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(155,89,182,0.16);
+      border-color: rgba(155,89,182,0.35);
+    }
+    .portfolio-card a { text-decoration: none; color: inherit; display: block; }
+    .portfolio-preview {
+      height: 190px;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .crm-preview { background: linear-gradient(135deg, #0F1626, #1A2744); }
+    .studio-preview { background: var(--grad); }
+    .preview-window {
+      margin: 14px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      overflow: hidden;
+      height: calc(100% - 28px);
+    }
+    .preview-dots {
+      display: flex;
+      gap: 5px;
+      padding: 7px 10px;
+      background: rgba(0,0,0,0.25);
+    }
+    .preview-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.3); }
+    .preview-dots span:nth-child(1) { background: #FF5F57; }
+    .preview-dots span:nth-child(2) { background: #FEBC2E; }
+    .preview-dots span:nth-child(3) { background: #28C840; }
+    .preview-body { display: flex; gap: 8px; padding: 8px; height: calc(100% - 22px); }
+    .preview-body--studio { flex-direction: column; padding: 20px 16px; gap: 10px; justify-content: center; }
+    .preview-sidebar { width: 34px; background: rgba(255,255,255,.12); border-radius: 6px; flex-shrink: 0; padding: 8px 6px; display: flex; flex-direction: column; gap: 6px; }
+    .preview-nav-item { height: 6px; border-radius: 3px; background: rgba(255,255,255,.25); }
+    .preview-nav-item.active { background: rgba(155,89,182,.8); }
+    .preview-content { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+    .preview-stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
+    .preview-stat { background: rgba(255,255,255,.12); border-radius: 6px; padding: 5px 6px; display: flex; flex-direction: column; gap: 2px; }
+    .preview-stat.accent { background: rgba(155,89,182,.35); }
+    .preview-stat span { font-size: 9px; font-weight: 700; color: #fff; line-height: 1; }
+    .preview-stat small { font-size: 7px; color: rgba(255,255,255,.6); }
+    .preview-chart { display: flex; align-items: flex-end; gap: 4px; height: 50px; padding: 0 2px; }
+    .preview-bar { flex: 1; background: rgba(155,89,182,.6); border-radius: 3px 3px 0 0; }
+    .preview-hero-line { height: 16px; background: rgba(255,255,255,.7); border-radius: 4px; width: 80%; }
+    .preview-hero-text { height: 11px; background: rgba(255,255,255,.55); border-radius: 999px; width: 70%; }
+    .preview-hero-text.short { width: 45%; background: rgba(255,255,255,.30); }
+    .preview-cta-bar { height: 24px; background: rgba(255,255,255,.25); border-radius: 999px; width: 36%; margin-top: 4px; }
+    .portfolio-info { padding: 20px; }
+    .portfolio-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .portfolio-tags span {
+      font-size: .74rem; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+      background: rgba(155,89,182,.08); border: 1px solid rgba(155,89,182,.20);
+      color: var(--primary); letter-spacing: .03em;
+    }
+    .portfolio-info h3 { margin: 0 0 7px; font-size: 1.05rem; color: var(--text); }
+    .portfolio-info p { margin: 0 0 12px; font-size: .88rem; color: var(--muted); line-height: 1.6; }
+    .portfolio-link { font-size: .9rem; font-weight: 700; color: var(--primary); }
+    .portfolio-card:hover .portfolio-link { color: var(--primary-mid); }
+    @media (max-width: 900px) { .portfolio-grid { grid-template-columns: 1fr; } }
 
     @media (max-width: 992px) {
       .process-grid { grid-template-columns: 1fr 1fr; }
@@ -339,8 +414,8 @@
         </div>
         <h1>Création de sites web &amp; stratégie digitale pour <strong>entreprises ambitieuses</strong></h1>
         <p>
-          Des sites et des stratégies pensés pour <strong style="color:#fff">convertir</strong>, renforcer votre image et
-          générer des clients avec une approche <strong style="color:#fff">sur‑mesure</strong>, humaine et premium.
+          Des sites et des stratégies pensés pour <strong style="color:var(--primary)">convertir</strong>, renforcer votre image et
+          générer des clients avec une approche <strong style="color:var(--primary)">sur‑mesure</strong>, humaine et premium.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html">Réserver un appel</a>
@@ -439,9 +514,9 @@
         <div class="diff fade-in">
           <h3>Une équipe complémentaire</h3>
           <ul>
-            <li><strong style="color:#C98FDC">Meryne</strong> : stratégie digitale, webdesign &amp; UX.</li>
-            <li><strong style="color:#C98FDC">Giovanni</strong> : développement web (WordPress / sur‑mesure).</li>
-            <li><strong style="color:#C98FDC">Donia</strong> : contenus &amp; community management.</li>
+            <li><strong style="color:var(--primary)">Meryne</strong> : stratégie digitale, webdesign &amp; UX.</li>
+            <li><strong style="color:var(--primary)">Giovanni</strong> : développement web (WordPress / sur‑mesure).</li>
+            <li><strong style="color:var(--primary)">Donia</strong> : contenus &amp; community management.</li>
           </ul>
         </div>
       </div>
@@ -484,22 +559,109 @@
     </div>
   </section>
 
-  <!-- PROOF / REVIEWS -->
+  <!-- PORTFOLIO -->
   <section>
     <div class="container">
       <div class="section-title fade-in">
-        <h2>Projets &amp; retours clients</h2>
-        <p>Des preuves visuelles et des avis qui montrent l'impact d'une présence digitale travaillée.</p>
+        <h2>Nos réalisations</h2>
+        <p>Des projets concrets qui illustrent notre approche : design soigné, expérience fluide, résultats mesurables.</p>
         <div class="underline"></div>
       </div>
 
-      <div class="test-grid is-carousel">
-        <div class="shot fade-in" aria-label="Projet web Sky Social Agency">
-          <img src="mockup.png" alt="Exemple de projet Sky Social Agency">
-        </div>
-        <div class="shot fade-in" aria-label="Projet web Sky Social Agency">
-          <img src="persona.png" alt="Exemple de projet Sky Social Agency">
-        </div>
+      <div class="portfolio-grid">
+
+        <!-- Sky Social CRM -->
+        <article class="portfolio-card fade-in">
+          <a href="https://skysocialfr.github.io/sky-social-crm/#/" target="_blank" rel="noopener">
+            <div class="portfolio-preview crm-preview">
+              <div class="preview-window">
+                <div class="preview-dots"><span></span><span></span><span></span></div>
+                <div class="preview-body">
+                  <div class="preview-sidebar">
+                    <div class="preview-nav-item active"></div>
+                    <div class="preview-nav-item"></div>
+                    <div class="preview-nav-item"></div>
+                    <div class="preview-nav-item"></div>
+                  </div>
+                  <div class="preview-content">
+                    <div class="preview-stats-row">
+                      <div class="preview-stat"><span>71</span><small>Prospects</small></div>
+                      <div class="preview-stat accent"><span>79,6k€</span><small>Pipeline</small></div>
+                      <div class="preview-stat"><span>0%</span><small>Conversion</small></div>
+                    </div>
+                    <div class="preview-chart">
+                      <div class="preview-bar" style="height:40%"></div>
+                      <div class="preview-bar" style="height:65%"></div>
+                      <div class="preview-bar" style="height:50%"></div>
+                      <div class="preview-bar" style="height:80%"></div>
+                      <div class="preview-bar" style="height:55%"></div>
+                      <div class="preview-bar" style="height:70%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-tags">
+                <span>SaaS</span><span>CRM</span><span>Vue.js</span>
+              </div>
+              <h3>Sky Social CRM</h3>
+              <p>Application CRM pour agences digitales — gestion de prospects, pipeline commercial, suivi des conversions.</p>
+              <span class="portfolio-link">Voir le projet →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Meryne Studio -->
+        <article class="portfolio-card fade-in">
+          <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener">
+            <div class="portfolio-preview studio-preview">
+              <div class="preview-window">
+                <div class="preview-dots"><span></span><span></span><span></span></div>
+                <div class="preview-body preview-body--studio">
+                  <div class="preview-hero-line"></div>
+                  <div class="preview-hero-text"></div>
+                  <div class="preview-hero-text short"></div>
+                  <div class="preview-cta-bar"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-tags">
+                <span>Vitrine</span><span>Design</span><span>HTML/CSS</span>
+              </div>
+              <h3>Meryne Studio</h3>
+              <p>Site vitrine personnel pour une créatrice — identité visuelle forte, mise en page élégante et sobre.</p>
+              <span class="portfolio-link">Voir le projet →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Site Sky Social Agency -->
+        <article class="portfolio-card fade-in">
+          <a href="index.html">
+            <div class="portfolio-preview" style="background: linear-gradient(135deg, #F3EEFF, #EFE0FF);">
+              <div class="preview-window">
+                <div class="preview-dots"><span></span><span></span><span></span></div>
+                <div class="preview-body preview-body--studio">
+                  <div class="preview-hero-line" style="background: var(--grad); opacity:0.7;"></div>
+                  <div class="preview-hero-text" style="background: rgba(155,89,182,.25);"></div>
+                  <div class="preview-hero-text short" style="background: rgba(155,89,182,.18);"></div>
+                  <div class="preview-cta-bar" style="background: var(--grad); opacity: 0.55;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-tags">
+                <span>Agence</span><span>Branding</span><span>HTML/CSS</span>
+              </div>
+              <h3>Sky Social Agency</h3>
+              <p>Ce site — identité de marque complète, animations fluides et parcours de conversion optimisé.</p>
+              <span class="portfolio-link">Découvrir →</span>
+            </div>
+          </a>
+        </article>
+
       </div>
     </div>
   </section>
