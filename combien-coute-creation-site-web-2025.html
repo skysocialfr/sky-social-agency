@@ -20,24 +20,24 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="global.css">
 
 
 <style>
 
-/* ⭐ HERO ARTICLE */
+/* HERO ARTICLE */
 .article-hero {
     padding: 170px 0 50px;
     background:
-        radial-gradient(circle at top left, rgba(74,108,247,0.12), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(255,107,0,0.12), transparent 60%),
-        var(--light);
+        radial-gradient(circle at top left, rgba(155,89,182,0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(233,30,140,0.14), transparent 60%),
+        var(--bg);
 }
 
 .article-hero h1 {
     font-size: 2.6rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--grad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -45,46 +45,49 @@
 .article-meta {
     margin-top: 8px;
     font-size: .95rem;
+    color: var(--muted);
 }
 
-/* 📄 CONTENU ARTICLE */
+/* CONTENU ARTICLE */
 .article-wrapper {
     margin: 40px 0 80px;
 }
 
 .article-card {
-    background: radial-gradient(circle at top left, #ffffff, #f8f9ff 60%);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
     padding: 28px 24px 36px;
     border-radius: 22px;
-    box-shadow: 0 14px 40px rgba(0,0,0,0.07);
+    box-shadow: var(--shadow);
 }
 
 .article-content p {
     margin-bottom: 16px;
-    color: #424242;
+    color: var(--muted);
 }
 
 .article-content h2 {
     font-size: 1.6rem;
     margin: 28px 0 12px;
+    color: var(--text);
     position: relative;
     padding-left: 14px;
 }
 
-/* Petite barre colorée devant les h2 */
 .article-content h2::before {
-    content: '';
+    content: ‘’;
     position: absolute;
     left: 0;
     top: 8px;
     width: 6px;
     height: 22px;
     border-radius: 999px;
-    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    background: var(--grad);
 }
 
 .article-content h3 {
-    color: var(--primary);
+    color: #C98FDC;
     margin: 22px 0 10px;
 }
 
@@ -97,24 +100,24 @@
 }
 
 .article-content strong {
-    color: var(--primary);
+    color: #C98FDC;
 }
 
 /* Encadrés */
 .highlight-box {
-    background: linear-gradient(120deg, #eef2ff, #fdf5f1);
+    background: rgba(155, 89, 182, 0.08);
     padding: 16px;
-    border-left: 4px solid var(--secondary);
+    border-left: 4px solid #E91E8C;
     border-radius: 12px;
     margin: 20px 0;
+    color: var(--muted);
 }
 
-/* Images d’illustration si tu en ajoutes plus tard */
 .article-image {
     margin: 26px 0;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 14px 40px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
 }
 
 .article-image img {
@@ -123,37 +126,55 @@
     display: block;
 }
 
-/* 🧊 Désactivation safe de fade-in */
 .fade-in {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
 
-/* 📢 CTA */
+/* CTA */
 .cta-article {
     margin-top: 40px;
     padding: 22px 20px 24px;
     border-radius: 20px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: var(--white);
+    background: var(--grad);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-article::before {
+    content: ‘’;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.07), transparent 60%);
+    pointer-events: none;
 }
 
 .cta-article h2 {
     margin: 0 0 8px;
+    color: #fff;
 }
 
 .cta-article p {
     margin-bottom: 14px;
+    color: rgba(255,255,255,0.92);
 }
 
 .cta-buttons a {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 999px;
-    background: var(--white);
-    color: var(--primary);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.30);
+    color: #fff;
     font-weight: 600;
     text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.cta-buttons a:hover {
+    background: rgba(255,255,255,0.25);
 }
 </style>
 </head>
