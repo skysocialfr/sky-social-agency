@@ -109,10 +109,10 @@
       display: flex; align-items: flex-start; gap: 12px;
       padding: 14px;
       border-radius: 16px;
-      background: rgba(255,255,255,.04);
+      background: rgba(155,89,182,.06);
       border: 1px solid var(--border);
     }
-    .pill i { color: #C98FDC; margin-top: 2px; flex-shrink: 0; }
+    .pill i { color: var(--primary); margin-top: 2px; flex-shrink: 0; }
     .pill strong { display: block; color: var(--text); font-size: .95rem; }
     .pill span { color: var(--muted); font-size: .88rem; }
 
@@ -147,7 +147,7 @@
       border: 1px solid rgba(155,89,182,.25);
       color: var(--muted); font-weight: 600; font-size: .88rem;
     }
-    .reassurance li i { color: #C98FDC; }
+    .reassurance li i { color: var(--primary); }
 
     form { display: grid; gap: 14px; }
     .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -157,17 +157,17 @@
       border-radius: 12px;
       border: 1px solid var(--border);
       outline: none; font-size: .93rem;
-      background: rgba(255,255,255,.04);
+      background: #FFFFFF;
       color: var(--text);
       font-family: inherit;
       transition: .2s;
     }
     input::placeholder, textarea::placeholder { color: var(--text-dim); }
-    select option { background: #1a1a1a; color: var(--text); }
+    select option { background: #fff; color: var(--text); }
     input:focus, select:focus, textarea:focus {
       border-color: rgba(233,30,140,.40);
       box-shadow: 0 0 0 3px rgba(233,30,140,.10);
-      background: rgba(255,255,255,.06);
+      background: #FFFFFF;
     }
     textarea { min-height: 130px; resize: vertical; }
 
@@ -190,7 +190,7 @@
       display: grid; place-items: center;
       background: rgba(155,89,182,.15);
       border: 1px solid rgba(155,89,182,.25);
-      color: #C98FDC; flex-shrink: 0;
+      color: var(--primary); flex-shrink: 0;
       font-size: .95rem;
     }
     .contact-item strong { display: block; margin-bottom: 2px; color: var(--text); font-size: .93rem; }
@@ -225,7 +225,7 @@
     .faq-item {
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.03);
+      background: #FFFFFF;
       overflow: hidden;
       transition: border-color .2s;
     }
@@ -240,7 +240,7 @@
       font-size: .97rem; color: var(--text);
       font-family: inherit;
     }
-    .faq-q span { color: #C98FDC; font-size: 1.2rem; transition: transform .2s; }
+    .faq-q span { color: var(--primary); font-size: 1.2rem; transition: transform .2s; }
     .faq-a { padding: 0 18px 14px; color: var(--muted); display: none; line-height: 1.65; font-size: .93rem; }
     .faq-item.open .faq-a { display: block; }
     .faq-item.open .faq-q span { transform: rotate(45deg); }
