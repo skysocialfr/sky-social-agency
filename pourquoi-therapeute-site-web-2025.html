@@ -61,7 +61,7 @@
     }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75,200;75,300;75,400;75,500;75,600;75,700;75,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 	<link rel="stylesheet" href="global.css">
@@ -73,9 +73,9 @@
 .article-hero {
     padding: 170px 0 60px;
     background:
-        radial-gradient(circle at top left, rgba(74,108,247,0.14), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(255,107,0,0.14), transparent 60%),
-        var(--light);
+        radial-gradient(circle at top left, rgba(155,89,182,0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(233,30,140,0.14), transparent 60%),
+        var(--bg);
 }
 
 .article-hero-inner {
@@ -94,8 +94,9 @@
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    background: rgba(74, 108, 247, 0.08);
-    color: var(--primary);
+    background: rgba(155, 89, 182, 0.12);
+    border: 1px solid rgba(155, 89, 182, 0.30);
+    color: #C98FDC;
     margin-bottom: 14px;
 }
 
@@ -103,20 +104,20 @@
     font-size: 2.5rem;
     line-height: 1.15;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--grad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .article-meta {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--muted);
     margin-bottom: 14px;
 }
 
 .hero-intro {
     font-size: 1rem;
-    color: #333;
+    color: var(--muted);
 }
 
 /* Image + badge héro */
@@ -161,21 +162,23 @@
 }
 
 .article-card {
-    background: var(--white);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
     border-radius: 22px;
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.07);
+    box-shadow: var(--shadow);
     padding: 26px 22px 36px;
 }
 
 .article-content p {
     margin-bottom: 16px;
-    color: #404040;
+    color: var(--muted);
 }
 
 .article-content h2 {
     font-size: 1.6rem;
     margin: 28px 0 12px;
-    color: var(--dark);
+    color: var(--text);
 }
 
 .article-content h3 {
@@ -201,12 +204,13 @@
 		
 /* Encadré important */
 .highlight-box {
-    background: #eef2ff;
-    border-left: 4px solid var(--primary);
+    background: rgba(155, 89, 182, 0.08);
+    border-left: 4px solid #E91E8C;
     border-radius: 12px;
     padding: 14px 16px;
     margin: 20px 0 24px;
     font-size: 0.96rem;
+    color: var(--muted);
 }
 
 /* Grille 2 colonnes */
@@ -238,8 +242,9 @@
     letter-spacing: 0.08em;
     padding: 4px 10px;
     border-radius: 999px;
-    background: rgba(74, 108, 247, 0.08);
-    color: var(--primary);
+    background: rgba(155, 89, 182, 0.12);
+    border: 1px solid rgba(155, 89, 182, 0.25);
+    color: #C98FDC;
     margin-bottom: 10px;
 }
 
@@ -256,8 +261,10 @@
     align-items: center;
     padding: 6px 12px;
     border-radius: 999px;
-    background: #f3f4ff;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
     font-size: 0.9rem;
+    color: var(--muted);
 }
 
 /* Grille des étapes (1,2,3,4) */
@@ -269,10 +276,18 @@
 }
 
 .step-card {
-    background: #f9fafb;
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 14px 14px 16px;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glow-hover);
 }
 
 .step-number {
@@ -294,8 +309,18 @@
     margin-top: 32px;
     padding: 22px 20px 24px;
     border-radius: 20px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: var(--white);
+    background: var(--grad);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-article::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.07), transparent 60%);
+    pointer-events: none;
 }
 
 .cta-article h2 {
@@ -327,8 +352,14 @@
 }
 
 .cta-main-btn {
-    background: var(--white);
-    color: var(--primary);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.30);
+    color: #fff;
+}
+
+.cta-main-btn:hover {
+    background: rgba(255,255,255,0.25);
 }
 
 .cta-main-btn span {
@@ -336,8 +367,12 @@
 }
 
 .cta-alt-btn {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    color: #fff;
+}
+
+.cta-alt-btn:hover {
+    background: rgba(255,255,255,0.10);
 }
 
 /* ========= ANIMATION FADE-IN (SÉCURISÉE) ========= */
@@ -380,60 +415,46 @@
     background: linear-gradient(180deg, var(--primary), var(--secondary));
 }
 
-/* h3 légèrement teintés */
 .article-content h3 {
-    color: var(--primary);
+    color: #C98FDC;
 }
 
-/* Mots importants un peu plus “vivants” */
 .article-content strong {
-    color: var(--primary);
+    color: #C98FDC;
 }
 
-/* Cartes / encadrés un peu plus colorés */
 .highlight-box {
-    background: linear-gradient(120deg, #eef2ff, #fdf5f1);
-    border-left-color: var(--secondary);
-}
-
-/* Cartes étapes (pour la page thérapeute) plus dynamiques */
-.step-card {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: rgba(155, 89, 182, 0.08);
+    border-left-color: #E91E8C;
 }
 
 .step-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
+    box-shadow: var(--glow-hover);
 }
 
-/* Pills (les petits tags) un peu plus fun */
 .pill {
-    background: rgba(74, 108, 247, 0.08);
-    border: 1px solid rgba(74, 108, 247, 0.15);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: var(--muted);
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .pill:hover {
-    background: rgba(74, 108, 247, 0.16);
+    background: rgba(155, 89, 182, 0.15);
     transform: translateY(-2px);
 }
 
-/* Article card légère “carte glossy” */
-.article-card {
-    background: radial-gradient(circle at top left, #ffffff, #f8f9ff 60%);
-}
-
-/* Liens dans le texte (si tu en mets plus tard) */
 .article-content a {
-    color: var(--primary);
+    color: #C98FDC;
     text-decoration: none;
-    border-bottom: 1px solid rgba(74, 108, 247, 0.3);
+    border-bottom: 1px solid rgba(155, 89, 182, 0.35);
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .article-content a:hover {
-    color: var(--secondary);
-    border-color: rgba(255, 107, 0, 0.6);
+    color: #E91E8C;
+    border-color: rgba(233, 30, 140, 0.60);
 }
 
 </style>

@@ -19,42 +19,39 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link rel="stylesheet" href="global.css">
 
   <style>
     :root{
-      --shadow: 0 14px 40px rgba(17,24,39,.10);
       --radius: 22px;
       --max: 1200px;
     }
 
-    /* Hero */
     .legal-hero{
       padding: 140px 0 26px;
       background:
-        radial-gradient(circle at top left, rgba(162,58,255,0.18), transparent 58%),
-        radial-gradient(circle at bottom right, rgba(255,107,0,0.16), transparent 58%),
-        #f7f6ff;
+        radial-gradient(circle at top left, rgba(155,89,182,0.18), transparent 58%),
+        radial-gradient(circle at bottom right, rgba(233,30,140,0.14), transparent 58%),
+        var(--bg);
     }
     .legal-hero h1{
       margin: 0 0 8px;
       font-size: clamp(2.0rem, 3.5vw, 2.6rem);
       line-height: 1.1;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: var(--grad);
       -webkit-background-clip:text;
       color: transparent;
       letter-spacing: -0.02em;
     }
     .legal-hero p{
       margin:0;
-      color: #4b5563;
+      color: var(--muted);
       font-size: 0.98rem;
     }
 
-    /* Layout */
     .legal-wrap{
       padding: 26px 0 70px;
     }
@@ -65,62 +62,63 @@
       align-items:start;
     }
     .card{
-      background: #fff;
-      border: 1px solid rgba(162,58,255,0.12);
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 26px 24px;
     }
 
-    /* Content */
     .legal-card h2{
       margin: 22px 0 10px;
       font-size: 1.25rem;
       letter-spacing: -0.02em;
+      color: var(--text);
     }
     .legal-card h2:first-of-type{ margin-top: 0; }
-    .legal-card p{ margin: 0 0 12px; color: #374151; }
-    .legal-card ul{ margin: 0 0 12px 18px; color:#374151; }
+    .legal-card p{ margin: 0 0 12px; color: var(--muted); }
+    .legal-card ul{ margin: 0 0 12px 18px; color: var(--muted); }
     .legal-card li{ margin: 6px 0; }
-    .legal-card a{ color: var(--primary); text-decoration: none; font-weight: 700; }
-    .legal-card a:hover{ text-decoration: underline; }
+    .legal-card a{ color: #C98FDC; text-decoration: none; font-weight: 700; }
+    .legal-card a:hover{ color: #E91E8C; text-decoration: underline; }
 
     .legal-highlight{
       margin-top: 14px;
       padding: 12px 14px;
       border-radius: 14px;
-      background: linear-gradient(135deg, rgba(162,58,255,0.08), rgba(255,107,0,0.08));
-      border: 1px solid rgba(162,58,255,0.12);
-      color: #374151;
+      background: rgba(155, 89, 182, 0.08);
+      border: 1px solid rgba(155, 89, 182, 0.20);
+      color: var(--muted);
       font-size: 0.95rem;
     }
 
-    /* Sticky TOC */
     .toc{
       position: sticky;
       top: 98px;
       padding: 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.85);
-      border: 1px solid rgba(162,58,255,0.12);
-      box-shadow: 0 14px 40px rgba(17,24,39,.08);
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
     }
-    .toc strong{ display:block; margin-bottom: 10px; }
+    .toc strong{ display:block; margin-bottom: 10px; color: var(--text); }
     .toc a{
       display:block;
       padding: 8px 10px;
       border-radius: 12px;
       text-decoration:none;
-      color:#111827;
-      font-weight: 700;
-      opacity: 0.9;
+      color: var(--muted);
+      font-weight: 600;
+      transition: background 0.2s ease, color 0.2s ease;
     }
-    .toc a:hover{ background: rgba(162,58,255,0.08); opacity: 1; }
+    .toc a:hover{ background: rgba(155,89,182,0.12); color: #C98FDC; }
 
     .mini-cta{
       margin-top: 12px;
       padding-top: 12px;
-      border-top: 1px solid rgba(17,24,39,0.08);
+      border-top: 1px solid var(--border);
     }
     .mini-cta a{
       display:inline-flex;
@@ -128,16 +126,18 @@
       gap: 8px;
       padding: 10px 12px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      background: var(--grad);
       color:#fff;
       text-decoration:none;
-      font-weight: 900;
-      box-shadow: 0 10px 24px rgba(17,24,39,.12);
+      font-weight: 700;
+      box-shadow: var(--glow);
+      transition: box-shadow 0.2s ease;
     }
+    .mini-cta a:hover{ box-shadow: var(--glow-hover); }
 
-/* Responsive */
     @media (max-width: 700px){
       .legal-hero{ padding: 130px 0 22px; }
+      .legal-grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
