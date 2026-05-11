@@ -18,6 +18,10 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+  <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+  <script src="js/tarteaucitron-init.js"></script>
+
   <!-- Inter — brand kit Sky Social -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -172,6 +176,11 @@
     textarea { min-height: 130px; resize: vertical; }
 
     .form-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+    .form-consent { margin: 8px 0 4px; }
+    .consent-label { display: flex; gap: 10px; align-items: flex-start; color: var(--text-dim); font-size: .85rem; cursor: pointer; line-height: 1.5; }
+    .consent-label input[type="checkbox"] { margin-top: 4px; width: auto; flex-shrink: 0; accent-color: var(--primary); }
+    .consent-label a { color: var(--primary); text-decoration: underline; }
+    .consent-label a:hover { color: var(--text); }
     .small-note { color: var(--text-dim); font-size: .85rem; margin-top: 8px; }
     .small-note a { color: var(--muted); }
     .small-note a:hover { color: var(--text); }
@@ -418,7 +427,7 @@
               <label for="budget">Budget indicatif</label>
               <select id="budget" name="Budget">
                 <option value="" selected disabled>Choisir une fourchette</option>
-				<option value="1500-3000">350€ – 800€</option>  
+                <option value="350-800">350€ – 800€</option>
                 <option value="800-1500">800€ – 1 500€</option>
                 <option value="1500-3000">1 500€ – 3 000€</option>
                 <option value="3000-6000">3 000€ – 6 000€</option>
@@ -443,16 +452,22 @@
             <textarea id="message" name="Message" placeholder="Objectif, activité, ce que vous attendez du site / des réseaux, vos contraintes…" required></textarea>
           </div>
 
+          <div class="form-consent">
+            <label class="consent-label">
+              <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required />
+              <span>J'accepte que mes données soient traitées pour répondre à ma demande, conformément à la <a href="politique-de-confidentialite.html">politique de confidentialité</a>. <span aria-hidden="true">*</span></span>
+            </label>
+          </div>
+
           <div class="form-actions">
             <button type="submit" class="btn primary">Envoyer ma demande →</button>
-            <a class="btn secondary" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+            <a class="btn secondary" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
               Ou réserver un appel
             </a>
           </div>
 
           <div class="small-note">
-            En envoyant ce formulaire, vous acceptez d’être recontacté(e) au sujet de votre demande.
-            Consultez notre <a href="politique-de-confidentialite.html">politique de confidentialité</a>.
+            Réponse sous 24–48h ouvrées. Vos données ne sont jamais transmises à des tiers.
           </div>
         </form>
       </div>
