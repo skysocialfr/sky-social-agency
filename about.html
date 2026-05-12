@@ -597,47 +597,81 @@
     margin: 0 auto;
 }
 
-/* TÉMOIGNAGES — MARQUEE INFINI */
+/* TÉMOIGNAGES — Carrousel scrollable (auto + manuel) */
 .testimonials-section {
     padding: 80px 0 60px;
     background: var(--bg-section);
     overflow: hidden;
 }
-.testimonials-marquee {
+.testimonials-wrap {
     position: relative;
-    overflow: hidden;
-    padding: 12px 0;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
-            mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px; /* place pour les flèches */
 }
-.testimonials-marquee-track {
+.testimonials-scroller {
     display: flex;
     gap: 22px;
-    width: max-content;
-    animation: testimonials-scroll 45s linear infinite;
-    will-change: transform;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 12px 4px 24px;
+    /* fade edges */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 3%, #000 97%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 3%, #000 97%, transparent 100%);
+    /* hide scrollbar */
+    scrollbar-width: none;
 }
-.testimonials-marquee:hover .testimonials-marquee-track,
-.testimonials-marquee:focus-within .testimonials-marquee-track {
-    animation-play-state: paused;
-}
-.testimonials-marquee .testimonial-card {
+.testimonials-scroller::-webkit-scrollbar { display: none; }
+.testimonials-scroller .testimonial-card {
     flex: 0 0 360px;
     width: 360px;
-    min-height: 220px;
+    min-height: 230px;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-@keyframes testimonials-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+.testimonials-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: #FFFFFF;
+    color: var(--text);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: background .2s, border-color .2s, transform .2s, opacity .2s;
 }
-@media (prefers-reduced-motion: reduce) {
-    .testimonials-marquee-track { animation: none; }
+.testimonials-arrow:hover {
+    background: var(--grad);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-50%) scale(1.05);
 }
-@media (max-width: 600px) {
-    .testimonials-marquee .testimonial-card { flex-basis: 300px; width: 300px; }
+.testimonials-arrow:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+.testimonials-arrow.prev { left: 4px; }
+.testimonials-arrow.next { right: 4px; }
+.testimonials-arrow[disabled] {
+    opacity: .35;
+    cursor: not-allowed;
+}
+@media (max-width: 720px) {
+    .testimonials-wrap { padding: 0 12px; }
+    .testimonials-scroller .testimonial-card { flex-basis: 300px; width: 300px; }
+    .testimonials-arrow { display: none; }
 }
 
 .mockup-carousel,
@@ -721,11 +755,12 @@
 		/* Taille uniforme du carrousel */
 .mockup-carousel {
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
     height: 470px; /* Hauteur uniforme */
     position: relative;
     overflow: hidden;
     border-radius: 18px;
+    margin: 0 auto; /* Centrage */
 }
 
 /* Chaque slide occupe toute la zone */
@@ -1320,9 +1355,9 @@
         </div>
     </div>
 
-    <div class="testimonials-marquee fade-in" aria-label="Avis clients défilants">
-        <div class="testimonials-marquee-track">
-            <!-- Set 1 -->
+    <div class="testimonials-wrap fade-in">
+        <button class="testimonials-arrow prev" type="button" aria-label="Avis précédents">‹</button>
+        <div class="testimonials-scroller" id="testimonials-scroller" aria-label="Avis clients" tabindex="0">
             <article class="testimonial-card">
                 <div class="testimonial-tag">Avis client</div>
                 <p class="testimonial-text">« Meryne m'a accompagnée sur la stratégie de communication de notre application mobile, avec un vrai travail sur le planning média et la création de contenu. Tout était clair, structuré et orienté résultats. »</p>
@@ -1334,29 +1369,43 @@
                 <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>EPANA.</strong> – Fondatrice d'une marque de vêtement</p>
             </article>
             <article class="testimonial-card">
-                <div class="testimonial-tag">Avis client</div>
-                <p class="testimonial-text">« Un grand merci pour le travail réalisé sur notre site web. Le résultat est moderne, fluide et correspond totalement à nos attentes. »</p>
-                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Besti.co</strong> – Agence évènementielle</p>
-            </article>
-            <!-- Set 2 (duplicate for seamless infinite scroll) -->
-            <article class="testimonial-card" aria-hidden="true">
-                <div class="testimonial-tag">Avis client</div>
-                <p class="testimonial-text">« Meryne m'a accompagnée sur la stratégie de communication de notre application mobile, avec un vrai travail sur le planning média et la création de contenu. Tout était clair, structuré et orienté résultats. »</p>
-                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Michaël.</strong> – CEO d'une application mobile</p>
-            </article>
-            <article class="testimonial-card" aria-hidden="true">
-                <div class="testimonial-tag">Avis Google</div>
-                <p class="testimonial-text">« Nous avons fait appel à Sky Social Agency pour travailler le branding de notre marque et le résultat a largement dépassé nos attentes. L'identité visuelle est cohérente, moderne et parfaitement alignée avec nos valeurs. Un vrai coup de cœur ! »</p>
-                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>EPANA.</strong> – Fondatrice d'une marque de vêtement</p>
-            </article>
-            <article class="testimonial-card" aria-hidden="true">
                 <div class="testimonial-tag">Avis client</div>
                 <p class="testimonial-text">« Un grand merci pour le travail réalisé sur notre site web. Le résultat est moderne, fluide et correspond totalement à nos attentes. »</p>
                 <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Besti.co</strong> – Agence évènementielle</p>
             </article>
         </div>
+        <button class="testimonials-arrow next" type="button" aria-label="Avis suivants">›</button>
     </div>
 </section>
+
+<script>
+(function () {
+    const scroller = document.getElementById('testimonials-scroller');
+    if (!scroller) return;
+    const prev = document.querySelector('.testimonials-arrow.prev');
+    const next = document.querySelector('.testimonials-arrow.next');
+    const card = scroller.querySelector('.testimonial-card');
+    const step = () => (card ? card.offsetWidth + 22 : 380);
+
+    const updateArrows = () => {
+        if (!prev || !next) return;
+        prev.toggleAttribute('disabled', scroller.scrollLeft <= 4);
+        next.toggleAttribute('disabled', scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 4);
+    };
+
+    prev && prev.addEventListener('click', () => scroller.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next && next.addEventListener('click', () => scroller.scrollBy({ left:  step(), behavior: 'smooth' }));
+    scroller.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+
+    // Keyboard support
+    scroller.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); scroller.scrollBy({ left:  step(), behavior: 'smooth' }); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); scroller.scrollBy({ left: -step(), behavior: 'smooth' }); }
+    });
+})();
+</script>
 
 
     <!-- CTA FINALE -->
