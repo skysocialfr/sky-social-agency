@@ -360,44 +360,10 @@
       position: relative;
       overflow: hidden;
     }
-    .portfolio-preview img { width: 100%; height: 100%; object-fit: cover; }
-    .crm-preview { background: linear-gradient(135deg, #0F1626, #1A2744); }
-    .studio-preview { background: var(--grad); }
-    .preview-window {
-      margin: 14px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.15);
-      overflow: hidden;
-      height: calc(100% - 28px);
-    }
-    .preview-dots {
-      display: flex;
-      gap: 5px;
-      padding: 7px 10px;
-      background: rgba(0,0,0,0.25);
-    }
-    .preview-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.3); }
-    .preview-dots span:nth-child(1) { background: #FF5F57; }
-    .preview-dots span:nth-child(2) { background: #FEBC2E; }
-    .preview-dots span:nth-child(3) { background: #28C840; }
-    .preview-body { display: flex; gap: 8px; padding: 8px; height: calc(100% - 22px); }
-    .preview-body--studio { flex-direction: column; padding: 20px 16px; gap: 10px; justify-content: center; }
-    .preview-sidebar { width: 34px; background: rgba(255,255,255,.12); border-radius: 6px; flex-shrink: 0; padding: 8px 6px; display: flex; flex-direction: column; gap: 6px; }
-    .preview-nav-item { height: 6px; border-radius: 3px; background: rgba(255,255,255,.25); }
-    .preview-nav-item.active { background: rgba(155,89,182,.8); }
-    .preview-content { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-    .preview-stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
-    .preview-stat { background: rgba(255,255,255,.12); border-radius: 6px; padding: 5px 6px; display: flex; flex-direction: column; gap: 2px; }
-    .preview-stat.accent { background: rgba(155,89,182,.35); }
-    .preview-stat span { font-size: 9px; font-weight: 700; color: #fff; line-height: 1; }
-    .preview-stat small { font-size: 7px; color: rgba(255,255,255,.6); }
-    .preview-chart { display: flex; align-items: flex-end; gap: 4px; height: 50px; padding: 0 2px; }
-    .preview-bar { flex: 1; background: rgba(155,89,182,.6); border-radius: 3px 3px 0 0; }
-    .preview-hero-line { height: 16px; background: rgba(255,255,255,.7); border-radius: 4px; width: 80%; }
-    .preview-hero-text { height: 11px; background: rgba(255,255,255,.55); border-radius: 999px; width: 70%; }
-    .preview-hero-text.short { width: 45%; background: rgba(255,255,255,.30); }
-    .preview-cta-bar { height: 24px; background: rgba(255,255,255,.25); border-radius: 999px; width: 36%; margin-top: 4px; }
+    .portfolio-preview img,
+    .portfolio-video { width: 100%; height: 100%; object-fit: cover; display: block; background: linear-gradient(135deg, #F3EEFF, #EFE0FF); }
+    .portfolio-card:hover .portfolio-video { transform: scale(1.02); }
+    .portfolio-video { transition: transform 0.5s ease; }
     .portfolio-info { padding: 20px; }
     .portfolio-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
     .portfolio-tags span {
@@ -629,33 +595,13 @@
         <!-- Sky Social CRM -->
         <article class="portfolio-card fade-in">
           <a href="https://skysocialfr.github.io/sky-social-crm/#/" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-preview crm-preview">
-              <div class="preview-window">
-                <div class="preview-dots"><span></span><span></span><span></span></div>
-                <div class="preview-body">
-                  <div class="preview-sidebar">
-                    <div class="preview-nav-item active"></div>
-                    <div class="preview-nav-item"></div>
-                    <div class="preview-nav-item"></div>
-                    <div class="preview-nav-item"></div>
-                  </div>
-                  <div class="preview-content">
-                    <div class="preview-stats-row">
-                      <div class="preview-stat"><span>71</span><small>Prospects</small></div>
-                      <div class="preview-stat accent"><span>79,6k€</span><small>Pipeline</small></div>
-                      <div class="preview-stat"><span>0%</span><small>Conversion</small></div>
-                    </div>
-                    <div class="preview-chart">
-                      <div class="preview-bar" style="height:40%"></div>
-                      <div class="preview-bar" style="height:65%"></div>
-                      <div class="preview-bar" style="height:50%"></div>
-                      <div class="preview-bar" style="height:80%"></div>
-                      <div class="preview-bar" style="height:55%"></div>
-                      <div class="preview-bar" style="height:70%"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="portfolio-preview">
+              <!-- Drop videos/sky-social-crm.mp4 (loop ~10s, muet, max 2MB) -->
+              <video class="portfolio-video" autoplay loop muted playsinline preload="metadata"
+                     poster="mockup.webp" aria-label="Aperçu vidéo Sky Social CRM">
+                <source src="videos/sky-social-crm.mp4" type="video/mp4">
+                <img src="mockup.webp" alt="Sky Social CRM — Aperçu" loading="lazy" decoding="async">
+              </video>
             </div>
             <div class="portfolio-info">
               <div class="portfolio-tags">
@@ -671,16 +617,13 @@
         <!-- Meryne Studio -->
         <article class="portfolio-card fade-in">
           <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-preview studio-preview">
-              <div class="preview-window">
-                <div class="preview-dots"><span></span><span></span><span></span></div>
-                <div class="preview-body preview-body--studio">
-                  <div class="preview-hero-line"></div>
-                  <div class="preview-hero-text"></div>
-                  <div class="preview-hero-text short"></div>
-                  <div class="preview-cta-bar"></div>
-                </div>
-              </div>
+            <div class="portfolio-preview">
+              <!-- Drop videos/meryne-studio.mp4 (loop ~10s, muet, max 2MB) -->
+              <video class="portfolio-video" autoplay loop muted playsinline preload="metadata"
+                     poster="mockupchatgpt.webp" aria-label="Aperçu vidéo Meryne Studio">
+                <source src="videos/meryne-studio.mp4" type="video/mp4">
+                <img src="mockupchatgpt.webp" alt="Meryne Studio — Aperçu" loading="lazy" decoding="async">
+              </video>
             </div>
             <div class="portfolio-info">
               <div class="portfolio-tags">
@@ -696,16 +639,13 @@
         <!-- Site Sky Social Agency -->
         <article class="portfolio-card fade-in">
           <a href="index.html">
-            <div class="portfolio-preview" style="background: linear-gradient(135deg, #F3EEFF, #EFE0FF);">
-              <div class="preview-window">
-                <div class="preview-dots"><span></span><span></span><span></span></div>
-                <div class="preview-body preview-body--studio">
-                  <div class="preview-hero-line" style="background: var(--grad); opacity:0.7;"></div>
-                  <div class="preview-hero-text" style="background: rgba(155,89,182,.25);"></div>
-                  <div class="preview-hero-text short" style="background: rgba(155,89,182,.18);"></div>
-                  <div class="preview-cta-bar" style="background: var(--grad); opacity: 0.55;"></div>
-                </div>
-              </div>
+            <div class="portfolio-preview">
+              <!-- Drop videos/sky-social-agency.mp4 (loop ~10s, muet, max 2MB) -->
+              <video class="portfolio-video" autoplay loop muted playsinline preload="metadata"
+                     poster="persona.webp" aria-label="Aperçu vidéo Sky Social Agency">
+                <source src="videos/sky-social-agency.mp4" type="video/mp4">
+                <img src="persona.webp" alt="Sky Social Agency — Aperçu" loading="lazy" decoding="async">
+              </video>
             </div>
             <div class="portfolio-info">
               <div class="portfolio-tags">
