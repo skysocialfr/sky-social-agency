@@ -6,7 +6,7 @@ Dépose tes vidéos ici pour qu'elles apparaissent automatiquement dans la secti
 
 | Nom du fichier | Carte concernée |
 |---|---|
-| `sky-social-crm.mp4` | Sky Social CRM |
+| `velmio-crm.mp4` | Velmio CRM |
 | `meryne-studio.mp4` | Meryne Studio |
 | `sky-social-agency.mp4` | Sky Social Agency (ce site) |
 
@@ -22,7 +22,7 @@ Dépose tes vidéos ici pour qu'elles apparaissent automatiquement dans la secti
 ## Compression rapide avec ffmpeg
 
 ```bash
-ffmpeg -i source.mov -c:v libx264 -crf 28 -preset slow -an -vf "scale=1280:-2" sky-social-crm.mp4
+ffmpeg -i source.mov -c:v libx264 -crf 28 -preset slow -an -vf "scale=1280:-2" velmio-crm.mp4
 ```
 
 (le `-an` enlève le son, `-crf 28` compresse fort, ajuster entre 23 et 30)
@@ -37,7 +37,7 @@ ffmpeg -i source.mov -c:v libx264 -crf 28 -preset slow -an -vf "scale=1280:-2" s
 ## En attendant les vidéos
 
 Les cartes affichent une image de fallback (`poster`) :
-- CRM → `mockup.webp`
+- Velmio CRM → `mockup.webp`
 - Meryne Studio → `mockupchatgpt.webp`
 - Sky Social Agency → `persona.webp`
 
