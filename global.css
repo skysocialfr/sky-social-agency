@@ -89,7 +89,7 @@ img {
 }
 
 /* =========================================
-   HEADER — glassmorphism dark
+   HEADER — light, fixed, glass on scroll
    ========================================= */
 header {
   background: #FFFFFF;
@@ -98,7 +98,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: box-shadow 0.3s;
+  transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
   box-shadow: 0 2px 20px rgba(0,0,0,0.05);
 }
 
