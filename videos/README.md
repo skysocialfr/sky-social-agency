@@ -8,7 +8,7 @@ Dépose tes vidéos ici pour qu'elles apparaissent automatiquement dans la secti
 |---|---|
 | `velmio-crm.mp4` | Velmio CRM |
 | `meryne-studio.mp4` | Meryne Studio |
-| `sky-social-agency.mp4` | Sky Social Agency (ce site) |
+| `cabinet-solice.mp4` | Cabinet Solice |
 
 ## Recommandations techniques
 
@@ -39,6 +39,6 @@ ffmpeg -i source.mov -c:v libx264 -crf 28 -preset slow -an -vf "scale=1280:-2" v
 Les cartes affichent une image de fallback (`poster`) :
 - Velmio CRM → `mockup.webp`
 - Meryne Studio → `mockupchatgpt.webp`
-- Sky Social Agency → `persona.webp`
+- Cabinet Solice → `illustration-therapie-1.webp`
 
 Tu peux changer ces images dans `index.html` (chercher `poster=` dans la section portfolio).
