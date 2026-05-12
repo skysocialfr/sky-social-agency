@@ -804,11 +804,15 @@
     const header = document.querySelector('header');
     if (!header) return;
     if (window.scrollY > 60) {
-      header.style.background = 'rgba(13,13,13,0.95)';
-      header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.40)';
+      header.style.background = 'rgba(255,255,255,0.96)';
+      header.style.backdropFilter = 'blur(14px)';
+      header.style.webkitBackdropFilter = 'blur(14px)';
+      header.style.boxShadow = '0 4px 24px rgba(155,89,182,0.10)';
     } else {
-      header.style.background = 'rgba(13,13,13,0.85)';
-      header.style.boxShadow = 'none';
+      header.style.background = '#FFFFFF';
+      header.style.backdropFilter = 'none';
+      header.style.webkitBackdropFilter = 'none';
+      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
     }
   });
 
