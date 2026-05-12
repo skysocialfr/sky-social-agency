@@ -590,9 +590,54 @@
 
 .mockup-testimonial-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: stretch;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* TÉMOIGNAGES — MARQUEE INFINI */
+.testimonials-section {
+    padding: 80px 0 60px;
+    background: var(--bg-section);
+    overflow: hidden;
+}
+.testimonials-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.testimonials-marquee-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: testimonials-scroll 45s linear infinite;
+    will-change: transform;
+}
+.testimonials-marquee:hover .testimonials-marquee-track,
+.testimonials-marquee:focus-within .testimonials-marquee-track {
+    animation-play-state: paused;
+}
+.testimonials-marquee .testimonial-card {
+    flex: 0 0 360px;
+    width: 360px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@keyframes testimonials-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .testimonials-marquee-track { animation: none; }
+}
+@media (max-width: 600px) {
+    .testimonials-marquee .testimonial-card { flex-basis: 300px; width: 300px; }
 }
 
 .mockup-carousel,
@@ -1260,39 +1305,55 @@
                 <button class="carousel-btn next" data-carousel-next="mockups">›</button>
             </div>
 
-            <!-- AVIS CLIENTS - VERSION ORIGINALE RESTAURÉE -->
-<div class="testimonials-box is-carousel">
-    
-    <!-- Avis 1 -->
-    <article class="testimonial-card fade-in">
-        <div class="testimonial-tag">Avis client</div>
-        <p class="testimonial-text">
-          « Meryne m’a accompagnée sur la stratégie de communication de notre application mobile, avec un vrai travail sur le planning média et la création de contenu. Tout était clair, structuré et orienté résultats. Son regard stratégique nous a permis de mieux organiser notre communication et de gagner en cohérence. Au plaisir de retravailler avec vous ! »</p>
-        <p class="testimonial-author">
-            ⭐⭐⭐⭐⭐ &nbsp; <strong>Michaël.</strong> –CEO d'une application mobile
-        </p>
-    </article>
+            <!-- AVIS CLIENTS — déplacés en section pleine largeur ci-dessous -->
 
-    <!-- Avis 2 -->
-    <article class="testimonial-card fade-in">
-        <div class="testimonial-tag">Avis Google</div>
-        <p class="testimonial-text">
-          « Nous avons fait appel à Sky Social Agency pour travailler le branding de notre marque et le résultat a largement dépassé nos attentes. L’identité visuelle est cohérente, moderne et parfaitement alignée avec nos valeurs. Le travail a été très structuré et surtout créatif. Nous avons reçu énormément de retours positifs depuis le lancement. Un vrai coup de cœur ! »</p>
-        <p class="testimonial-author">
-          ⭐⭐⭐⭐⭐ &nbsp; <strong>EPANA.</strong> – Fonatrice d'une marque de vêtement </p>
-    </article>
+        </div>
+    </div>
+</section>
 
-    <!-- Avis 3 -->
-    <article class="testimonial-card fade-in">
-        <div class="testimonial-tag">Avis client</div>
-        <p class="testimonial-text">
-            « Un grand merci pour le travail réalisé sur notre site web. Le résultat est moderne, fluide et correspond totalement à nos attentes. »
-        </p>
-        <p class="testimonial-author">
-          ⭐⭐⭐⭐⭐ &nbsp; <strong>Besti.co&nbsp;</strong> – Agence évènementielle </p>
-    </article>
+<!-- TÉMOIGNAGES — MARQUEE FULL WIDTH -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-title fade-in" style="text-align:center; max-width:780px; margin:0 auto 32px;">
+            <h2>Ils ont déjà tenté l'aventure avec nous</h2>
+            <p>Quelques retours de clients qui nous ont fait confiance.</p>
+        </div>
+    </div>
 
-</div>
+    <div class="testimonials-marquee fade-in" aria-label="Avis clients défilants">
+        <div class="testimonials-marquee-track">
+            <!-- Set 1 -->
+            <article class="testimonial-card">
+                <div class="testimonial-tag">Avis client</div>
+                <p class="testimonial-text">« Meryne m'a accompagnée sur la stratégie de communication de notre application mobile, avec un vrai travail sur le planning média et la création de contenu. Tout était clair, structuré et orienté résultats. »</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Michaël.</strong> – CEO d'une application mobile</p>
+            </article>
+            <article class="testimonial-card">
+                <div class="testimonial-tag">Avis Google</div>
+                <p class="testimonial-text">« Nous avons fait appel à Sky Social Agency pour travailler le branding de notre marque et le résultat a largement dépassé nos attentes. L'identité visuelle est cohérente, moderne et parfaitement alignée avec nos valeurs. Un vrai coup de cœur ! »</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>EPANA.</strong> – Fondatrice d'une marque de vêtement</p>
+            </article>
+            <article class="testimonial-card">
+                <div class="testimonial-tag">Avis client</div>
+                <p class="testimonial-text">« Un grand merci pour le travail réalisé sur notre site web. Le résultat est moderne, fluide et correspond totalement à nos attentes. »</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Besti.co</strong> – Agence évènementielle</p>
+            </article>
+            <!-- Set 2 (duplicate for seamless infinite scroll) -->
+            <article class="testimonial-card" aria-hidden="true">
+                <div class="testimonial-tag">Avis client</div>
+                <p class="testimonial-text">« Meryne m'a accompagnée sur la stratégie de communication de notre application mobile, avec un vrai travail sur le planning média et la création de contenu. Tout était clair, structuré et orienté résultats. »</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Michaël.</strong> – CEO d'une application mobile</p>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+                <div class="testimonial-tag">Avis Google</div>
+                <p class="testimonial-text">« Nous avons fait appel à Sky Social Agency pour travailler le branding de notre marque et le résultat a largement dépassé nos attentes. L'identité visuelle est cohérente, moderne et parfaitement alignée avec nos valeurs. Un vrai coup de cœur ! »</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>EPANA.</strong> – Fondatrice d'une marque de vêtement</p>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+                <div class="testimonial-tag">Avis client</div>
+                <p class="testimonial-text">« Un grand merci pour le travail réalisé sur notre site web. Le résultat est moderne, fluide et correspond totalement à nos attentes. »</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ &nbsp; <strong>Besti.co</strong> – Agence évènementielle</p>
+            </article>
         </div>
     </div>
 </section>
