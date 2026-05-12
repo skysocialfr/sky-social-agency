@@ -49,6 +49,26 @@
   font-family: 'Inter', 'Poppins', sans-serif;
 }
 
+/* Skip link — accessibility (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  z-index: 10000;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 8px;
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text);

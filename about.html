@@ -8,6 +8,7 @@
     <title>À propos – Sky Social Agency | Agence digitale & création de sites web</title>
     <meta name="description" content="Sky Social Agency est une agence digitale qui combine stratégie, webdesign, développement web et social media pour aider les entreprises ambitieuses à construire une présence en ligne rentable et cohérente.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.skysocial.fr/about.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="À propos – Sky Social Agency">
@@ -22,14 +23,9 @@
     <meta name="twitter:description" content="Agence digitale spécialisée en création de sites web, stratégie digitale et gestion des réseaux sociaux pour entreprises ambitieuses.">
     <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDDXQ0CRP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-FXDDXQ0CRP');
-    </script>
+    <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+    <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+    <script src="js/tarteaucitron-init.js"></script>
 
     <!-- Données structurées Schema.org -->
     <script type="application/ld+json">
@@ -53,7 +49,7 @@
     <!-- Inter — brand kit Sky Social -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="global.css">
 
@@ -880,11 +876,13 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- HEADER -->
     <header>
         <div class="container header-container">
             <a href="index.html" class="logo">
-    <img src="logo.png" alt="Sky Social Agency" class="logo-img">
+    <img fetchpriority="high" decoding="async" src="logo.webp" alt="Sky Social Agency" class="logo-img" width="500" height="500">
     <span>SKY SOCIAL AGENCY</span>
 </a>
             <nav>
@@ -894,7 +892,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank">Prendre RDV</a></li>
+                    <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener noreferrer">Prendre RDV</a></li>
                 </ul>
 				<!-- ✅ le bouton DOIT être ici, en dehors du UL -->
   <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -904,7 +902,9 @@
         </div>
     </header>
 
-    <!-- HERO -->
+  <a id="main" tabindex="-1" aria-hidden="true"></a>
+
+  <!-- HERO -->
     <section class="page-hero">
         <div class="container page-hero-content fade-in">
             <div class="hero-tagline">Agence digitale & création de sites web</div>
@@ -944,7 +944,7 @@
 
                 <div class="about-image-container">
                     <!-- Mets ici ta photo -->
-                    <img src="nous.jpg" alt="Fondatrice de Sky Social Agency en train de travailler sur un site web">
+                    <img decoding="async" loading="lazy" src="nous.webp" alt="Fondatrice de Sky Social Agency en train de travailler sur un site web" width="1170" height="1273">
                     <div class="about-floating-card">
                         <strong>« Créer une présence en ligne cohérente, ce n’est pas que du design. C’est une stratégie. »</strong>
                     </div>
@@ -1061,7 +1061,7 @@
             <article class="team-card fade-in">
                 <div class="team-header">
                     <div class="team-avatar">
-                        <img src="meryne.png" alt="Meryne Ndjeyi">
+                        <img decoding="async" loading="lazy" src="meryne.webp" alt="Meryne Ndjeyi" width="1407" height="1397">
                     </div>
                     <div>
                         <h3>Meryne Ndjeyi</h3>
@@ -1078,15 +1078,15 @@
                 <div class="team-social">
                     <span>Réseaux :</span>
                     <a href="https://www.instagram.com/skysocial_agency/"
-                       target="_blank" rel="noopener" aria-label="Instagram Sky Social Agency">
+                       target="_blank" rel="noopener noreferrer" aria-label="Instagram Sky Social Agency">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr"
-                       target="_blank" rel="noopener" aria-label="LinkedIn Meryne Ndjeyi">
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Meryne Ndjeyi">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.tiktok.com/@sky.socialfr"
-                       target="_blank" rel="noopener" aria-label="TikTok Sky Social Agency">
+                       target="_blank" rel="noopener noreferrer" aria-label="TikTok Sky Social Agency">
                         <i class="fab fa-tiktok"></i>
                     </a>
                 </div>
@@ -1096,7 +1096,7 @@
             <article class="team-card fade-in">
                 <div class="team-header">
                     <div class="team-avatar">
-                        <img src="giovanni.png" alt="Giovanni Affogbolo">
+                        <img decoding="async" loading="lazy" src="giovanni.webp" alt="Giovanni Affogbolo" width="1405" height="932">
                     </div>
                     <div>
                         <h3>Giovanni Affogbolo</h3>
@@ -1113,11 +1113,11 @@
                 <div class="team-social">
                     <span>Réseaux :</span>
                     <a href="https://www.linkedin.com/in/giovanni-affogbolo-6a0919124/?originalSubdomain=fr"
-                       target="_blank" rel="noopener" aria-label="LinkedIn Giovanni Affogbolo">
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Giovanni Affogbolo">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.instagram.com/skysocial_agency/"
-                       target="_blank" rel="noopener" aria-label="Instagram Sky Social Agency">
+                       target="_blank" rel="noopener noreferrer" aria-label="Instagram Sky Social Agency">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -1127,7 +1127,7 @@
             <article class="team-card fade-in">
                 <div class="team-header">
                     <div class="team-avatar">
-                        <img src="donia.png" alt="Donia Chaïr">
+                        <img decoding="async" loading="lazy" src="donia.webp" alt="Donia Chaïr" width="547" height="982">
                     </div>
                     <div>
                         <h3>Donia Chaïr</h3>
@@ -1144,11 +1144,11 @@
                 <div class="team-social">
                     <span>Réseaux :</span>
                     <a href="https://www.linkedin.com/in/dounia-cha%C3%AFr-21b3a31a0/?originalSubdomain=fr"
-                       target="_blank" rel="noopener" aria-label="LinkedIn Donia Chaïr">
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Donia Chaïr">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.instagram.com/skysocial_agency/"
-                       target="_blank" rel="noopener" aria-label="Instagram Sky Social Agency">
+                       target="_blank" rel="noopener noreferrer" aria-label="Instagram Sky Social Agency">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -1216,27 +1216,27 @@
 
                 <div class="carousel-track">
                     <div class="mockup-slide is-active">
-                        <img src="persona.png"
-                             alt="Exemple de site web réalisé par Sky Social Agency">
+                        <img decoding="async" loading="lazy" src="persona.webp"
+                             alt="Exemple de site web réalisé par Sky Social Agency" width="2871" height="1620">
                     </div>
                     <div class="mockup-slide">
-                        <img src="sitewebinstitut.png"
-                             alt="Exemple d’interface ou de dashboard digital">
+                        <img decoding="async" loading="lazy" src="sitewebinstitut.webp"
+                             alt="Exemple d’interface ou de dashboard digital" width="3750" height="1958">
                     </div>
                     <div class="mockup-slide">
-                        <img src="sitelala.png"
-                             alt="Autre projet client réalisé par l’agence">
+                        <img decoding="async" loading="lazy" src="sitelala.webp"
+                             alt="Autre projet client réalisé par l’agence" width="3780" height="1954">
                     </div>
 					<div class="mockup-slide">
-                        <img src="mockup.png"
-                             alt="Autre projet client réalisé par l’agence">
+                        <img decoding="async" loading="lazy" src="mockup.webp"
+                             alt="Autre projet client réalisé par l’agence" width="3802" height="2060">
                     </div>
 					<div class="mockup-slide">
-                        <img src="mockupchatgpt.png"
-                             alt="Autre projet client réalisé par l’agence">
+                        <img decoding="async" loading="lazy" src="mockupchatgpt.webp"
+                             alt="Autre projet client réalisé par l’agence" width="1536" height="1024">
                     </div>
                     <div class="mockup-slide">
-                        <a href="https://skysocialfr.github.io/sky-social-crm/#/" target="_blank" rel="noopener" style="display:block; height:100%; text-decoration:none;">
+                        <a href="https://skysocialfr.github.io/sky-social-crm/#/" target="_blank" rel="noopener noreferrer" style="display:block; height:100%; text-decoration:none;">
                             <div style="height:100%; background: linear-gradient(135deg, #0F1626, #1A2744); border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:24px;">
                                 <div style="font-size:1.6rem;">📊</div>
                                 <div style="color:#fff; font-weight:800; font-size:1rem; text-align:center;">Sky Social CRM</div>
@@ -1246,7 +1246,7 @@
                         </a>
                     </div>
                     <div class="mockup-slide">
-                        <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener" style="display:block; height:100%; text-decoration:none;">
+                        <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener noreferrer" style="display:block; height:100%; text-decoration:none;">
                             <div style="height:100%; background: linear-gradient(135deg, #9B59B6, #E91E8C, #FF7043); border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:24px;">
                                 <div style="font-size:1.6rem;">✨</div>
                                 <div style="color:#fff; font-weight:800; font-size:1rem; text-align:center;">Meryne Studio</div>
@@ -1329,9 +1329,9 @@
             </p>
 
             <div class="footer-light-socials">
-                <a href="https://www.instagram.com/skysocial_agency/" target="_blank">IG</a>
-                <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198" target="_blank">IN</a>
-                <a href="https://www.tiktok.com/@sky.socialfr" target="_blank">TT</a>
+                <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer">IG</a>
+                <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198" target="_blank" rel="noopener noreferrer">IN</a>
+                <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer">TT</a>
             </div>
         </div>
 

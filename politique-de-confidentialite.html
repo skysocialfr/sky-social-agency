@@ -4,22 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDDXQ0CRP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FXDDXQ0CRP');
-  </script>
+  <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+  <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+  <script src="js/tarteaucitron-init.js"></script>
 
   <title>Politique de confidentialité | Sky Social Agency</title>
   <meta name="description" content="Politique de confidentialité de Sky Social Agency : données collectées, finalités, bases légales, durée de conservation, droits RGPD et contact." />
   <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://www.skysocial.fr/politique-de-confidentialite.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link rel="stylesheet" href="global.css">
@@ -139,10 +135,12 @@
 
 <body>
 
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo" aria-label="Sky Social Agency - Accueil">
-        <img src="logo.png" alt="Logo Sky Social Agency" class="logo-img" />
+        <img fetchpriority="high" decoding="async" src="logo.webp" alt="Logo Sky Social Agency" class="logo-img" width="500" height="500" />
         <span>SKY SOCIAL AGENCY</span>
       </a>
 
@@ -154,7 +152,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a class="nav-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+            <a class="nav-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
               Prendre RDV
             </a>
           </li>
@@ -166,6 +164,8 @@
       </nav>
     </div>
   </header>
+
+  <a id="main" tabindex="-1" aria-hidden="true"></a>
 
   <section class="legal-hero">
     <div class="container-narrow">
@@ -292,9 +292,9 @@
             </p>
 
             <div class="footer-light-socials">
-                <a href="https://www.instagram.com/skysocial_agency/" target="_blank">IG</a>
-                <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198" target="_blank">IN</a>
-                <a href="https://www.tiktok.com/@sky.socialfr" target="_blank">TT</a>
+                <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer">IG</a>
+                <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198" target="_blank" rel="noopener noreferrer">IN</a>
+                <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer">TT</a>
             </div>
         </div>
 

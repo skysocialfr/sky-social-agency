@@ -8,6 +8,7 @@
     <title>5 raisons d’investir dans un site web professionnel en 2025 | Blog SkySocial</title>
     <meta name="description" content="En 2025, avoir un site web professionnel n’est plus un luxe, mais un véritable investissement stratégique pour ton activité. Découvre 5 raisons concrètes de passer à l’action dès maintenant.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.skysocial.fr/5-raisons-investir-site-web-professionnel-2025.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="5 raisons d’investir dans un site web professionnel en 2025">
@@ -22,14 +23,9 @@
     <meta name="twitter:description" content="Avoir un site web n’est plus un luxe, mais un investissement stratégique. Voici pourquoi 2025 est le bon moment pour passer à l’action.">
     <meta name="twitter:image" content="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDDXQ0CRP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-FXDDXQ0CRP');
-    </script>
+    <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+    <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+    <script src="js/tarteaucitron-init.js"></script>
 
     <!-- Schema.org Article -->
     <script type="application/ld+json">
@@ -60,7 +56,7 @@
     }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -384,11 +380,13 @@
 </head>
 <body>
 
-      <!-- HEADER -->
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- HEADER -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo">
-        <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
+        <img fetchpriority="high" decoding="async" src="logo.webp" alt="Sky Social Agency" class="logo-img" width="500" height="500" />
         <span>SKY SOCIAL AGENCY</span>
       </a>
       <nav>
@@ -399,7 +397,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
+            <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener noreferrer">
               Prendre RDV
             </a>
           </li>
@@ -412,7 +410,9 @@
     </div>
   </header>
 
-    <!-- HERO ARTICLE -->
+  <a id="main" tabindex="-1" aria-hidden="true"></a>
+
+  <!-- HERO ARTICLE -->
     <section class="article-hero">
         <div class="container">
             <div class="article-hero-inner fade-in">
@@ -429,7 +429,7 @@
                 </div>
                 <div class="hero-image-wrap">
                     <div class="hero-image-card">
-                        <img src="websitepropre.jpeg" loading="lazy">
+                        <img decoding="async" src="websitepropre.webp" loading="lazy" width="736" height="1311">
                     </div>
                     <div class="hero-floating-badge">
                         <span class="icon">🌐</span>
@@ -491,7 +491,7 @@
                             </ul>
                         </div>
                         <div class="illustration-card">
-                            <img src="confiance.jpeg">
+                            <img decoding="async" loading="lazy" src="confiance.webp" width="735" height="490">
                         </div>
                     </div>
 
@@ -525,8 +525,8 @@
 
                     <!-- IMAGE LARGE -->
                     <div class="article-image">
-                        <img src="seogoogle.jpeg"
-                             alt="Clients échangeant avec une entrepreneure devant un ordinateur" loading="lazy">
+                        <img decoding="async" src="seogoogle.webp"
+                             alt="Clients échangeant avec une entrepreneure devant un ordinateur" loading="lazy" width="683" height="512">
                     </div>
 
                     <!-- RAISON 3 -->
@@ -654,9 +654,9 @@
           qui veulent une présence en ligne claire, professionnelle et rentable.
         </p>
         <div class="footer-light-socials">
-          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
-          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TT</a>
         </div>
       </div>
 

@@ -7,21 +7,33 @@
   <title>Contact | Sky Social Agency — Devis sur-mesure & appel découverte</title>
   <meta name="description" content="Contactez Sky Social Agency : création de site web, stratégie digitale, branding et réseaux sociaux. Premier échange sans engagement, devis sur-mesure. Réponse sous 24–48h." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://skysocialfr.github.io/sky-social-agency/contact.html" />
+  <link rel="canonical" href="https://www.skysocial.fr/contact.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sky Social Agency" />
+  <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Contact | Sky Social Agency" />
   <meta property="og:description" content="Premier échange sans engagement. Devis sur-mesure. Réponse sous 24–48h." />
-  <meta property="og:url" content="https://skysocialfr.github.io/sky-social-agency/contact.html" />
+  <meta property="og:url" content="https://www.skysocial.fr/contact.html" />
+  <meta property="og:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Sky Social Agency" />
+  <meta name="twitter:description" content="Premier échange sans engagement. Devis sur-mesure. Réponse sous 24–48h." />
+  <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
+
+  <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+  <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+  <script src="js/tarteaucitron-init.js"></script>
 
   <!-- Inter — brand kit Sky Social -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="global.css">
 
@@ -31,11 +43,11 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact | Sky Social Agency",
-    "url": "https://skysocialfr.github.io/sky-social-agency/contact.html",
+    "url": "https://www.skysocial.fr/contact.html",
     "about": {
       "@type": "Organization",
       "name": "Sky Social Agency",
-      "url": "https://skysocialfr.github.io/sky-social-agency/",
+      "url": "https://www.skysocial.fr/",
       "email": "skysocialfr@gmail.com",
       "telephone": "+33 6 69 70 80 46",
       "sameAs": [
@@ -172,6 +184,11 @@
     textarea { min-height: 130px; resize: vertical; }
 
     .form-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+    .form-consent { margin: 8px 0 4px; }
+    .consent-label { display: flex; gap: 10px; align-items: flex-start; color: var(--text-dim); font-size: .85rem; cursor: pointer; line-height: 1.5; }
+    .consent-label input[type="checkbox"] { margin-top: 4px; width: auto; flex-shrink: 0; accent-color: var(--primary); }
+    .consent-label a { color: var(--primary); text-decoration: underline; }
+    .consent-label a:hover { color: var(--text); }
     .small-note { color: var(--text-dim); font-size: .85rem; margin-top: 8px; }
     .small-note a { color: var(--muted); }
     .small-note a:hover { color: var(--text); }
@@ -290,11 +307,13 @@
 
 <body>
 
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
   <!-- HEADER -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo" aria-label="Sky Social Agency - Accueil">
-        <img src="logo.png" alt="Logo Sky Social Agency" class="logo-img" />
+        <img fetchpriority="high" decoding="async" src="logo.webp" alt="Logo Sky Social Agency" class="logo-img" width="500" height="500" />
         <span>SKY SOCIAL AGENCY</span>
       </a>
 
@@ -306,7 +325,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a class="nav-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+            <a class="nav-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
               Prendre RDV
             </a>
           </li>
@@ -319,6 +338,8 @@
     </div>
   </header>
 
+  <a id="main" tabindex="-1" aria-hidden="true"></a>
+
   <!-- HERO -->
   <section class="page-hero">
     <div class="container hero-grid">
@@ -330,7 +351,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+          <a class="btn primary" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
             Réserver un appel découverte →
           </a>
           <a class="btn secondary" href="services.html">Voir nos services</a>
@@ -380,9 +401,12 @@
           <li><i class="fa-solid fa-check"></i> Sans engagement</li>
         </ul>
 
-        <!-- ⚠️ IMPORTANT : pour une réception automatique, remplace l'action par un service type Formspree -->
-        <!-- Exemple: action="https://formspree.io/f/TON_ID" method="POST" -->
-        <form action="mailto:skysocialfr@gmail.com" method="POST" enctype="text/plain">
+        <!-- Formspree endpoint — replace FORMSPREE_ID with the real form ID from formspree.io -->
+        <form action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+          <input type="hidden" name="_subject" value="Nouveau lead — Sky Social Agency" />
+          <input type="hidden" name="_next" value="https://www.skysocial.fr/merci.html" />
+          <input type="hidden" name="_language" value="fr" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true" />
           <div class="two-cols">
             <div>
               <label for="name">Nom & prénom</label>
@@ -418,7 +442,7 @@
               <label for="budget">Budget indicatif</label>
               <select id="budget" name="Budget">
                 <option value="" selected disabled>Choisir une fourchette</option>
-				<option value="1500-3000">350€ – 800€</option>  
+                <option value="350-800">350€ – 800€</option>
                 <option value="800-1500">800€ – 1 500€</option>
                 <option value="1500-3000">1 500€ – 3 000€</option>
                 <option value="3000-6000">3 000€ – 6 000€</option>
@@ -443,16 +467,22 @@
             <textarea id="message" name="Message" placeholder="Objectif, activité, ce que vous attendez du site / des réseaux, vos contraintes…" required></textarea>
           </div>
 
+          <div class="form-consent">
+            <label class="consent-label">
+              <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required />
+              <span>J'accepte que mes données soient traitées pour répondre à ma demande, conformément à la <a href="politique-de-confidentialite.html">politique de confidentialité</a>. <span aria-hidden="true">*</span></span>
+            </label>
+          </div>
+
           <div class="form-actions">
             <button type="submit" class="btn primary">Envoyer ma demande →</button>
-            <a class="btn secondary" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+            <a class="btn secondary" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
               Ou réserver un appel
             </a>
           </div>
 
           <div class="small-note">
-            En envoyant ce formulaire, vous acceptez d’être recontacté(e) au sujet de votre demande.
-            Consultez notre <a href="politique-de-confidentialite.html">politique de confidentialité</a>.
+            Réponse sous 24–48h ouvrées. Vos données ne sont jamais transmises à des tiers.
           </div>
         </form>
       </div>
@@ -483,16 +513,16 @@
             <i class="fa-solid fa-calendar-check"></i>
             <div>
               <strong>Appel découverte</strong>
-              <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+              <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
                 Réserver un créneau
               </a>
             </div>
           </div>
 
           <div class="socials" aria-label="Réseaux sociaux Sky Social Agency">
-            <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i> TikTok</a>
           </div>
         </div>
       </aside>
@@ -506,7 +536,7 @@
           <h3>Prête à construire une présence digitale qui convertit ?</h3>
           <p>On clarifie votre besoin, on vous conseille, puis on vous envoie un devis sur-mesure.</p>
         </div>
-        <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+        <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
           Réserver un appel →
         </a>
       </div>
@@ -590,9 +620,9 @@
         </p>
 
         <div class="footer-light-socials" aria-label="Réseaux sociaux">
-          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener">IG</a>
-          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener">IN</a>
-          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener">TT</a>
+          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer">IG</a>
+          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer">IN</a>
+          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer">TT</a>
         </div>
       </div>
 
@@ -609,7 +639,7 @@
         <h4>Contact</h4>
         <p>📩 skysocialfr@gmail.com</p>
         <p>📞 +33 6 69 70 80 46</p>
-        <a class="footer-light-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+        <a class="footer-light-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
           Réserver un appel →
         </a>
       </div>

@@ -8,29 +8,24 @@
   <title>Services | Site web, Réseaux sociaux & Stratégie digitale sur-mesure | Sky Social Agency</title>
   <meta name="description" content="Sky Social Agency accompagne les entreprises ambitieuses : création de site web professionnel, gestion des réseaux sociaux, branding et stratégie digitale. Devis sur-mesure, approche premium, résultats concrets." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://skysocialfr.github.io/sky-social-agency/services.html" />
+  <link rel="canonical" href="https://www.skysocial.fr/services.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Services | Sky Social Agency" />
   <meta property="og:description" content="Site web, social media, branding & stratégie digitale : une présence en ligne cohérente et rentable, sur-mesure." />
-  <meta property="og:image" content="https://skysocialfr.github.io/sky-social-agency/stratmedia.jpeg" />
-  <meta property="og:url" content="https://skysocialfr.github.io/sky-social-agency/services.html" />
+  <meta property="og:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
+  <meta property="og:url" content="https://www.skysocial.fr/services.html" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Services | Site web & Social Media sur-mesure" />
   <meta name="twitter:description" content="Accompagnement digital premium pour entreprises ambitieuses : stratégie, design, contenu et web." />
-  <meta name="twitter:image" content="https://skysocialfr.github.io/sky-social-agency/stratmedia.jpeg" />
+  <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDDXQ0CRP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FXDDXQ0CRP');
-  </script>
+  <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+  <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+  <script src="js/tarteaucitron-init.js"></script>
 
   <!-- Données structurées -->
   <script type="application/ld+json">
@@ -38,8 +33,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Sky Social Agency",
-    "url": "https://skysocialfr.github.io/sky-social-agency/",
-    "logo": "https://skysocialfr.github.io/sky-social-agency/logo.png",
+    "url": "https://www.skysocial.fr/",
+    "logo": "https://www.skysocial.fr/logo.png",
     "description": "Agence de stratégie digitale : création de sites web, gestion des réseaux sociaux, branding et audits pour entreprises ambitieuses.",
     "sameAs": [
       "https://www.instagram.com/skysocial_agency/",
@@ -52,7 +47,7 @@
   <!-- Inter — brand kit Sky Social -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="global.css">
 
@@ -326,11 +321,14 @@
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
   <!-- HEADER -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo">
-        <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
+        <img fetchpriority="high" decoding="async" src="logo.webp" alt="Sky Social Agency" class="logo-img" width="500" height="500" />
         <span>SKY SOCIAL AGENCY</span>
       </a>
       <nav>
@@ -341,7 +339,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
+            <a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener noreferrer">
               Prendre RDV
             </a>
           </li>
@@ -353,6 +351,8 @@
       </nav>
     </div>
   </header>
+
+  <a id="main" tabindex="-1" aria-hidden="true"></a>
 
   <!-- HERO -->
   <section class="page-hero">
@@ -367,7 +367,7 @@
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="contact.html"><i class="fas fa-paper-plane"></i> Demander un devis</a>
-        <a class="btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+        <a class="btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-calendar-check"></i> Appel découverte
         </a>
       </div>
@@ -596,7 +596,7 @@
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="contact.html"><i class="fas fa-paper-plane"></i> Demander un devis</a>
-        <a class="btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener">
+        <a class="btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-calendar-check"></i> Appel découverte
         </a>
       </div>
@@ -613,9 +613,9 @@
           qui veulent une présence en ligne claire, professionnelle et rentable.
         </p>
         <div class="footer-light-socials">
-          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
-          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+          <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+          <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TT</a>
         </div>
       </div>
 

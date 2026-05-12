@@ -5,13 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sky Social Agency | Création de sites web & stratégie digitale</title>
   <meta name="description" content="Sky Social Agency accompagne les entreprises ambitieuses : création de sites web premium, stratégie digitale, social media & branding. Sur-mesure, orienté résultats." />
-  <link rel="canonical" href="index.html" />
+  <link rel="canonical" href="https://www.skysocial.fr/" />
   <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sky Social Agency" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Sky Social Agency | Création de sites web &amp; stratégie digitale" />
+  <meta property="og:description" content="Création de sites web premium, stratégie digitale, social media &amp; branding pour entreprises ambitieuses. Sur-mesure, orienté résultats." />
+  <meta property="og:url" content="https://www.skysocial.fr/" />
+  <meta property="og:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sky Social Agency | Création de sites web &amp; stratégie digitale" />
+  <meta name="twitter:description" content="Création de sites web premium, stratégie digitale, social media &amp; branding pour entreprises ambitieuses." />
+  <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sky Social Agency",
+    "alternateName": "SkySocial",
+    "url": "https://www.skysocial.fr/",
+    "logo": "https://www.skysocial.fr/logo.png",
+    "description": "Agence digitale française : création de sites web, gestion des réseaux sociaux, branding et stratégie digitale pour entreprises ambitieuses.",
+    "founder": {
+      "@type": "Person",
+      "name": "Meryne Ndjeyi"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33-6-69-70-80-46",
+      "email": "skysocialfr@gmail.com",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/skysocial_agency/",
+      "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/",
+      "https://www.tiktok.com/@sky.socialfr"
+    ]
+  }
+  </script>
+
+  <!-- Tarteaucitron — Cookie consent (CNIL/GDPR). Google Analytics loads only after consent. -->
+  <script src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@v1.18.0/tarteaucitron.min.js"></script>
+  <script src="js/tarteaucitron-init.js"></script>
 
   <!-- Inter — brand kit Sky Social -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
 
   <style>
@@ -376,11 +427,14 @@
 </head>
 
 <body>
-<!-- HEADER -->
+
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- HEADER -->
 <header>
   <div class="container header-container">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="Sky Social Agency" class="logo-img" />
+      <img fetchpriority="high" decoding="async" src="logo.webp" alt="Sky Social Agency" class="logo-img" width="500" height="500" />
       <span>SKY SOCIAL AGENCY</span>
     </a>
     <nav aria-label="Navigation principale">
@@ -390,7 +444,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener">
+        <li><a href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" class="nav-btn" target="_blank" rel="noopener noreferrer">
             Prendre RDV
           </a>
         </li>
@@ -402,7 +456,9 @@
   </div>
 </header>
 
-<main>
+  <a id="main" tabindex="-1" aria-hidden="true"></a>
+
+  <main>
 
   <!-- HERO -->
   <section class="hero">
@@ -433,7 +489,7 @@
 
       <div class="hero-card fade-in">
         <div class="mock">
-          <img src="notrvision.jpeg" alt="Aperçu d'un projet web Sky Social Agency">
+          <img decoding="async" loading="lazy" src="notrvision.webp" alt="Aperçu d'un projet web Sky Social Agency" width="736" height="920">
         </div>
         <div class="hero-proof" aria-label="Preuves rapides">
           <div class="proof-pill"><b>+15</b><span>projets accompagnés</span></div>
@@ -572,7 +628,7 @@
 
         <!-- Sky Social CRM -->
         <article class="portfolio-card fade-in">
-          <a href="https://skysocialfr.github.io/sky-social-crm/#/" target="_blank" rel="noopener">
+          <a href="https://skysocialfr.github.io/sky-social-crm/#/" target="_blank" rel="noopener noreferrer">
             <div class="portfolio-preview crm-preview">
               <div class="preview-window">
                 <div class="preview-dots"><span></span><span></span><span></span></div>
@@ -614,7 +670,7 @@
 
         <!-- Meryne Studio -->
         <article class="portfolio-card fade-in">
-          <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener">
+          <a href="https://skysocialfr.github.io/meryne-studio/" target="_blank" rel="noopener noreferrer">
             <div class="portfolio-preview studio-preview">
               <div class="preview-window">
                 <div class="preview-dots"><span></span><span></span><span></span></div>
@@ -691,13 +747,13 @@
         qui veulent une présence en ligne claire, professionnelle et rentable.
       </p>
       <div class="footer-light-socials">
-        <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://www.instagram.com/skysocial_agency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
-        <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener" aria-label="TikTok">
+        <a href="https://www.tiktok.com/@sky.socialfr" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"/></svg>
         </a>
       </div>
