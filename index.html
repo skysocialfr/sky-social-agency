@@ -28,19 +28,34 @@
   <meta name="twitter:description" content="Création de sites web premium, stratégie digitale, social media &amp; branding pour entreprises ambitieuses." />
   <meta name="twitter:image" content="https://www.skysocial.fr/stratmedia.jpeg" />
 
-  <!-- Schema.org Organization -->
+  <!-- Schema.org Organization + LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+    "@id": "https://www.skysocial.fr/#organization",
     "name": "Sky Social Agency",
     "alternateName": "SkySocial",
     "url": "https://www.skysocial.fr/",
     "logo": "https://www.skysocial.fr/logo.png",
+    "image": "https://www.skysocial.fr/stratmedia.jpeg",
     "description": "Agence digitale française : création de sites web, gestion des réseaux sociaux, branding et stratégie digitale pour entreprises ambitieuses.",
+    "priceRange": "€€",
     "founder": {
       "@type": "Person",
       "name": "Meryne Ndjeyi"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Rue des Marais",
+      "addressLocality": "Champigny-sur-Marne",
+      "postalCode": "94500",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "France"
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -50,6 +65,14 @@
       "areaServed": "FR",
       "availableLanguage": ["French"]
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/skysocial_agency/",
       "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198/",
@@ -708,7 +731,8 @@
       <a href="about.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      
+        <a href="recrutement.html">Recrutement</a><a href="contact.html">Contact</a>
     </div>
 
     <div class="footer-light-contact">
