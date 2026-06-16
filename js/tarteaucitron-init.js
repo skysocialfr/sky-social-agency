@@ -5,7 +5,7 @@
   if (typeof tarteaucitron === 'undefined') return;
 
   tarteaucitron.init({
-    privacyUrl: 'https://www.skysocial.fr/politique-de-confidentialite.html',
+    privacyUrl: 'https://www.sky-social.fr/politique-de-confidentialite.html',
     bodyPosition: 'bottom',
     hashtag: '#tarteaucitron',
     cookieName: 'skysocial_consent',
@@ -27,7 +27,7 @@
     moreInfoLink: true,
     useExternalCss: false,
     useExternalJs: false,
-    readmoreLink: 'https://www.skysocial.fr/politique-de-confidentialite.html',
+    readmoreLink: 'https://www.sky-social.fr/politique-de-confidentialite.html',
     mandatory: true,
     mandatoryCta: true
   });
