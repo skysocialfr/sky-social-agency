@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.skysocial.fr/sitemap.xml
+Sitemap: https://www.sky-social.fr/sitemap.xml
