@@ -204,23 +204,91 @@
     }
     .more-jobs strong { color: var(--text); }
 
-    /* FORMULAIRE DE CANDIDATURE */
-    .apply-section {
-      padding: 60px 0 100px;
-      background: var(--bg-section);
-      scroll-margin-top: 80px;
+    /* MODAL DE CANDIDATURE */
+    .apply-modal {
+      position: fixed; inset: 0;
+      z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      animation: applyFade .25s ease-out;
     }
-    .apply-card {
-      max-width: 720px; margin: 0 auto;
+    .apply-modal[hidden] { display: none; }
+    .apply-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(20, 14, 38, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .apply-dialog {
+      position: relative;
+      width: 100%; max-width: 680px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
       background: #FFFFFF;
-      border: 1px solid var(--border);
       border-radius: 22px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.30);
       padding: 36px 32px;
+      animation: applySlide .3s ease-out;
+      outline: none;
     }
-    .apply-head { text-align: center; margin-bottom: 28px; }
+    .apply-close {
+      position: absolute; top: 12px; right: 14px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 1.4rem; line-height: 1;
+      color: var(--text);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: .2s;
+      z-index: 2;
+    }
+    .apply-close:hover { background: var(--grad); color: #fff; border-color: transparent; transform: rotate(90deg); }
+
+    .apply-head { text-align: center; margin-bottom: 24px; }
     .apply-head h2 { margin: 12px 0 8px; font-size: 1.6rem; color: var(--text); letter-spacing: -0.01em; }
     .apply-head p { color: var(--muted); margin: 0; }
+
+    /* Vue succès */
+    .apply-view--success { text-align: center; padding: 30px 10px; }
+    .apply-success-icon {
+      width: 84px; height: 84px; margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 14px 36px rgba(155,89,182,.35);
+      animation: applyPop .4s cubic-bezier(.34,1.56,.64,1);
+    }
+    .apply-success-icon svg { width: 44px; height: 44px; color: #fff; }
+    .apply-view--success h2 { font-size: 1.6rem; margin: 0 0 10px; color: var(--text); }
+    .apply-view--success p { color: var(--muted); margin: 0 0 22px; line-height: 1.6; }
+
+    .apply-error {
+      margin: 6px 0 0;
+      padding: 10px 14px;
+      background: rgba(255, 56, 96, 0.10);
+      border: 1px solid rgba(255, 56, 96, 0.30);
+      border-radius: 10px;
+      color: #c62247;
+      font-size: .88rem;
+    }
+
+    @keyframes applyFade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes applySlide {
+      from { opacity: 0; transform: translateY(20px) scale(.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes applyPop {
+      from { transform: scale(.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @media (max-width: 620px) {
+      .apply-dialog { padding: 28px 20px; border-radius: 18px; }
+    }
 
     .apply-form { display: grid; gap: 16px; }
     .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -409,9 +477,9 @@
         </div>
 
         <div class="job-cta">
-          <a class="btn primary" href="#postuler">
+          <button class="btn primary" type="button" data-open-apply>
             <i class="fa-regular fa-paper-plane"></i> Je candidate
-          </a>
+          </button>
         </div>
       </article>
 
@@ -425,22 +493,25 @@
     </div>
   </section>
 
-  <!-- FORMULAIRE DE CANDIDATURE -->
-  <section class="apply-section" id="postuler">
-    <div class="container">
-      <div class="apply-card">
+  <!-- MODAL DE CANDIDATURE -->
+  <div class="apply-modal" id="apply-modal" hidden aria-hidden="true">
+    <div class="apply-backdrop" data-close-apply></div>
+    <div class="apply-dialog" role="dialog" aria-modal="true" aria-labelledby="apply-title" tabindex="-1">
+      <button type="button" class="apply-close" aria-label="Fermer" data-close-apply>×</button>
+
+      <!-- Vue formulaire -->
+      <div class="apply-view apply-view--form">
         <div class="apply-head">
           <span class="rec-tagline">Candidate maintenant</span>
-          <h2>Envoie-nous ta candidature</h2>
+          <h2 id="apply-title">Envoie-nous ta candidature</h2>
           <p>Remplis le formulaire ci-dessous, joins ton CV et on te répond sous 48h ouvrées.</p>
         </div>
 
-        <!-- Web3Forms — créer un compte gratuit sur https://web3forms.com → remplacer WEB3FORMS_KEY -->
-        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="apply-form">
-          <input type="hidden" name="access_key" value="WEB3FORMS_KEY" />
+        <!-- Web3Forms — réceptionne sur skysocialfr@gmail.com -->
+        <form id="apply-form" class="apply-form" enctype="multipart/form-data">
+          <input type="hidden" name="access_key" value="ddd37e40-5aea-43ac-9590-6c72bb93b74c" />
           <input type="hidden" name="subject" value="Nouvelle candidature — Stagiaire Business Developer" />
           <input type="hidden" name="from_name" value="Site Sky Social Agency" />
-          <input type="hidden" name="redirect" value="https://www.sky-social.fr/merci.html" />
           <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;" />
 
           <div class="apply-grid">
@@ -485,12 +556,85 @@
           </label>
 
           <button type="submit" class="btn primary apply-submit">
-            <i class="fa-regular fa-paper-plane"></i> Soumettre ma candidature
+            <i class="fa-regular fa-paper-plane"></i> <span class="apply-submit-label">Soumettre ma candidature</span>
           </button>
+          <p class="apply-error" hidden role="alert"></p>
         </form>
       </div>
+
+      <!-- Vue succès (cachée par défaut) -->
+      <div class="apply-view apply-view--success" hidden>
+        <div class="apply-success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2>Candidature bien envoyée !</h2>
+        <p>Merci pour ton message. On revient vers toi dès que possible (sous 48h ouvrées).</p>
+        <button type="button" class="btn primary" data-close-apply>Fermer</button>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <script>
+    (function() {
+      const modal = document.getElementById('apply-modal');
+      const dialog = modal.querySelector('.apply-dialog');
+      const form = document.getElementById('apply-form');
+      const viewForm = modal.querySelector('.apply-view--form');
+      const viewSuccess = modal.querySelector('.apply-view--success');
+      const errorEl = modal.querySelector('.apply-error');
+      const submitBtn = modal.querySelector('.apply-submit');
+      const submitLabel = modal.querySelector('.apply-submit-label');
+
+      function openModal() {
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        viewForm.hidden = false;
+        viewSuccess.hidden = true;
+        setTimeout(() => dialog.focus(), 50);
+      }
+      function closeModal() {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('[data-open-apply]').forEach(b => b.addEventListener('click', openModal));
+      document.querySelectorAll('[data-close-apply]').forEach(b => b.addEventListener('click', closeModal));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errorEl.hidden = true;
+        submitBtn.disabled = true;
+        const original = submitLabel.textContent;
+        submitLabel.textContent = 'Envoi en cours…';
+
+        try {
+          const fd = new FormData(form);
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+          const data = await res.json();
+          if (data.success) {
+            viewForm.hidden = true;
+            viewSuccess.hidden = false;
+            form.reset();
+            // auto-close after 5s
+            setTimeout(closeModal, 5000);
+          } else {
+            throw new Error(data.message || 'Erreur lors de l\'envoi');
+          }
+        } catch (err) {
+          errorEl.textContent = 'Désolé, l\'envoi a échoué. Vérifie ta connexion ou réessaie plus tard.';
+          errorEl.hidden = false;
+        } finally {
+          submitBtn.disabled = false;
+          submitLabel.textContent = original;
+        }
+      });
+    })();
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer-light">
