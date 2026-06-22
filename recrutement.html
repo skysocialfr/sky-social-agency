@@ -204,6 +204,84 @@
     }
     .more-jobs strong { color: var(--text); }
 
+    /* FORMULAIRE DE CANDIDATURE */
+    .apply-section {
+      padding: 60px 0 100px;
+      background: var(--bg-section);
+      scroll-margin-top: 80px;
+    }
+    .apply-card {
+      max-width: 720px; margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 36px 32px;
+    }
+    .apply-head { text-align: center; margin-bottom: 28px; }
+    .apply-head h2 { margin: 12px 0 8px; font-size: 1.6rem; color: var(--text); letter-spacing: -0.01em; }
+    .apply-head p { color: var(--muted); margin: 0; }
+
+    .apply-form { display: grid; gap: 16px; }
+    .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 620px) { .apply-grid { grid-template-columns: 1fr; } }
+
+    .apply-form label {
+      font-weight: 700; font-size: .85rem;
+      color: var(--text); display: block; margin-bottom: 6px;
+    }
+    .apply-form label span[aria-hidden] { color: var(--primary-mid); }
+
+    .apply-form input[type="text"],
+    .apply-form input[type="email"],
+    .apply-form input[type="tel"],
+    .apply-form select,
+    .apply-form textarea {
+      width: 100%; padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      outline: none; font-size: .93rem;
+      background: #FFFFFF;
+      color: var(--text);
+      font-family: inherit;
+      transition: .2s;
+    }
+    .apply-form input:focus,
+    .apply-form select:focus,
+    .apply-form textarea:focus {
+      border-color: rgba(233,30,140,.40);
+      box-shadow: 0 0 0 3px rgba(233,30,140,.10);
+    }
+    .apply-form textarea { resize: vertical; min-height: 100px; }
+
+    .apply-form input[type="file"] {
+      width: 100%; padding: 14px;
+      border: 2px dashed var(--border-grad);
+      border-radius: 12px;
+      background: rgba(155,89,182,.04);
+      cursor: pointer;
+      font-size: .9rem;
+      color: var(--text);
+    }
+    .apply-form input[type="file"]:hover { border-color: rgba(233,30,140,.40); background: rgba(155,89,182,.08); }
+    .apply-hint { display: block; color: var(--text-dim); font-size: .82rem; margin-top: 6px; }
+
+    .apply-consent {
+      display: flex; gap: 10px; align-items: flex-start;
+      color: var(--text-dim); font-size: .85rem; cursor: pointer; line-height: 1.5;
+      margin: 4px 0;
+    }
+    .apply-consent input[type="checkbox"] {
+      margin-top: 3px; width: auto; flex-shrink: 0;
+      accent-color: var(--primary);
+    }
+    .apply-consent a { color: var(--primary); text-decoration: underline; }
+
+    .apply-submit {
+      width: 100%; justify-content: center; padding: 14px;
+      font-size: 1rem; margin-top: 4px;
+    }
+
     @media (max-width: 620px) {
       .rec-hero { padding: 130px 0 44px; }
       .job-card { padding: 24px 20px; }
@@ -230,7 +308,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="recrutement.html">Recrutement</a></li>
+          <li><a href="recrutement.html">On recrute !</a></li>
           <li>
             <a class="nav-btn" href="https://calendly.com/skysocialfr/demande-de-renseignements-clone" target="_blank" rel="noopener noreferrer">
               Prendre RDV
@@ -331,10 +409,9 @@
         </div>
 
         <div class="job-cta">
-          <a class="btn primary" href="mailto:skysocialfr@gmail.com?subject=Candidature%20-%20Stagiaire%20Business%20Developer&body=Bonjour%20Meryne%2C%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%C2%B7e%20par%20l%27offre%20de%20stage%20Business%20Developer.%0A%0AVoici%20quelques%20mots%20sur%20moi%20%3A%0A%0A%5BTon%20parcours%20%2B%20pourquoi%20cette%20offre%20te%20parle%5D%0A%0AMon%20CV%20est%20en%20pi%C3%A8ce%20jointe.%0A%0A%C3%80%20bient%C3%B4t%2C">
-            <i class="fa-regular fa-paper-plane"></i> Postuler par email
+          <a class="btn primary" href="#postuler">
+            <i class="fa-regular fa-paper-plane"></i> Je candidate
           </a>
-          <a class="btn secondary" href="contact.html">Ou via le formulaire</a>
         </div>
       </article>
 
@@ -345,6 +422,73 @@
         on est toujours à l'écoute des bons profils.
       </div>
 
+    </div>
+  </section>
+
+  <!-- FORMULAIRE DE CANDIDATURE -->
+  <section class="apply-section" id="postuler">
+    <div class="container">
+      <div class="apply-card">
+        <div class="apply-head">
+          <span class="rec-tagline">Candidate maintenant</span>
+          <h2>Envoie-nous ta candidature</h2>
+          <p>Remplis le formulaire ci-dessous, joins ton CV et on te répond sous 48h ouvrées.</p>
+        </div>
+
+        <!-- Web3Forms — créer un compte gratuit sur https://web3forms.com → remplacer WEB3FORMS_KEY -->
+        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="apply-form">
+          <input type="hidden" name="access_key" value="WEB3FORMS_KEY" />
+          <input type="hidden" name="subject" value="Nouvelle candidature — Stagiaire Business Developer" />
+          <input type="hidden" name="from_name" value="Site Sky Social Agency" />
+          <input type="hidden" name="redirect" value="https://www.sky-social.fr/merci.html" />
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;" />
+
+          <div class="apply-grid">
+            <div>
+              <label for="apply-name">Nom &amp; prénom <span aria-hidden="true">*</span></label>
+              <input id="apply-name" type="text" name="Nom et prénom" required placeholder="Ex : Sophie Martin" />
+            </div>
+            <div>
+              <label for="apply-email">Email <span aria-hidden="true">*</span></label>
+              <input id="apply-email" type="email" name="Email" required placeholder="ex@email.com" />
+            </div>
+          </div>
+
+          <div class="apply-grid">
+            <div>
+              <label for="apply-phone">Téléphone</label>
+              <input id="apply-phone" type="tel" name="Téléphone" placeholder="06 12 34 56 78" />
+            </div>
+            <div>
+              <label for="apply-poste">Poste visé</label>
+              <select id="apply-poste" name="Poste">
+                <option value="Stagiaire Business Developer" selected>Stagiaire Business Developer</option>
+                <option value="Candidature spontanée">Candidature spontanée</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="apply-cv">Ton CV (PDF, DOC ou DOCX) <span aria-hidden="true">*</span></label>
+            <input id="apply-cv" type="file" name="CV" accept=".pdf,.doc,.docx" required />
+            <span class="apply-hint">Max 10 MB. Format PDF recommandé.</span>
+          </div>
+
+          <div>
+            <label for="apply-message">Pourquoi cette offre te parle ? (optionnel)</label>
+            <textarea id="apply-message" name="Message" rows="4" placeholder="2-3 phrases pour te présenter et expliquer ton intérêt"></textarea>
+          </div>
+
+          <label class="apply-consent">
+            <input type="checkbox" required />
+            <span>J'accepte que mes données (nom, email, CV) soient utilisées pour traiter ma candidature, conformément à la <a href="politique-de-confidentialite.html">politique de confidentialité</a>.</span>
+          </label>
+
+          <button type="submit" class="btn primary apply-submit">
+            <i class="fa-regular fa-paper-plane"></i> Soumettre ma candidature
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -370,7 +514,7 @@
         <a href="about.html">À propos</a>
         <a href="services.html">Services</a>
         <a href="blog.html">Blog</a>
-        <a href="recrutement.html">Recrutement</a>
+        <a href="recrutement.html">On recrute !</a>
         <a href="contact.html">Contact</a>
       </div>
 
