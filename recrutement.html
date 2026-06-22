@@ -626,7 +626,8 @@
             throw new Error(data.message || 'Erreur lors de l\'envoi');
           }
         } catch (err) {
-          errorEl.textContent = 'Désolé, l\'envoi a échoué. Vérifie ta connexion ou réessaie plus tard.';
+          console.error('[apply-form]', err);
+          errorEl.textContent = 'Échec de l\'envoi : ' + (err && err.message ? err.message : 'erreur inconnue') + '. Tu peux nous envoyer ta candidature directement à skysocialfr@gmail.com.';
           errorEl.hidden = false;
         } finally {
           submitBtn.disabled = false;
