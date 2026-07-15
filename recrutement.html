@@ -507,12 +507,17 @@
           <p>Remplis le formulaire ci-dessous, joins ton CV et on te répond sous 48h ouvrées.</p>
         </div>
 
-        <!-- Web3Forms — réceptionne sur skysocialfr@gmail.com -->
-        <form id="apply-form" class="apply-form" enctype="multipart/form-data">
-          <input type="hidden" name="access_key" value="ddd37e40-5aea-43ac-9590-6c72bb93b74c" />
-          <input type="hidden" name="subject" value="Nouvelle candidature — Stagiaire Business Developer" />
-          <input type="hidden" name="from_name" value="Site Sky Social Agency" />
-          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;" />
+        <!-- FormSubmit — gratuit, supporte les CV en PJ. À la 1re soumission, un email de confirmation
+             sera envoyé à skysocialfr@gmail.com : clique le lien dedans pour activer le form. -->
+        <form id="apply-form" class="apply-form"
+              action="https://formsubmit.co/skysocialfr@gmail.com"
+              method="POST"
+              enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Nouvelle candidature — Sky Social Agency" />
+          <input type="hidden" name="_next" value="https://www.sky-social.fr/merci.html" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none;" />
 
           <div class="apply-grid">
             <div>
@@ -558,20 +563,7 @@
           <button type="submit" class="btn primary apply-submit">
             <i class="fa-regular fa-paper-plane"></i> <span class="apply-submit-label">Soumettre ma candidature</span>
           </button>
-          <p class="apply-error" hidden role="alert"></p>
         </form>
-      </div>
-
-      <!-- Vue succès (cachée par défaut) -->
-      <div class="apply-view apply-view--success" hidden>
-        <div class="apply-success-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </div>
-        <h2>Candidature bien envoyée !</h2>
-        <p>Merci pour ton message. On revient vers toi dès que possible (sous 48h ouvrées).</p>
-        <button type="button" class="btn primary" data-close-apply>Fermer</button>
       </div>
     </div>
   </div>
@@ -581,9 +573,6 @@
       const modal = document.getElementById('apply-modal');
       const dialog = modal.querySelector('.apply-dialog');
       const form = document.getElementById('apply-form');
-      const viewForm = modal.querySelector('.apply-view--form');
-      const viewSuccess = modal.querySelector('.apply-view--success');
-      const errorEl = modal.querySelector('.apply-error');
       const submitBtn = modal.querySelector('.apply-submit');
       const submitLabel = modal.querySelector('.apply-submit-label');
 
@@ -591,8 +580,6 @@
         modal.hidden = false;
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
-        viewForm.hidden = false;
-        viewSuccess.hidden = true;
         setTimeout(() => dialog.focus(), 50);
       }
       function closeModal() {
@@ -605,34 +592,10 @@
       document.querySelectorAll('[data-close-apply]').forEach(b => b.addEventListener('click', closeModal));
       document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        errorEl.hidden = true;
+      // Feedback visuel pendant l'envoi (le form fait un vrai POST qui redirige vers /merci.html)
+      form.addEventListener('submit', () => {
         submitBtn.disabled = true;
-        const original = submitLabel.textContent;
         submitLabel.textContent = 'Envoi en cours…';
-
-        try {
-          const fd = new FormData(form);
-          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-          const data = await res.json();
-          if (data.success) {
-            viewForm.hidden = true;
-            viewSuccess.hidden = false;
-            form.reset();
-            // auto-close after 5s
-            setTimeout(closeModal, 5000);
-          } else {
-            throw new Error(data.message || 'Erreur lors de l\'envoi');
-          }
-        } catch (err) {
-          console.error('[apply-form]', err);
-          errorEl.textContent = 'Échec de l\'envoi : ' + (err && err.message ? err.message : 'erreur inconnue') + '. Tu peux nous envoyer ta candidature directement à skysocialfr@gmail.com.';
-          errorEl.hidden = false;
-        } finally {
-          submitBtn.disabled = false;
-          submitLabel.textContent = original;
-        }
       });
     })();
   </script>
