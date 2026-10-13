@@ -318,6 +318,40 @@
       .page-hero { padding: 120px 0 60px; }
       section { padding: 65px 0; }
     }
+
+    /* TARIFS */
+    .pricing { padding: 70px 0; }
+    .currency-switch {
+      display: flex; justify-content: center; gap: 6px; margin: 0 auto 30px; padding: 6px;
+      width: fit-content; border-radius: 999px; background: var(--bg-section); border: 1px solid var(--border);
+    }
+    .currency-switch button {
+      border: 0; cursor: pointer; padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: .92rem;
+      background: transparent; color: var(--muted); font-family: inherit;
+    }
+    .currency-switch button[aria-pressed="true"] { background: var(--grad); color: #fff; box-shadow: 0 6px 18px rgba(233,30,140,.25); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; }
+    .price-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 22px; box-shadow: var(--shadow);
+    }
+    .price-card h3 { margin: 0 0 14px; font-size: 1.02rem; display: flex; gap: 10px; align-items: center; color: var(--text); }
+    .price-card h3 i { color: var(--primary); }
+    .price-card ul { list-style: none; margin: 0; padding: 0; }
+    .price-card li {
+      display: flex; justify-content: space-between; gap: 14px; align-items: baseline;
+      padding: 10px 0; border-top: 1px dashed var(--border); font-size: .92rem;
+    }
+    .price-card li:first-child { border-top: 0; }
+    .price-label { color: var(--text); }
+    .price-label small, .price small { display: block; color: var(--text-dim); font-size: .78rem; font-weight: 500; }
+    .price { font-weight: 800; color: var(--primary); text-align: right; white-space: nowrap; }
+    .price small { white-space: normal; }
+    .pricing-note { text-align: center; color: var(--muted); font-size: .9rem; margin: 22px 0 0; }
+    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 680px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price { white-space: normal; }
+    }
   </style>
 </head>
 
@@ -589,6 +623,149 @@
             </div>
         </div>
     </section>
+
+  <!-- TARIFS -->
+  <section class="pricing" id="tarifs" data-currency="eur">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Tarifs indicatifs</h2>
+        <p>Prix de départ, hors taxes. Chaque projet fait ensuite l’objet d’un devis sur-mesure.</p>
+      </div>
+      <div class="currency-switch fade-in" role="group" aria-label="Afficher les tarifs pour">
+        <button type="button" data-set-currency="eur" aria-pressed="true">🇫🇷 France · €</button>
+        <button type="button" data-set-currency="xaf" aria-pressed="false">🇬🇦 Gabon · FCFA</button>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card fade-in">
+          <h3><i class="fas fa-hashtag"></i> Communication &amp; réseaux sociaux</h3>
+          <ul>
+            <li>
+              <span class="price-label">Formule Essentiel <small>2 réseaux · 8 à 10 publications/mois</small></span>
+              <span class="price" data-eur="850 €/mois" data-xaf="400 000 FCFA/mois">850 €/mois</span>
+            </li>
+            <li>
+              <span class="price-label">Formule Croissance <small>3 réseaux · reels inclus</small></span>
+              <span class="price" data-eur="1 600 €/mois" data-xaf="750 000 FCFA/mois">1 600 €/mois</span>
+            </li>
+            <li>
+              <span class="price-label">Formule Premium <small>institutions &amp; grandes entreprises</small></span>
+              <span class="price" data-eur="2 900 €/mois" data-xaf="1 300 000 FCFA/mois">2 900 €/mois</span>
+            </li>
+            <li>
+              <span class="price-label">Personnalités publiques</span>
+              <span class="price" data-eur="2 500 €/mois" data-xaf="1 500 000 FCFA/mois">2 500 €/mois</span>
+            </li>
+            <li>
+              <span class="price-label">Gestion des publicités</span>
+              <span class="price" data-eur="15 % du budget <small>min. 450 €/mois</small>" data-xaf="15 % du budget <small>min. 150 000 FCFA/mois</small>">15 % du budget <small>min. 450 €/mois</small></span>
+            </li>
+            <li>
+              <span class="price-label">Newsletter</span>
+              <span class="price" data-eur="550 € / envoi" data-xaf="250 000 FCFA / envoi">550 € / envoi</span>
+            </li>
+          </ul>
+        </article>
+        <article class="price-card fade-in">
+          <h3><i class="fas fa-video"></i> Production photo &amp; vidéo</h3>
+          <ul>
+            <li>
+              <span class="price-label">Couverture photo + vidéo · ½ journée</span>
+              <span class="price" data-eur="1 400 €" data-xaf="700 000 FCFA">1 400 €</span>
+            </li>
+            <li>
+              <span class="price-label">Couverture photo + vidéo · journée</span>
+              <span class="price" data-eur="2 400 €" data-xaf="1 200 000 FCFA">2 400 €</span>
+            </li>
+            <li>
+              <span class="price-label">Aftermovie <small>en complément d’une couverture</small></span>
+              <span class="price" data-eur="+ 800 €" data-xaf="+ 400 000 FCFA">+ 800 €</span>
+            </li>
+            <li>
+              <span class="price-label">Pack 4 reels</span>
+              <span class="price" data-eur="1 600 €" data-xaf="650 000 FCFA">1 600 €</span>
+            </li>
+            <li>
+              <span class="price-label">Film institutionnel</span>
+              <span class="price" data-eur="dès 6 500 €" data-xaf="dès 4 000 000 FCFA">dès 6 500 €</span>
+            </li>
+          </ul>
+        </article>
+        <article class="price-card fade-in">
+          <h3><i class="fas fa-magnifying-glass-chart"></i> Stratégie digitale &amp; audit</h3>
+          <ul>
+            <li>
+              <span class="price-label">Audit digital</span>
+              <span class="price" data-eur="1 900 €" data-xaf="750 000 FCFA">1 900 €</span>
+            </li>
+            <li>
+              <span class="price-label">Stratégie complète</span>
+              <span class="price" data-eur="dès 4 500 €" data-xaf="dès 1 800 000 FCFA">dès 4 500 €</span>
+            </li>
+          </ul>
+        </article>
+        <article class="price-card fade-in">
+          <h3><i class="fas fa-wand-magic-sparkles"></i> Branding &amp; identité visuelle</h3>
+          <ul>
+            <li>
+              <span class="price-label">Logo + mini-charte</span>
+              <span class="price" data-eur="1 800 €" data-xaf="700 000 FCFA">1 800 €</span>
+            </li>
+            <li>
+              <span class="price-label">Identité visuelle complète</span>
+              <span class="price" data-eur="4 500 €" data-xaf="1 500 000 FCFA">4 500 €</span>
+            </li>
+          </ul>
+        </article>
+        <article class="price-card fade-in">
+          <h3><i class="fas fa-laptop-code"></i> Sites web</h3>
+          <ul>
+            <li>
+              <span class="price-label">Site vitrine</span>
+              <span class="price" data-eur="dès 3 200 €" data-xaf="dès 1 500 000 FCFA">dès 3 200 €</span>
+            </li>
+            <li>
+              <span class="price-label">Site sur-mesure ou e-commerce</span>
+              <span class="price" data-eur="sur devis" data-xaf="sur devis">sur devis</span>
+            </li>
+          </ul>
+        </article>
+        <article class="price-card fade-in">
+          <h3><i class="fas fa-champagne-glasses"></i> Événementiel</h3>
+          <ul>
+            <li>
+              <span class="price-label">Organisation de A à Z</span>
+              <span class="price" data-eur="12 à 15 % du budget <small>min. 5 000 €</small>" data-xaf="15 % du budget <small>min. 3 000 000 FCFA</small>">12 à 15 % du budget <small>min. 5 000 €</small></span>
+            </li>
+          </ul>
+        </article>
+      </div>
+      <p class="pricing-note" data-only="eur">Paiement en plusieurs fois possible en France, selon le projet.</p>
+      <p class="pricing-note" data-only="xaf" hidden>Tarifs pour nos clients au Gabon, établis en francs CFA.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:18px">
+        <a class="btn btn-primary" href="contact.html"><i class="fas fa-paper-plane"></i> Demander un devis</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function () {
+      const section = document.getElementById('tarifs');
+      if (!section) return;
+      function apply(cur) {
+        section.dataset.currency = cur;
+        section.querySelectorAll('.price').forEach(p => { p.innerHTML = p.dataset[cur]; });
+        section.querySelectorAll('[data-set-currency]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setCurrency === cur)));
+        section.querySelectorAll('[data-only]').forEach(n => { n.hidden = n.dataset.only !== cur; });
+        try { localStorage.setItem('sky_currency', cur); } catch (e) {}
+      }
+      section.querySelectorAll('[data-set-currency]').forEach(b => b.addEventListener('click', () => apply(b.dataset.setCurrency)));
+      let initial = 'eur';
+      try { initial = localStorage.getItem('sky_currency') || initial; } catch (e) {}
+      const param = new URLSearchParams(location.search).get('devise');
+      if (param === 'xaf' || param === 'fcfa') initial = 'xaf';
+      if (param === 'eur') initial = 'eur';
+      if (initial !== 'eur') apply(initial);
+    })();
+  </script>
 
   <!-- SUR-MESURE + PAIEMENT -->
   <section class="custom-solution" id="sur-mesure">
