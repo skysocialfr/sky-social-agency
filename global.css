@@ -732,7 +732,7 @@ section {
   .testimonial-card,
   .test-card { padding: 16px !important; }
 
-  input, textarea, select {
+  input:not([type="checkbox"]):not([type="radio"]), textarea, select {
     width: 100% !important;
     max-width: 100% !important;
     font-size: 16px;
