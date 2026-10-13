@@ -618,6 +618,41 @@ section {
 }
 
 /* =========================================
+   MENU — écrans moyens : menu burger dès 1180px
+   (8 entrées ne tiennent plus sur une ligne)
+   ========================================= */
+@media (max-width: 1180px) {
+  .nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; }
+  nav { position: relative; }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 14px);
+    width: min(330px, 92vw);
+    background: rgba(255,255,255,0.97);
+    border: 1px solid rgba(155,89,182,0.15);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    border-radius: 18px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  nav ul.is-open { display: flex; }
+  nav ul li a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    color: var(--text);
+  }
+  nav ul li a::after { display: none; }
+  nav ul li a:hover { background: rgba(155,89,182,0.08); color: var(--primary); }
+  .nav-btn { display: block; width: 100%; text-align: center; }
+}
+
+/* =========================================
    RESPONSIVE — Tablette
    ========================================= */
 @media (max-width: 980px) {
