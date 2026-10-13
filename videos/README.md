@@ -7,7 +7,7 @@ Dépose tes vidéos ici pour qu'elles apparaissent automatiquement dans la secti
 | Nom du fichier | Carte concernée |
 |---|---|
 | `velmio-crm.mp4` | Velmio CRM |
-| `meryne-studio.mp4` | Meryne Studio |
+| `veyra-studio.mp4` | Veyra Studio |
 | `cabinet-solice.mp4` | Cabinet Solice |
 
 ## Recommandations techniques

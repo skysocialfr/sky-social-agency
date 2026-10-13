@@ -490,6 +490,9 @@ section {
   padding-left: 4px;
 }
 
+.footer-light-contact p a { color: inherit; text-decoration: none; }
+.footer-light-contact p a:hover { text-decoration: underline; }
+
 .footer-light-contact p {
   margin-bottom: 10px;
   color: rgba(255,255,255,0.65);
