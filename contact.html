@@ -405,12 +405,14 @@
           <li><i class="fa-solid fa-check"></i> Sans engagement</li>
         </ul>
 
-        <!-- Formspree endpoint — replace FORMSPREE_ID with the real form ID from formspree.io -->
-        <form action="https://formspree.io/f/FORMSPREE_ID" method="POST">
-          <input type="hidden" name="_subject" value="Nouveau lead — Sky Social Agency" />
+        <!-- FormSubmit — même service que le formulaire de candidature (recrutement.html).
+             Les demandes arrivent sur skysocialfr@gmail.com. -->
+        <form action="https://formsubmit.co/skysocialfr@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis — Sky Social Agency" />
           <input type="hidden" name="_next" value="https://www.sky-social.fr/merci.html" />
-          <input type="hidden" name="_language" value="fr" />
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true" />
           <div class="two-cols">
             <div>
               <label for="name">Nom & prénom</label>
@@ -418,7 +420,7 @@
             </div>
             <div>
               <label for="email">Email</label>
-              <input id="email" name="Email" type="email" placeholder="ex: contact@entreprise.fr" required />
+              <input id="email" name="email" type="email" placeholder="ex: contact@entreprise.fr" required />
             </div>
           </div>
 
@@ -431,12 +433,13 @@
               <label for="service">Besoin principal</label>
               <select id="service" name="Besoin" required>
                 <option value="" selected disabled>Choisir une option</option>
-                <option value="site">Création / refonte de site web</option>
-                <option value="social">Gestion des réseaux sociaux</option>
-                <option value="strategie">Stratégie digitale globale</option>
-                <option value="branding">Branding / identité visuelle</option>
-                <option value="audit">Audit & recommandations</option>
-                <option value="autre">à définir ensemble</option>
+                <option value="Communication & réseaux sociaux">Communication & réseaux sociaux</option>
+                <option value="Production photo & vidéo">Production photo & vidéo</option>
+                <option value="Stratégie & audit">Stratégie digitale & audit</option>
+                <option value="Branding / identité visuelle">Branding / identité visuelle</option>
+                <option value="Site web">Création / refonte de site web</option>
+                <option value="Événementiel">Organisation d'événement</option>
+                <option value="À définir">À définir ensemble</option>
               </select>
             </div>
           </div>

@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="logo.png">
 
   <title>On recrute | Sky Social Agency — Rejoignez l'équipe</title>
-  <meta name="description" content="Rejoignez Sky Social Agency. Découvrez nos offres de stage, alternance et freelance. Stage Business Developer ouvert pour septembre 2026." />
+  <meta name="description" content="Rejoignez Sky Social Agency. Découvrez nos offres de stage, alternance et freelance. Stage Business Developer en full remote à partir du 1er décembre 2026." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.sky-social.fr/recrutement.html" />
 
@@ -38,8 +38,8 @@
     "@type": "JobPosting",
     "title": "Stagiaire Business Developer",
     "description": "<p>Sky Social Agency recherche un·e stagiaire Business Developer pour une mission d'un mois. Vous serez en charge d'exploiter notre liste de prospects existante, d'en identifier de nouveaux, et de décrocher des rendez-vous qualifiés avec des décideurs en TPE/PME.</p><p><strong>Missions principales :</strong><ul><li>Exploiter la base de prospects existante (relances, qualification, suivi)</li><li>Identifier de nouveaux prospects sur LinkedIn, Instagram et bases sectorielles</li><li>Rédiger et envoyer des messages de prospection personnalisés</li><li>Décrocher des rendez-vous de découverte qualifiés</li><li>Reporter sur l'avancement et les résultats hebdomadaires</li></ul></p><p><strong>Profil recherché :</strong><ul><li>Étudiant·e en école de commerce, communication ou marketing</li><li>À l'aise à l'écrit et avec la prospection digitale</li><li>Autonome, organisé·e, orienté·e résultats</li><li>Connaissance de LinkedIn Sales Navigator (bonus)</li></ul></p>",
-    "datePosted": "2026-06-16",
-    "validThrough": "2026-09-30T23:59",
+    "datePosted": "2026-10-13",
+    "validThrough": "2026-11-30T23:59",
     "employmentType": "INTERN",
     "hiringOrganization": {
       "@type": "Organization",
@@ -47,21 +47,11 @@
       "sameAs": "https://www.sky-social.fr/",
       "logo": "https://www.sky-social.fr/logo.png"
     },
-    "jobLocation": {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Champigny-sur-Marne",
-        "addressRegion": "Île-de-France",
-        "postalCode": "94500",
-        "addressCountry": "FR"
-      }
-    },
     "jobLocationType": "TELECOMMUTE",
-    "applicantLocationRequirements": {
-      "@type": "Country",
-      "name": "France"
-    },
+    "applicantLocationRequirements": [
+      { "@type": "Country", "name": "France" },
+      { "@type": "Country", "name": "Gabon" }
+    ],
     "baseSalary": {
       "@type": "MonetaryAmount",
       "currency": "EUR",
@@ -207,7 +197,8 @@
     /* MODAL DE CANDIDATURE */
     .apply-modal {
       position: fixed; inset: 0;
-      z-index: 9999;
+      /* Au-dessus du bandeau cookies (tarteaucitron, z-index 2147483645) qui masquait le bouton d'envoi sur mobile */
+      z-index: 2147483646;
       display: flex; align-items: center; justify-content: center;
       padding: 20px;
       animation: applyFade .25s ease-out;
@@ -425,7 +416,7 @@
             <i class="fa-regular fa-calendar"></i>
             <div>
               <strong>Démarrage</strong>
-              <span>Lundi 7 septembre 2026</span>
+              <span>1er décembre 2026</span>
             </div>
           </div>
           <div class="job-meta-item">
@@ -439,7 +430,7 @@
             <i class="fa-solid fa-location-dot"></i>
             <div>
               <strong>Localisation</strong>
-              <span>Remote / Île-de-France</span>
+              <span>Full remote</span>
             </div>
           </div>
           <div class="job-meta-item">
@@ -526,7 +517,7 @@
             </div>
             <div>
               <label for="apply-email">Email <span aria-hidden="true">*</span></label>
-              <input id="apply-email" type="email" name="Email" required placeholder="ex@email.com" />
+              <input id="apply-email" type="email" name="email" required placeholder="ex@email.com" />
             </div>
           </div>
 
