@@ -42,3 +42,9 @@ Les cartes affichent une image de fallback (`poster`) :
 - Cabinet Solice → `illustration-therapie-1.webp`
 
 Tu peux changer ces images dans `index.html` (chercher `poster=` dans la section portfolio).
+
+## Boucles des réalisations (FONED / Tech Days)
+
+- `cdc-loop.mp4` : 5 plans du Forum national de l'épargne (salle, panel, vice-président, public, stands). **Ne pas y mettre le photographe-vidéaste**, qui n'a pas donné son accord pour apparaître sur le site.
+- `techdays-loop.mp4` : 5 plans des Tech Days.
+- Les teasers longs ont été retirés à la demande de Meryne (14/10/2026).

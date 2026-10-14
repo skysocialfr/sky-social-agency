@@ -333,13 +333,6 @@
       background: linear-gradient(135deg, #2A1240, #9B59B6);
     }
     .case-media video, .case-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .case-play {
-      position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer;
-      background: rgba(255,255,255,.92); color: #2A1240; font-weight: 700; font-size: .9rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,.18);
-    }
-    .case-play:hover { background: #fff; }
     .case-visual {
       position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
       gap: 12px; padding: 24px; text-align: center; color: #fff;
@@ -384,11 +377,6 @@
       .sites-grid { grid-template-columns: 1fr; }
       .work-section { padding: 50px 0; }
     }
-    /* Lecteur vidéo plein écran */
-    .video-modal { position: fixed; inset: 0; z-index: 2147483646; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(12,6,20,.86); }
-    .video-modal[hidden] { display: none; }
-    .video-modal video { width: min(1100px, 100%); max-height: 85vh; border-radius: 14px; background: #000; }
-    .video-modal button { position: absolute; top: 16px; right: 20px; width: 44px; height: 44px; border-radius: 50%; border: 0; font-size: 1.6rem; cursor: pointer; background: #fff; color: #2A1240; }
   </style>
 </head>
 
@@ -456,7 +444,6 @@
           <video autoplay loop muted playsinline preload="metadata" poster="realisation-cdc-foned.jpg" aria-label="Extraits du Forum national de l’épargne pour le développement">
             <source src="videos/cdc-loop.mp4" type="video/mp4">
           </video>
-          <button class="case-play" type="button" data-teaser="videos/cdc-teaser.mp4" data-poster="realisation-cdc-foned.jpg"><i class="fas fa-play"></i> Voir le teaser (37 s)</button>
         </div>
         <div class="case-body">
           <div class="portfolio-tags"><span>Institutionnel</span><span>Photo</span><span>Vidéo</span><span>Montage</span></div>
@@ -479,7 +466,6 @@
           <video autoplay loop muted playsinline preload="metadata" poster="realisation-tech-days.jpg" aria-label="Extraits de l’événement Tech Days">
             <source src="videos/techdays-loop.mp4" type="video/mp4">
           </video>
-          <button class="case-play" type="button" data-teaser="videos/techdays-teaser.mp4" data-poster="realisation-tech-days.jpg"><i class="fas fa-play"></i> Voir le teaser (34 s)</button>
         </div>
         <div class="case-body">
           <div class="portfolio-tags"><span>Événement corporate</span><span>Vidéo</span><span>Photo</span><span>Interviews</span></div>
@@ -591,7 +577,7 @@
         </article>
         <article class="site-card fade-in">
           <a href="https://app.velmiocrm.com" target="_blank" rel="noopener noreferrer">
-            <div class="site-preview"><video autoplay loop muted playsinline preload="metadata" poster="mockup.webp" aria-label="Aperçu de Velmio CRM"><source src="videos/velmio-crm.mp4" type="video/mp4"></video></div>
+            <div class="site-preview"><video autoplay loop muted playsinline preload="metadata" poster="realisation-velmio.jpg" aria-label="Aperçu de Velmio CRM"><source src="videos/velmio-crm.mp4" type="video/mp4"></video></div>
             <div class="site-info">
               <div class="portfolio-tags"><span>SaaS</span><span>CRM</span></div>
               <h3>Velmio CRM</h3>
@@ -632,25 +618,6 @@
     </div>
   </section>
 
-  <!-- LECTEUR VIDÉO -->
-  <div class="video-modal" id="video-modal" hidden>
-    <button type="button" aria-label="Fermer la vidéo" data-close-video>×</button>
-    <video controls playsinline preload="none"></video>
-  </div>
-  <script>
-    (function () {
-      const modal = document.getElementById('video-modal');
-      const player = modal.querySelector('video');
-      function close() { player.pause(); player.removeAttribute('src'); player.load(); modal.hidden = true; document.body.style.overflow = ''; }
-      document.querySelectorAll('[data-teaser]').forEach(btn => btn.addEventListener('click', () => {
-        player.src = btn.dataset.teaser; player.poster = btn.dataset.poster || '';
-        modal.hidden = false; document.body.style.overflow = 'hidden'; player.play().catch(() => {});
-      }));
-      modal.querySelector('[data-close-video]').addEventListener('click', close);
-      modal.addEventListener('click', e => { if (e.target === modal) close(); });
-      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) close(); });
-    })();
-  </script>
 
   <!-- FOOTER -->
   <footer class="footer-light">
