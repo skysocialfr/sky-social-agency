@@ -406,7 +406,7 @@
 
         <!-- FormSubmit — même service que le formulaire de candidature (recrutement.html).
              Les demandes arrivent sur skysocialfr@gmail.com. -->
-        <form action="https://formsubmit.co/skysocialfr@gmail.com" method="POST">
+        <form id="devis" action="https://formsubmit.co/skysocialfr@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="Nouvelle demande de devis — Sky Social Agency" />
           <input type="hidden" name="_next" value="https://www.sky-social.fr/merci.html" />
           <input type="hidden" name="_template" value="table" />
@@ -745,5 +745,29 @@
 </script>
 
 
+
+  <script>
+    /* Pré-remplissage du formulaire de devis :
+       contact.html?demande=plaquette  → demande de plaquette
+       contact.html?besoin=Site%20web → « Besoin principal » présélectionné */
+    (function () {
+      const form = document.getElementById('devis');
+      if (!form) return;
+      const params = new URLSearchParams(location.search);
+      const besoin = params.get('besoin');
+      const select = form.querySelector('#service');
+      if (besoin && select) {
+        const opt = [...select.options].find(o => o.value === besoin);
+        if (opt) select.value = opt.value;
+      }
+      if (params.get('demande') === 'plaquette') {
+        const subject = form.querySelector('input[name="_subject"]');
+        if (subject) subject.value = 'Demande de plaquette — Sky Social Agency';
+        const msg = form.querySelector('#message');
+        if (msg && !msg.value) msg.value = 'Bonjour, je souhaite recevoir votre plaquette de présentation.\n\nNotre organisation et notre besoin en quelques mots : ';
+        if (select && !select.value) select.value = 'À définir';
+      }
+    })();
+  </script>
 </body>
 </html>
