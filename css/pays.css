@@ -204,6 +204,7 @@ section { padding: 85px 0; }
 .pays-hero .hero-tagline { margin-bottom: 4px; }
 .pays-hero p.lead { color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin: 0 0 22px; }
 .pays-hero .gb-flag { margin: 0 0 14px; }
+.pays-hero .hero-actions { justify-content: flex-start; }
 .pays-contacts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .pays-contacts a {
   display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px;
