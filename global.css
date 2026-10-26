@@ -851,3 +851,25 @@ section {
 @media (max-width: 420px) {
   .logo span { display: inline; font-size: .82rem; letter-spacing: .05em; }
 }
+
+
+/* =========================================
+   BANDEAU D'ANNONCE — piloté par js/annonce.js
+   (n'apparaît que si ANNONCE.actif = true)
+   ========================================= */
+.annonce {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1001;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8px 48px 8px 16px;
+  background: #23103A; color: #fff; text-align: center;
+}
+.annonce p { margin: 0; font-size: .88rem; line-height: 1.45; color: #fff; }
+.annonce a { color: #FFB3D9; font-weight: 700; text-decoration: underline; white-space: nowrap; }
+.annonce button {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  width: 34px; height: 34px; border: 0; border-radius: 50%;
+  background: transparent; color: #fff; font-size: 1.35rem; line-height: 1; cursor: pointer;
+}
+.annonce button:hover { background: rgba(255,255,255,.12); }
+html.has-annonce header { top: var(--annonce-h, 0px); }
+html.has-annonce body { margin-top: var(--annonce-h, 0px); }

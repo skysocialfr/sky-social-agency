@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prendre rendez-vous | Sky Social Agency</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; display: grid; place-items: center; min-height: 100vh; margin: 0; background: #F3EEFF; color: #1A1A2E; text-align: center; padding: 24px; }
+    a { color: #9B59B6; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main>
+    <p>Redirection vers notre agenda de prise de rendez-vous…</p>
+    <p><a id="rdv-link" href="contact.html">Cliquez ici si rien ne se passe</a></p>
+    <noscript><p>Pour prendre rendez-vous, <a href="contact.html">écrivez-nous depuis la page contact</a>.</p></noscript>
+  </main>
+  <script>
+    /* =============================================================
+       LIEN CALENDLY : c'est le SEUL endroit du site où il est défini.
+       Tous les boutons « Prendre RDV » pointent vers cette page
+       (sky-social.fr/rdv), qui redirige ici. Collez la bonne URL
+       entre les apostrophes ci-dessous.
+       ============================================================= */
+    var CALENDLY_URL = 'https://calendly.com/skysocialfr/demande-de-renseignements-clone';
+
+    document.getElementById('rdv-link').href = CALENDLY_URL;
+    window.location.replace(CALENDLY_URL);
+  </script>
+</body>
+</html>
