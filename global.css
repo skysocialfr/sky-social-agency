@@ -873,3 +873,54 @@ section {
 .annonce button:hover { background: rgba(255,255,255,.12); }
 html.has-annonce header { top: var(--annonce-h, 0px); }
 html.has-annonce body { margin-top: var(--annonce-h, 0px); }
+
+
+/* =========================================
+   RÉFÉRENCES — ligne de preuve (accueil, pages pays)
+   ========================================= */
+.refs-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 20px; }
+.refs-proof-label {
+  width: 100%; font-size: .74rem; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--primary);
+}
+a.trust-chip { text-decoration: none; font-weight: 600; transition: border-color .2s, background .2s; }
+a.trust-chip:hover { border-color: rgba(155,89,182,.45); background: rgba(155,89,182,.12); }
+
+/* =========================================
+   GRILLE DE LOGOS CLIENTS
+   Fichiers attendus dans /logos (SVG de préférence) — voir logos/LISEZMOI.md
+   Gris au repos, couleur au survol, hauteurs homogènes.
+   ========================================= */
+.logo-section { padding: 48px 0; }
+.logo-section h2 { text-align: center; font-size: 1rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 24px; }
+.logo-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px;
+}
+.logo-item {
+  height: 88px; display: flex; align-items: center; justify-content: center;
+  padding: 16px 20px; border-radius: 16px; background: #fff; border: 1px solid var(--border);
+}
+.logo-item img {
+  max-height: 48px; max-width: 100%; width: auto; height: auto; object-fit: contain;
+  filter: grayscale(1); opacity: .65; transition: filter .25s, opacity .25s;
+}
+.logo-item:hover img, .logo-item:focus-within img { filter: none; opacity: 1; }
+@media (max-width: 600px) {
+  .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .logo-item { height: 72px; padding: 12px; }
+  .logo-item img { max-height: 38px; }
+}
+
+/* =========================================
+   TÉMOIGNAGES (section masquée tant que les vrais textes ne sont pas fournis)
+   ========================================= */
+.temoignages { padding: 64px 0; }
+.temoignages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 28px; }
+.temoignage {
+  margin: 0; background: #fff; border: 1px solid var(--border); border-radius: 20px;
+  padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 16px;
+}
+.temoignage blockquote { margin: 0; font-size: 1rem; line-height: 1.65; color: var(--text); }
+.temoignage figcaption { font-size: .88rem; color: var(--muted); }
+.temoignage figcaption strong { display: block; color: var(--text); }
