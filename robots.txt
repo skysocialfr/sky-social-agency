@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /nouveau/
+Disallow: /_modeles/
+Disallow: /_outils/
 
 Sitemap: https://www.sky-social.fr/sitemap.xml
